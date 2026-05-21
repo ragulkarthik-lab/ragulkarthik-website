@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TITAN INDUSTRIAL - Engineering the Future of Industry</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3c4851",
+                        "surface-tint": "#ffb693",
+                        "background": "#131313",
+                        "tertiary": "#9ccaff",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffdbcc",
+                        "on-tertiary-container": "#003357",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#111d25",
+                        "on-primary-fixed": "#351000",
+                        "on-primary": "#561f00",
+                        "secondary": "#bbc8d3",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#572000",
+                        "primary-fixed-dim": "#ffb693",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#a04100",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface-bright": "#393939",
+                        "primary-container": "#ff6b00",
+                        "on-secondary-container": "#adbac5",
+                        "secondary-fixed-dim": "#bbc8d3",
+                        "on-surface-variant": "#e2bfb0",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "on-secondary": "#26323b",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#003257",
+                        "outline-variant": "#5a4136",
+                        "outline": "#a98a7d",
+                        "secondary-fixed": "#d7e4f0",
+                        "tertiary-container": "#059eff",
+                        "secondary-container": "#3e4b54",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary": "#ffb693",
+                        "surface-container": "#20201f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#7a3000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "column-count": "12",
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "technical-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "technical-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .blueprint-bg {
+            background-image: linear-gradient(to right, rgba(90, 65, 54, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(90, 65, 54, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .structural-border {
+            border: 2px solid var(--tw-colors-outline-variant);
+        }
+
+        .structural-border-active {
+            border: 2px solid var(--tw-colors-primary-container);
+        }
+
+        .module-header {
+            border-bottom: 2px solid var(--tw-colors-outline-variant);
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background blueprint-bg font-body-md min-h-screen flex flex-col">
+    <!-- TopNavBar (Shared Component) -->
+    <nav class="bg-background w-full top-0 border-b-2 border-outline-variant z-50 sticky">
+        <div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+            <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                TITAN INDUSTRIAL
+            </div>
+            <div class="hidden md:flex items-center space-x-gutter">
+                <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 scale-95 transition-transform hover:text-primary transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="services.html">Services</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="industries.html">Industries</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="projects.html">Projects</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="about.html">About</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <div class="hidden md:flex items-center">
+                <button
+                    class="bg-primary-container text-background font-label-caps text-label-caps px-4 py-2 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200">
+                    Request Technical Specs
+                </button>
+            </div>
+            <div class="md:hidden flex items-center">
+                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section
+            class="relative w-full min-h-[819px] flex items-center justify-center border-b-2 border-outline-variant overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Massive industrial machining equipment in a high-tech manufacturing facility."
+                    class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity"
+                    data-alt="A colossal, high-precision industrial milling machine in a vast, dark, cavernous factory setting. The heavy steel structure dominates the frame, lit by harsh, high-contrast directional work lights that catch the metallic sheen of fresh metal shavings. Sparks fly in the background, creating a moody, industrial atmosphere. The aesthetic aligns with structural brutalism and technical precision, utilizing deep shadows and stark highlights to emphasize the engineered strength of the machinery."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK5SaLDBjjhaUxZfy0mUtS3fik7LxJSgbUe4o3rYNUN1ZfaJWxlIBRJdesMVRSQx14kv92Esaz6AsdHA45xJLbjGj727xyroX7zPIVAW0eU3y3Gy3fs5REFlGYC5LiupJvwJaHuyUbFZ0GP8zXrJQWMiPAL8pQixK3-lQGMru6OWi3AwXssbAi0YT_t_2ASZDjp6lLI1RN_ZUjHbS0i0WjSMbRgWo2TfkBS55lIXWrrBfhqlvViWcih6ETlUjniJgrDywLJ-xhKDB7" />
+            </div>
+            <div
+                class="relative z-10 w-full max-w-[1440px] px-margin-desktop mx-auto flex flex-col items-start gap-gutter">
+                <div class="bg-surface-container-high p-4 border-l-4 border-primary-container">
+                    <span class="font-technical-sm text-technical-sm text-primary uppercase tracking-widest">SYS.STATUS:
+                        ONLINE</span>
+                </div>
+                <h1
+                    class="font-headline-lg text-headline-lg text-on-surface uppercase max-w-4xl bg-background/80 p-2 border-2 border-outline-variant">
+                    ENGINEERING THE FUTURE OF INDUSTRY
+                </h1>
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl bg-background/80 p-4 border border-outline-variant">
+                    Precision Manufacturing &amp; Heavy-Duty Solutions since 1985. We build the structural integrity of
+                    tomorrow.
+                </p>
+                <div class="flex gap-4 mt-4">
+                    <button
+                        class="bg-primary-container text-background font-label-caps text-label-caps px-8 py-4 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200 flex items-center gap-2">
+                        Discuss Your Project <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Core Capabilities -->
+        <section class="w-full max-w-[1440px] mx-auto px-margin-desktop py-24 border-b-2 border-outline-variant">
+            <div class="mb-12 flex items-baseline justify-between border-b-2 border-outline-variant pb-4">
+                <h2 class="font-headline-md text-headline-md text-primary uppercase">CORE CAPABILITIES</h2>
+                <span class="font-technical-sm text-technical-sm text-on-surface-variant">SEC. 01 // OPERATIONS</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <!-- Card 1 -->
+                <div
+                    class="bg-surface-container-high border-2 border-outline-variant hover:border-primary-container transition-colors duration-300 group flex flex-col h-full">
+                    <div class="module-header bg-background px-2 flex items-center justify-between">
+                        <span class="font-technical-sm text-technical-sm text-on-surface-variant">MOD-A1</span>
+                        <span class="material-symbols-outlined text-[16px] text-primary">precision_manufacturing</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="material-symbols-outlined text-[48px] text-primary mb-4"
+                            style="font-variation-settings: 'FILL' 1;">manufacturing</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Precision Machining</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Sub-micron tolerance
+                            engineering for critical aerospace and defense applications.</p>
+                        <div
+                            class="mt-4 pt-4 border-t border-outline-variant flex items-center text-primary group-hover:underline font-label-caps text-label-caps">
+                            VIEW SPECS <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-surface-container-high border-2 border-outline-variant hover:border-primary-container transition-colors duration-300 group flex flex-col h-full">
+                    <div class="module-header bg-background px-2 flex items-center justify-between">
+                        <span class="font-technical-sm text-technical-sm text-on-surface-variant">MOD-A2</span>
+                        <span class="material-symbols-outlined text-[16px] text-primary">engineering</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="material-symbols-outlined text-[48px] text-primary mb-4"
+                            style="font-variation-settings: 'FILL' 1;">construction</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Custom Fabrication</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Heavy-gauge metal forming
+                            and welding for large-scale industrial assemblies.</p>
+                        <div
+                            class="mt-4 pt-4 border-t border-outline-variant flex items-center text-primary group-hover:underline font-label-caps text-label-caps">
+                            VIEW SPECS <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-surface-container-high border-2 border-outline-variant hover:border-primary-container transition-colors duration-300 group flex flex-col h-full">
+                    <div class="module-header bg-background px-2 flex items-center justify-between">
+                        <span class="font-technical-sm text-technical-sm text-on-surface-variant">MOD-A3</span>
+                        <span class="material-symbols-outlined text-[16px] text-primary">architecture</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="material-symbols-outlined text-[48px] text-primary mb-4"
+                            style="font-variation-settings: 'FILL' 1;">foundation</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Structural Engineering</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Load-bearing frameworks
+                            and infrastructural support systems designed for extreme environments.</p>
+                        <div
+                            class="mt-4 pt-4 border-t border-outline-variant flex items-center text-primary group-hover:underline font-label-caps text-label-caps">
+                            VIEW SPECS <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-surface-container-high border-2 border-outline-variant hover:border-primary-container transition-colors duration-300 group flex flex-col h-full">
+                    <div class="module-header bg-background px-2 flex items-center justify-between">
+                        <span class="font-technical-sm text-technical-sm text-on-surface-variant">MOD-A4</span>
+                        <span class="material-symbols-outlined text-[16px] text-primary">conveyor_belt</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="material-symbols-outlined text-[48px] text-primary mb-4"
+                            style="font-variation-settings: 'FILL' 1;">settings_b_roll</span>
+                        <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Automated Assembly</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Robotic integration and
+                            continuous flow production lines optimized for high yield.</p>
+                        <div
+                            class="mt-4 pt-4 border-t border-outline-variant flex items-center text-primary group-hover:underline font-label-caps text-label-caps">
+                            VIEW SPECS <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Milestones Data Strip -->
+        <section class="bg-surface-container-highest border-b-2 border-outline-variant py-8 w-full overflow-hidden">
+            <div
+                class="max-w-[1440px] mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <span class="font-headline-lg text-headline-lg text-primary">500+</span>
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface uppercase border-l-2 border-outline-variant pl-4">Projects<br />Completed</span>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-outline-variant"></div>
+                <div class="flex items-center gap-4">
+                    <span class="font-headline-lg text-headline-lg text-primary">100%</span>
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface uppercase border-l-2 border-outline-variant pl-4">Safety<br />Compliance</span>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-outline-variant"></div>
+                <div class="flex items-center gap-4">
+                    <span class="font-headline-lg text-headline-lg text-primary">35</span>
+                    <span
+                        class="font-label-caps text-label-caps text-on-surface uppercase border-l-2 border-outline-variant pl-4">Years
+                        of<br />Excellence</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer
+        class="bg-surface-container-lowest w-full bottom-0 border-t-2 border-outline-variant bg-[url('blueprint-grid.svg')]">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-12 max-w-[1440px] mx-auto">
+            <div class="col-span-1 md:col-span-4 flex flex-col gap-4">
+                <div class="font-headline-md text-headline-md font-black text-on-surface">
+                    TITAN INDUSTRIAL
+                </div>
+                <p class="font-technical-sm text-technical-sm text-on-surface-variant max-w-xs mt-4">
+                    ENGINEERED FOR PRECISION. BUILT FOR SCALE.
+                </p>
+                <div class="mt-auto pt-8">
+                    <p class="font-technical-sm text-technical-sm text-on-surface-variant">
+                        © 2024 TITAN INDUSTRIAL. ALL RIGHTS RESERVED. ENGINEERED FOR PRECISION.
+                    </p>
+                </div>
+            </div>
+            <div class="col-span-1 md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="flex flex-col gap-2">
+                    <span
+                        class="font-label-caps text-label-caps text-primary border-b border-outline-variant pb-2 mb-2">CERTIFICATIONS</span>
+                    <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-all duration-300 ease-in-out"
+                        href="#">ISO 9001 CERTIFIED</a>
+                    <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-all duration-300 ease-in-out"
+                        href="#">OHSAS 18001 COMPLIANT</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span
+                        class="font-label-caps text-label-caps text-primary border-b border-outline-variant pb-2 mb-2">NAVIGATION</span>
+                    <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-all duration-300 ease-in-out"
+                        href="#">Sitemap</a>
+                    <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-all duration-300 ease-in-out"
+                        href="#">Office Locations</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span
+                        class="font-label-caps text-label-caps text-primary border-b border-outline-variant pb-2 mb-2">LEGAL</span>
+                    <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-all duration-300 ease-in-out"
+                        href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

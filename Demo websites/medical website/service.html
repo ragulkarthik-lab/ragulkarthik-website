@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services &amp; Treatments - St. Jude Clinical</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Public+Sans:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#86a0cd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#cae6ff",
+                        "inverse-primary": "#adc7f7",
+                        "on-tertiary-fixed": "#00201c",
+                        "primary-container": "#1a365d",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#004a6d",
+                        "outline-variant": "#c4c6cf",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "on-tertiary-container": "#43af9f",
+                        "primary": "#002045",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#002521",
+                        "surface-dim": "#d8dadc",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#adc7f7",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-container": "#003d36",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-background": "#191c1e",
+                        "outline": "#74777f",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-fixed-dim": "#70d8c8",
+                        "secondary-container": "#58bcfd",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed-variant": "#004b6f",
+                        "secondary": "#006492",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-fixed": "#8df5e4",
+                        "surface-tint": "#455f88",
+                        "on-tertiary-fixed-variant": "#005048",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed-dim": "#8ccdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "baseline": "8px",
+                        "container-max": "1200px",
+                        "section-gap-sm": "40px",
+                        "margin-mobile": "16px",
+                        "section-gap-lg": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Public Sans"],
+                        "headline-sm": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "portal-button": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "portal-button": ["14px", { "lineHeight": "1", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen">
+    <!-- EmergencyBanner -->
+    <div
+        class="bg-error dark:bg-error-container text-on-error dark:text-on-error-container w-full min-h-[40px] flex items-center justify-center text-center px-gutter py-2 cursor-default z-50 relative">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest">
+            EMERGENCY: If you are experiencing a medical emergency, please call 108 immediately.
+        </span>
+    </div>
+    <!-- TopNavBar -->
+    <header class="w-full bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline">
+        <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+            <div class="flex items-center gap-4">
+                <span
+                    class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed uppercase tracking-tight">St.
+                    Jude Clinical</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="service.html">Services</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="meet.html">Doctors</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="patient.html">Patient Info</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:flex items-center gap-2 border border-outline-variant px-4 py-2 rounded-full text-primary hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined" data-icon="lock">lock</span>
+                    <span class="font-portal-button text-portal-button">Patient Portal</span>
+                </button>
+                <button
+                    class="bg-primary text-on-primary px-6 py-3 rounded-full font-portal-button text-portal-button hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_20px_rgba(0,32,69,0.15)]">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-surface-container-low py-section-gap-lg px-gutter relative overflow-hidden">
+            <div class="max-w-container-max mx-auto relative z-10 grid md:grid-cols-2 gap-section-gap-sm items-center">
+                <div>
+                    <h1
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                        Comprehensive Care,<br />Clinical Precision.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">
+                        We offer a wide range of specialized medical services, diagnostic procedures, and wellness
+                        programs designed to support your journey to optimal health in a calm, healing environment.
+                    </p>
+                </div>
+                <div
+                    class="relative h-[400px] rounded-xl overflow-hidden border border-outline-variant hidden md:block">
+                    <img alt="Modern clinical room" class="absolute inset-0 w-full h-full object-cover"
+                        data-alt="A pristine, modern hospital corridor bathed in soft, natural daylight. The walls are a calming soft white, reflecting a clean, minimalist aesthetic. Subtle architectural details suggest advanced clinical precision while maintaining a serene, healing atmosphere. A warm, diffused glow emanates from hidden fixtures, creating a welcoming corporate healthcare environment."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuACJV2xi2FgwQLfuexFBbuCihfwK28q9-wQdQxz6uUdIEBV2AOOSX-nm7BRW0qpMlRfCcQnZ82xPjWgB17nswqHq2NQbJBtj9s9GmQqC7-oGhs_HxYf2RVeomhDhh7mSEaQVKprn7hNBJclQCTodPz5U9mYFwI_qM1fMLNG58uZ4liP6UVwMCn33wlzGrnuNN3eXM5Gb2mEVR8cvxfT1iH2S6BBXyiezz6EsEIOee1c0h4uVO3o50n3wof-3UO6gOf6Kj6sdHeL1PM" />
+                </div>
+            </div>
+        </section>
+        <!-- Specialized Care - Bento Grid -->
+        <section class="py-section-gap-lg px-gutter bg-background">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-12">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Specialized Care</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                        Our specialized departments are staffed by expert physicians utilizing the latest medical
+                        advancements to provide targeted, effective treatments.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Cardiology -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-8 border-t-2 border-t-tertiary-container shadow-[0_4px_20px_rgba(0,32,69,0.05)] border border-outline-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                        <div
+                            class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 text-tertiary-container">
+                            <span class="material-symbols-outlined" data-icon="ecg">ecg</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Cardiology</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Advanced cardiovascular diagnostics, interventional procedures, and long-term heart health
+                            management by leading specialists.
+                        </p>
+                        <a class="text-secondary font-portal-button text-portal-button flex items-center gap-1 hover:underline mt-auto"
+                            href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Oncology -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-8 border-t-2 border-t-tertiary-container shadow-[0_4px_20px_rgba(0,32,69,0.05)] border border-outline-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
+                        <div
+                            class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 text-tertiary-container">
+                            <span class="material-symbols-outlined" data-icon="healing">healing</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Oncology</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Comprehensive cancer care including precision medicine, radiation therapy, and compassionate
+                            patient support programs.
+                        </p>
+                        <a class="text-secondary font-portal-button text-portal-button flex items-center gap-1 hover:underline mt-auto"
+                            href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Neurology -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-8 border-t-2 border-t-tertiary-container shadow-[0_4px_20px_rgba(0,32,69,0.05)] border border-outline-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 md:row-span-2">
+                        <div class="w-full h-40 bg-surface-container rounded mb-6 overflow-hidden relative">
+                            <img alt="Neurology lab" class="w-full h-full object-cover"
+                                data-alt="A modern, sterile neurology examination room. High-tech medical scanning equipment sits quietly in a minimalist space painted in soothing tones of soft grey and stark white. The lighting is bright yet diffused, conveying a sense of calm precision and advanced technological capability within a professional clinical setting."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAU6Jzz31vNyqF4AmXE6GZk8jJDQEpL7eTq4r0_gE3SjbHvESPrKw31K5-_S_Tx6iGnW-Y1TDkh5dXSf_TpMrt5WsRAUDiRmSVCnxYPNaXP4LRSVEGEVYKYnnh8TfJtD9Drvi8EVhE2vdKfR20CTGTNz7lfVrzUFx6yQ3U2Jh753IZpC5UpnjfcdYVygCqJsK-RgetuAevoGMAMXTJzTK7umNTeIqEEWGDhnnUQkOXrCxkCuptHggDx7kL8sJ3irVsbRJZtBkPkts" />
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-surface-container-low rounded-full flex items-center justify-center mb-6 text-tertiary-container">
+                            <span class="material-symbols-outlined" data-icon="neurology">neurology</span>
+                        </div>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Neurology</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                            Expert diagnosis and treatment of disorders affecting the brain, spinal cord, and nervous
+                            system, utilizing state-of-the-art neuroimaging techniques and specialized therapeutic
+                            approaches tailored to individual patient needs.
+                        </p>
+                        <a class="text-secondary font-portal-button text-portal-button flex items-center gap-1 hover:underline mt-auto"
+                            href="#">
+                            Learn More <span class="material-symbols-outlined text-[16px]"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Orthopedics -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-8 border-t-2 border-t-tertiary-container shadow-[0_4px_20px_rgba(0,32,69,0.05)] border border-outline-variant flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 md:col-span-2">
+                        <div class="flex flex-col md:flex-row gap-6 h-full items-start md:items-center">
+                            <div
+                                class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center text-tertiary-container shrink-0">
+                                <span class="material-symbols-outlined text-2xl" data-icon="bone">done</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Orthopedics &amp; Sports
+                                    Medicine</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                                    Comprehensive care for musculoskeletal conditions, from minimally invasive joint
+                                    replacements to specialized rehabilitation for sports injuries.
+                                </p>
+                                <a class="text-secondary font-portal-button text-portal-button flex items-center gap-1 hover:underline"
+                                    href="#">
+                                    Learn More <span class="material-symbols-outlined text-[16px]"
+                                        data-icon="arrow_forward">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diagnostic Services - Asymmetric Layout -->
+        <section class="py-section-gap-lg px-gutter bg-surface-container-low border-y border-outline-variant">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-md text-headline-md text-primary mb-4">Diagnostic Services</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Accurate diagnosis is the foundation of effective treatment. We utilize the most advanced
+                        technology to provide clear, precise results rapidly.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-12">
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-section-gap-sm">
+                        <div
+                            class="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-surface-container border border-outline-variant relative">
+                            <img alt="MRI Machine" class="w-full h-full object-cover"
+                                data-alt="A state-of-the-art MRI machine in a softly lit, sterile diagnostic room. The large, circular white equipment stands out against pale walls, emphasizing clinical precision. Cool, ambient lighting creates a calming atmosphere intended to reduce patient anxiety, perfectly reflecting a modern corporate healthcare environment."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvf0fNhMgittQsDwZVPCgyunxG9IuoBrCpLPvBnYO33W5Pbk5ELAhwKBPbOzjUu_GqSaOxQVXIIpo2JjW4Lnd37E0BFbJXQDCci3UtTo6GqKIZ0PqDzzAV7XnhAPuHVdXHTWeYdXbfJKUKLZkPONxvwHhx7fZWzM-btZStdMuT7CABORPDIKIskZt7TOZxhHB2mSiVMuPcD_jK8Ca7Z-_gzLED724yqLNUzRIGoOyzFJNvEgxrGu01D7niK-GTJdSrLPMzvdAJnAw" />
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-4">
+                            <div class="flex items-center gap-3 text-secondary mb-2">
+                                <span class="material-symbols-outlined icon-fill"
+                                    data-icon="medical_services">medical_services</span>
+                                <span
+                                    class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Advanced
+                                    Imaging</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">MRI, CT &amp; Ultrasound</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                High-resolution imaging services providing detailed views of internal structures,
+                                enabling our specialists to detect anomalies with exceptional clarity and confidence.
+                                Our modern suites are designed to maximize patient comfort during procedures.
+                            </p>
+                            <button
+                                class="mt-4 px-6 py-2 border border-outline-variant rounded text-on-surface font-portal-button text-portal-button hover:bg-surface-container-highest transition-colors">
+                                View Imaging Options
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-section-gap-sm">
+                        <div
+                            class="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden bg-surface-container border border-outline-variant relative">
+                            <img alt="Laboratory" class="w-full h-full object-cover"
+                                data-alt="A modern medical laboratory featuring pristine white counters and high-tech diagnostic equipment. Micro-vials and pipettes are neatly organized in a meticulously clean environment. The lighting is bright and even, highlighting the sterile, minimalist aesthetic and underscoring the themes of clinical precision and scientific rigor."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZWGkT3hRqX8tbvGjqYbuXHqtGSz3dodXDS6ctwzwtkM9hW3d-X4WwNXUv-Ob5r7V7cH2hfGdydPSEi-tPBy9O1Mu9WSpR5OMr_2P-ksKEUQWUflVK05rzrBpyqk4ZHyWRYj77orR-tvgOwuvOm95TFP7CKnNAHBUkS1dflMmQNWmsap_8Y7SQHk0NbvF3Mx9vayMi5mM5kNPL65Wa_casF3rfB3hJkEBAAm0_c-HJzwH4qIonmd2QYBzJvr2CTkZbbOL2kvgDUs0" />
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-4">
+                            <div class="flex items-center gap-3 text-secondary mb-2">
+                                <span class="material-symbols-outlined icon-fill" data-icon="science">science</span>
+                                <span
+                                    class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Clinical
+                                    Lab</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary">Comprehensive Laboratory Testing
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Our on-site, fully accredited laboratory processes a wide array of blood, tissue, and
+                                fluid analyses with rapid turnaround times, ensuring your care team has critical
+                                information without delay.
+                            </p>
+                            <button
+                                class="mt-4 px-6 py-2 border border-outline-variant rounded text-on-surface font-portal-button text-portal-button hover:bg-surface-container-highest transition-colors">
+                                Learn About Lab Services
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Wellness Programs -->
+        <section class="py-section-gap-lg px-gutter bg-surface">
+            <div class="max-w-container-max mx-auto">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-outline-variant pb-6">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline-md text-headline-md text-primary mb-4">Wellness &amp; Prevention</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Beyond treating illness, we are dedicated to sustaining your health through structured
+                            wellness, rehabilitation, and preventive care programs.
+                        </p>
+                    </div>
+                    <a class="hidden md:inline-flex items-center gap-2 text-primary font-portal-button text-portal-button hover:text-secondary transition-colors mt-6 md:mt-0"
+                        href="#">
+                        View All Programs <span class="material-symbols-outlined"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,32,69,0.05)] transition-shadow cursor-pointer group">
+                        <div class="w-10 h-10 mb-4 text-primary group-hover:text-secondary transition-colors">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="fitness_center">fitness_center</span>
+                        </div>
+                        <h4 class="font-headline-sm text-body-lg font-bold text-primary mb-2">Physical Therapy</h4>
+                        <p class="font-body-md text-[14px] text-on-surface-variant">Customized rehabilitation plans to
+                            restore mobility and strength.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,32,69,0.05)] transition-shadow cursor-pointer group">
+                        <div class="w-10 h-10 mb-4 text-primary group-hover:text-secondary transition-colors">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="restaurant_menu">restaurant_menu</span>
+                        </div>
+                        <h4 class="font-headline-sm text-body-lg font-bold text-primary mb-2">Nutrition Counseling</h4>
+                        <p class="font-body-md text-[14px] text-on-surface-variant">Expert dietary guidance to support
+                            managing chronic conditions.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,32,69,0.05)] transition-shadow cursor-pointer group">
+                        <div class="w-10 h-10 mb-4 text-primary group-hover:text-secondary transition-colors">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="self_improvement">self_improvement</span>
+                        </div>
+                        <h4 class="font-headline-sm text-body-lg font-bold text-primary mb-2">Stress Management</h4>
+                        <p class="font-body-md text-[14px] text-on-surface-variant">Holistic approaches to reduce
+                            anxiety and improve mental resilience.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded border border-outline-variant hover:shadow-[0_4px_20px_rgba(0,32,69,0.05)] transition-shadow cursor-pointer group">
+                        <div class="w-10 h-10 mb-4 text-primary group-hover:text-secondary transition-colors">
+                            <span class="material-symbols-outlined text-3xl"
+                                data-icon="monitor_heart">monitor_heart</span>
+                        </div>
+                        <h4 class="font-headline-sm text-body-lg font-bold text-primary mb-2">Executive Health</h4>
+                        <p class="font-body-md text-[14px] text-on-surface-variant">Comprehensive, one-day preventive
+                            screening exams.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-primary-container w-full">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-section-gap-sm max-w-container-max mx-auto px-gutter py-section-gap-lg text-on-primary dark:text-on-primary-container">
+            <div class="md:col-span-1">
+                <div
+                    class="text-headline-sm font-headline-sm text-on-primary dark:text-on-primary-container mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined icon-fill">local_hospital</span>
+                    St. Jude Clinical
+                </div>
+                <p class="text-body-md font-body-md opacity-80 mt-4">
+                    Providing precise, compassionate care in a healing environment.
+                </p>
+            </div>
+            <div class="md:col-span-2 flex flex-col sm:flex-row gap-8 sm:gap-16">
+                <div>
+                    <h4 class="text-label-caps font-label-caps uppercase tracking-wider mb-4 opacity-60">Patient
+                        Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-body-md font-body-md text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                                href="#">Patient Portal</a></li>
+                        <li><a class="text-body-md font-body-md text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                                href="#">Insurance Partners</a></li>
+                        <li><a class="text-body-md font-body-md text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                                href="#">Clinic Locations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-label-caps font-label-caps uppercase tracking-wider mb-4 opacity-60">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-body-md font-body-md text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                                href="#">Privacy Policy</a></li>
+                        <li><a class="text-body-md font-body-md text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                                href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="md:col-span-1 flex flex-col justify-end border-t border-on-primary/20 pt-6 md:border-none md:pt-0">
+                <p class="text-label-caps font-label-caps opacity-60">
+                    © 2024 St. Jude Clinical Care. All rights reserved. HIPAA Compliant.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN INDUSTRIAL - Contact &amp; Estimate</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#3c4851",
+                    "surface-tint": "#ffb693",
+                    "background": "#131313",
+                    "tertiary": "#9ccaff",
+                    "error-container": "#93000a",
+                    "primary-fixed": "#ffdbcc",
+                    "on-tertiary-container": "#003357",
+                    "surface-container-high": "#2a2a2a",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#313030",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#9ccaff",
+                    "on-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-fixed": "#111d25",
+                    "on-primary-fixed": "#351000",
+                    "on-primary": "#561f00",
+                    "secondary": "#bbc8d3",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-primary-container": "#572000",
+                    "primary-fixed-dim": "#ffb693",
+                    "surface-container-highest": "#353535",
+                    "inverse-primary": "#a04100",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-dim": "#131313",
+                    "tertiary-fixed": "#d0e4ff",
+                    "surface-bright": "#393939",
+                    "primary-container": "#ff6b00",
+                    "on-secondary-container": "#adbac5",
+                    "secondary-fixed-dim": "#bbc8d3",
+                    "on-surface-variant": "#e2bfb0",
+                    "on-tertiary-fixed-variant": "#00497b",
+                    "on-secondary": "#26323b",
+                    "surface-variant": "#353535",
+                    "on-tertiary": "#003257",
+                    "outline-variant": "#5a4136",
+                    "outline": "#a98a7d",
+                    "secondary-fixed": "#d7e4f0",
+                    "tertiary-container": "#059eff",
+                    "secondary-container": "#3e4b54",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#001d35",
+                    "primary": "#ffb693",
+                    "surface-container": "#20201f",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-fixed-variant": "#7a3000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "column-count": "12",
+                    "margin-desktop": "32px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "technical-sm": ["JetBrains Mono"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "technical-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Blueprint Grid Effect */
+        .blueprint-bg {
+            background-size: 32px 32px;
+            background-image:
+                linear-gradient(to right, rgba(226, 191, 176, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 191, 176, 0.05) 1px, transparent 1px);
+        }
+        
+        /* Structural Brutalism Form Inputs */
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        /* Material Icons setup */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md blueprint-bg selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shared Component -->
+        <nav class="bg-background w-full top-0 border-b-2 border-outline-variant z-50 sticky">
+                <div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+                        <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                                TITAN INDUSTRIAL
+                        </div>
+                        <div class="hidden md:flex items-center space-x-gutter">
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="services.html">Services</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="industries.html">Industries</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="projects.html">Projects</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="about.html">About</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                                <button
+                                        class="bg-primary-container text-background font-label-caps text-label-caps px-4 py-2 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200">
+                                        Request Technical Specs
+                                </button>
+                        </div>
+                        <div class="md:hidden flex items-center">
+                                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+                        </div>
+                </div>
+        </nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col gap-12">
+<!-- Page Header -->
+<div class="border-l-4 border-primary pl-4 md:pl-8">
+<h1 class="font-headline-lg text-headline-lg text-on-background mb-2 tracking-tighter">GET AN ESTIMATE</h1>
+<p class="font-technical-sm text-technical-sm text-on-surface-variant max-w-2xl">
+                SYSTEM: INQUIRY LOGISTICS. SUBMIT DETAILED PROJECT SPECIFICATIONS FOR TECHNICAL REVIEW AND RESOURCE ALLOCATION.
+            </p>
+</div>
+<!-- Main Layout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Technical Inquiry Form (Col 8) -->
+<section class="md:col-span-8 bg-surface-container-high border-2 border-outline-variant flex flex-col">
+<!-- Module Header Bar -->
+<div class="h-10 border-b-2 border-outline-variant bg-surface-container-highest flex items-center px-4 justify-between">
+<span class="font-technical-sm text-technical-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">description</span>
+                        TECHNICAL_INQUIRY_FORM.SYS
+                    </span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">STATUS: READY</span>
+</div>
+<!-- Form Content -->
+<div class="p-6 md:p-8 flex flex-col gap-6">
+<form action="#" class="flex flex-col gap-6" method="POST">
+<!-- Row 1: Contact Info -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">CLIENT ID / COMPANY NAME</label>
+<input class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all placeholder:text-on-surface-variant/30" placeholder="ENTER ENTITY NAME" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PRIMARY CONTACT REGISTRY</label>
+<input class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all placeholder:text-on-surface-variant/30" placeholder="FULL NAME" type="text"/>
+</div>
+</div>
+<!-- Row 2: Comm Channels -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">SECURE EMAIL ADDRESS</label>
+<input class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all placeholder:text-on-surface-variant/30" placeholder="USER@DOMAIN.COM" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">DIRECT COMMS / PHONE</label>
+<input class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all placeholder:text-on-surface-variant/30" placeholder="+1 (000) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Row 3: Project Classification -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">PROJECT CLASSIFICATION VECTOR</label>
+<select class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all appearance-none cursor-pointer">
+<option>HEAVY MACHINERY INSTALLATION</option>
+<option>FACILITY RETROFITTING</option>
+<option>STRUCTURAL ENGINEERING</option>
+<option>LOGISTICS &amp; SUPPLY CHAIN ROUTING</option>
+<option>MAINTENANCE &amp; COMPLIANCE AUDIT</option>
+</select>
+</div>
+<!-- Row 4: Technical Specs -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant">OPERATIONAL PARAMETERS &amp; SPECIFICATIONS</label>
+<textarea class="bg-surface-dim border border-outline-variant focus:border-2 focus:border-primary text-on-surface font-technical-sm p-3 transition-all resize-y placeholder:text-on-surface-variant/30" placeholder="DETAIL SCOPE OF WORK, MATERIAL REQUIREMENTS, AND TIMELINES..." rows="6"></textarea>
+</div>
+<!-- Submit Action -->
+<div class="flex justify-end pt-4 border-t-2 border-outline-variant mt-2">
+<button class="bg-primary text-on-primary font-headline-md text-base py-3 px-8 hover:bg-primary-container transition-colors border-2 border-primary active:scale-95 flex items-center gap-2" type="submit">
+                                INITIATE ESTIMATE SEQUENCE
+                                <span class="material-symbols-outlined font-bold text-lg">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Support & Direct Lines (Col 4) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<!-- Support Panel -->
+<section class="bg-surface-container-high border-2 border-outline-variant flex flex-col">
+<div class="h-10 border-b-2 border-outline-variant bg-surface-container-highest flex items-center px-4">
+<span class="font-technical-sm text-technical-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+                            DIRECT_SUPPORT_LINES
+                        </span>
+</div>
+<div class="p-6 flex flex-col gap-6">
+<!-- Line 1 -->
+<div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PRIORITY TECHNICAL SUPPORT</span>
+<span class="font-headline-md text-xl text-primary tracking-tight">1-800-TTN-TECH</span>
+<span class="font-technical-sm text-xs text-on-surface-variant mt-1">OPERATIONAL 24/7/365</span>
+</div>
+<!-- Line 2 -->
+<div class="flex flex-col gap-1 border-l-2 border-outline-variant pl-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">LOGISTICS &amp; DISPATCH</span>
+<span class="font-headline-md text-xl text-on-surface tracking-tight">+1 (555) 890-1234</span>
+<span class="font-technical-sm text-xs text-on-surface-variant mt-1">0800 - 1800 EST</span>
+</div>
+<!-- Line 3 -->
+<div class="flex flex-col gap-1 border-l-2 border-outline-variant pl-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">COMPLIANCE &amp; SAFETY</span>
+<span class="font-headline-md text-xl text-on-surface tracking-tight">+1 (555) 890-9999</span>
+<span class="font-technical-sm text-xs text-on-surface-variant mt-1">MON - FRI</span>
+</div>
+</div>
+</section>
+<!-- Certification Badge -->
+<section class="bg-surface-container-high border-2 border-outline-variant p-6 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-on-surface-variant">SECURITY CLEARANCE</span>
+<span class="font-technical-sm text-technical-sm text-primary">ENCRYPTED COMMS PROTOCOL ACTIVE</span>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary fill">verified_user</span>
+</section>
+</div>
+</div>
+<!-- Global Locations Divider -->
+<div class="border-b-2 border-outline-variant mt-8 relative">
+<div class="absolute -top-3 left-8 bg-background px-4 font-headline-md text-headline-md text-on-background tracking-tighter">
+                GLOBAL FACILITIES
+            </div>
+</div>
+<!-- Locations Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-4">
+<!-- Location 1: Headquarters -->
+<article class="bg-surface-container-high border-2 border-outline-variant flex flex-col group hover:border-primary transition-colors">
+<div class="h-10 border-b-2 border-outline-variant bg-surface-container-highest flex items-center px-4 justify-between">
+<span class="font-technical-sm text-technical-sm text-on-surface">LOC_01: DETROIT, MI</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 font-label-caps text-[10px]">HQ</span>
+</div>
+<!-- Map Image Placeholder -->
+<div class="h-48 w-full border-b-2 border-outline-variant bg-surface-dim relative overflow-hidden">
+<img alt="Map of Detroit HQ" class="object-cover w-full h-full opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A highly stylized, blueprint-inspired aerial map view of an industrial district in Detroit. The image features a strict dark mode aesthetic with deep charcoal backgrounds and bright, high-contrast safety orange architectural lines outlining major freeways and massive factory complexes. The mood is highly technical and precise, evoking a satellite interface used for advanced logistics routing." data-location="Detroit, MI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGz2FqEQUKyCkjyAOzMRsbZTxzjTywhsd2arXhWoUwzQniSJCJ-wNIFb-T2DbgIno7LCzV-TldCIi8k3sn_fmnkM1CndMPJD2T-PRzW2lw5y-8kZebLDXKTjrBbX79MRdX9K0EDtP2hoi11sumIZ1ZTYYc7oZVcFiG4b-bif5VUV-_7qfWZYq5BBfCS6F-0aUKeR_hjaxZbckwv9eBXka2_e6zTI_AkzOMO_XDw38YD_Up63iUDswKtU06Wjb6jSyYcz1KwpCm45DS"/>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary pointer-events-none transition-colors"></div>
+<!-- Target Reticle Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-primary rounded-full flex items-center justify-center pointer-events-none">
+<div class="w-1 h-1 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<p class="font-body-md text-on-surface">Sector 4 Industrial Park<br/>8900 Heavy Forge Way<br/>Detroit, MI 48201</p>
+<a class="font-technical-sm text-primary mt-4 flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-sm">route</span>
+                        ENGAGE NAV ROUTING
+                    </a>
+</div>
+</article>
+<!-- Location 2: European Hub -->
+<article class="bg-surface-container-high border-2 border-outline-variant flex flex-col group hover:border-primary transition-colors">
+<div class="h-10 border-b-2 border-outline-variant bg-surface-container-highest flex items-center px-4 justify-between">
+<span class="font-technical-sm text-technical-sm text-on-surface">LOC_02: FRANKFURT, DE</span>
+<span class="border border-outline-variant text-on-surface-variant px-2 py-0.5 font-label-caps text-[10px]">HUB</span>
+</div>
+<div class="h-48 w-full border-b-2 border-outline-variant bg-surface-dim relative overflow-hidden">
+<img alt="Map of Frankfurt Hub" class="object-cover w-full h-full opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A stark, dark-mode satellite map visualization of Frankfurt's industrial outskirts. The aesthetic mimics a military or heavy logistics control panel, utilizing a dark slate grey background overlaid with sharp, structural grid lines. Key facilities are highlighted with glowing safety orange borders, communicating uncompromising clarity and structural brutalism. The scene feels cold, precise, and heavily engineered." data-location="Frankfurt, Germany" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl4pt5NUkgVDm8QD2UzhBnoc-tyIOilu7vP8S-lUGiG8PI8K5yrQFFqV7MOcB4RuVjQzm6PPJoUjKzpEQyJxVSe4C-zoLQ4LR9HxkDq9H09E3uC2_XFHIdmdoHixNpafrsYuGUQljdD1GGer2iT_FjpxAdofae6qCkEMcnQrl-ElrXRsaCauVl4lN8Q7ipw_nvjLeZ3gv1gLwWhGZL74DkM2Eznm-NkvAZdzIltTH8rH1P-ht2v0taqGS3x22qxZUHtH0iLK8bI2tJ"/>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary pointer-events-none transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-primary rounded-full flex items-center justify-center pointer-events-none">
+<div class="w-1 h-1 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<p class="font-body-md text-on-surface">Logistikzentrum Alpha<br/>Autobahn-Ring 42<br/>60549 Frankfurt am Main</p>
+<a class="font-technical-sm text-primary mt-4 flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-sm">route</span>
+                        ENGAGE NAV ROUTING
+                    </a>
+</div>
+</article>
+<!-- Location 3: APAC Node -->
+<article class="bg-surface-container-high border-2 border-outline-variant flex flex-col group hover:border-primary transition-colors">
+<div class="h-10 border-b-2 border-outline-variant bg-surface-container-highest flex items-center px-4 justify-between">
+<span class="font-technical-sm text-technical-sm text-on-surface">LOC_03: SINGAPORE, SG</span>
+<span class="border border-outline-variant text-on-surface-variant px-2 py-0.5 font-label-caps text-[10px]">NODE</span>
+</div>
+<div class="h-48 w-full border-b-2 border-outline-variant bg-surface-dim relative overflow-hidden">
+<img alt="Map of Singapore Node" class="object-cover w-full h-full opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="An imposing, high-contrast digital map interface centered on Jurong Port, Singapore. The visual style is rooted in structural brutalism, featuring a deep charcoal base palette cut by razor-sharp white architectural lines and thick 2px safety orange accent paths. The map emphasizes shipping lanes and heavy infrastructure over natural features, generating an emotional response of systematic order and absolute operational control." data-location="Jurong Port, Singapore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4N5C1ypgTrDAWQJASR4Uvefap7BDePt_kVBwNCduuDXXUA4b6heA7C2lSL5esw2zG-lVjUyRQUgaodusj1HbiTgOt_wQK80CRhpwYjL43kGjjGF6WpIeXhCD6oIkiiHsLZ1yRZNPQcaEZhd2O-uOIYvLKJF-_InBoVa_q_PUZfeh24ukuZU2DqG40oRxvQK0FvE1IjetkLlWEt-lb-UvIF1XiUyGgJ3z-DJZY0jCQbOLSlxzWkdsCeTt3z4pGQNgpq2lZ4cra4wo3"/>
+<div class="absolute inset-0 border-2 border-transparent group-hover:border-primary pointer-events-none transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 border border-primary rounded-full flex items-center justify-center pointer-events-none">
+<div class="w-1 h-1 bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-2">
+<p class="font-body-md text-on-surface">Jurong Port Industrial Estate<br/>15 Heavy Lift Avenue<br/>Singapore 619108</p>
+<a class="font-technical-sm text-primary mt-4 flex items-center gap-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-sm">route</span>
+                        ENGAGE NAV ROUTING
+                    </a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full bottom-0 bg-surface-container-lowest dark:bg-surface-container-lowest border-t-2 border-outline-variant dark:border-outline-variant bg-[url('blueprint-grid.svg')] relative">
+<!-- Since we can't use real SVG for background, we overlay the CSS blueprint via the body, but let's ensure the footer has it if requested specifically, though the body already handles the ambient grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-12 max-w-[1440px] mx-auto z-10 relative">
+<!-- Brand & Copyright -->
+<div class="col-span-1 md:col-span-4 flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-black text-on-surface dark:text-on-surface">
+                    TITAN INDUSTRIAL
+                </div>
+<p class="font-technical-sm text-technical-sm text-on-secondary-container dark:text-on-secondary-container max-w-sm mt-4">
+                    © 2024 TITAN INDUSTRIAL. ALL RIGHTS RESERVED. ENGINEERED FOR PRECISION.
+                </p>
+</div>
+<!-- Links Area -->
+<div class="col-span-1 md:col-span-8 flex flex-wrap justify-end gap-x-8 gap-y-4 items-end h-full">
+<a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container transition-all duration-300 ease-in-out" href="#">
+                    ISO 9001 CERTIFIED
+                </a>
+<a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container transition-all duration-300 ease-in-out" href="#">
+                    OHSAS 18001 COMPLIANT
+                </a>
+<a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container transition-all duration-300 ease-in-out" href="#">
+                    Sitemap
+                </a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary underline hover:text-primary-container dark:hover:text-primary-container transition-all duration-300 ease-in-out" href="#">
+                    Office Locations
+                </a>
+<a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container transition-all duration-300 ease-in-out" href="#">
+                    Terms of Service
+                </a>
+</div>
+</div>
+</footer>
+</body></html>

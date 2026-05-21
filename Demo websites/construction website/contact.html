@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - CONSTRUCT-PRO</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fb",
+                        "surface-tint": "#a04100",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary": "#5c5f62",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#e2bfb0",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "primary": "#a04100",
+                        "on-primary-fixed": "#351000",
+                        "surface-container-highest": "#e1e2e4",
+                        "tertiary-container": "#96999d",
+                        "primary-container": "#ff6b00",
+                        "on-tertiary-container": "#2e3134",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#8e7164",
+                        "inverse-primary": "#ffb693",
+                        "on-primary-container": "#572000",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "secondary-fixed": "#e5e2e3",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed-variant": "#474647",
+                        "secondary": "#5f5e5f",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-container-high": "#e7e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e0e2e6",
+                        "surface-variant": "#e1e2e4",
+                        "secondary-container": "#e2dfe0",
+                        "surface-container-low": "#f3f4f6",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#191c1f",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "background": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#636263"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "16px",
+                        "base": "8px",
+                        "margin-desktop": "48px",
+                        "stack-md": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "900" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border: 4px solid #191c1e;
+            /* Deep Charcoal */
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        /* Custom Checkbox/Radio */
+        .custom-radio {
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #191c1e;
+            border-radius: 0;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            background-color: #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .custom-radio:checked {
+            background-color: #ff6b00;
+            border-color: #191c1e;
+        }
+
+        .custom-radio:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background-color: #191c1e;
+        }
+
+        .input-field {
+            border: 2px solid #191c1e;
+            border-radius: 0;
+            transition: border-color 0.2s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #ff6b00;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-inverse-surface w-full top-0 sticky border-b-4 border-inverse-surface dark:border-surface-dim z-50">
+        <div class="flex justify-between items-center h-20 px-margin-desktop max-w-[1200px] mx-auto hidden md:flex">
+            <!-- Brand -->
+            <div
+                class="font-headline-md text-headline-md font-black uppercase tracking-tighter text-on-surface dark:text-inverse-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <!-- Links -->
+            <div class="flex space-x-gutter items-center">
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="index.html">Home</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="services.html">Services</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="project.html">Portfolio</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="about.html">About</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Action -->
+            <button
+                class="bg-primary-container text-on-surface font-label-bold text-label-bold uppercase px-6 py-3 rounded-none hover:bg-primary transition-colors border-2 border-transparent">
+                Request a Quote
+            </button>
+        </div>
+        <!-- Mobile Nav Shell -->
+        <div class="md:hidden flex justify-between items-center h-20 px-margin-mobile w-full">
+            <div
+                class="font-headline-lg-mobile text-headline-lg-mobile font-black uppercase tracking-tighter text-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <button class="text-on-surface">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+        <!-- Header Section -->
+        <div class="mb-stack-lg text-center md:text-left border-b-4 border-on-surface pb-stack-md">
+            <h1
+                class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary-container uppercase mb-base">
+                Ready to build?</h1>
+            <p class="font-body-lg text-body-lg text-secondary max-w-2xl">Connect with our engineering experts to
+                discuss your next infrastructure project. We build heavy-duty solutions designed to last generations.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Contact Details & Map (Left Column) -->
+            <div class="lg:col-span-5 flex flex-col gap-stack-md">
+                <!-- Contact Info Card -->
+                <div class="bg-surface-container-low border-2 border-on-surface p-stack-sm flex flex-col gap-stack-sm">
+                    <h2 class="font-headline-sm text-headline-sm uppercase border-b-2 border-on-surface pb-2">
+                        Headquarters</h2>
+                    <div class="flex items-start gap-base">
+                        <span class="material-symbols-outlined text-primary-container"
+                            style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        <div>
+                            <p class="font-label-bold text-label-bold text-on-surface">Address</p>
+                            <p class="font-body-md text-body-md text-secondary">100 Steelworks Avenue<br />Industrial
+                                District<br />Chicago, IL 60601</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-base">
+                        <span class="material-symbols-outlined text-primary-container"
+                            style="font-variation-settings: 'FILL' 1;">call</span>
+                        <div>
+                            <p class="font-label-bold text-label-bold text-on-surface">Direct Line</p>
+                            <p class="font-body-md text-body-md text-secondary">+1 (555) 890-1234</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-base">
+                        <span class="material-symbols-outlined text-primary-container"
+                            style="font-variation-settings: 'FILL' 1;">mail</span>
+                        <div>
+                            <p class="font-label-bold text-label-bold text-on-surface">Estimating &amp; Inquiries</p>
+                            <p class="font-body-md text-body-md text-secondary">quotes@construct-pro.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map Embed -->
+                <div class="map-container w-full bg-surface-container-high" data-location="Chicago" style="">
+                    <!-- Placeholder for Map, using iframe for actual implementation -->
+                    <img alt="Aerial map view of a dense urban industrial district in Chicago, highlighting steel bridges and concrete infrastructure."
+                        class="absolute inset-0 w-full h-full object-cover opacity-80"
+                        data-alt="An aerial, high-contrast overhead shot of a sprawling industrial district in a major city like Chicago. The image showcases heavy infrastructure, steel bridges, concrete roads, and large warehouse roofs. The lighting is harsh and direct, creating deep black shadows and bright concrete highlights, perfectly matching an industrial, structural aesthetic."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyVP6CIXVRITXTMF_HWc_QVP6dsBrvBRprzkLLkCkpdw491j5BAUfOqHwUngZ8kd4Oz5KksERF0qEIZjciNNaOyUYGFuUoOSu6Nbm1yGIQ3-ID6XbvFqCUDmFETOt6YWXfaEHBdu_5xCII4qqtQV8-2J88W_8i73kAkMJGVY1c6_URqN9Ys-NATMkFDPiq-wMT9njG5Rcs8OB9eIKswMETdXNW9O_IiSQOz9nIWOpeiVF-EyXTOZObvVmxlIUoYyvnkJ7N3xl8Pbdv" />
+                    <div class="absolute inset-0 bg-on-surface/20 mix-blend-multiply"></div>
+                    <!-- Map marker pin -->
+                    <div
+                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                        <div
+                            class="bg-primary-container text-on-surface p-2 border-2 border-on-surface shadow-[4px_4px_0px_#191c1e]">
+                            <span class="material-symbols-outlined block"
+                                style="font-size: 32px; font-variation-settings: 'FILL' 1;">factory</span>
+                        </div>
+                        <div class="w-1 h-8 bg-on-surface"></div>
+                        <div class="w-4 h-4 rounded-full bg-on-surface"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Request Quote Form (Right Column) -->
+            <div class="lg:col-span-7">
+                <div
+                    class="bg-surface-container-lowest border-4 border-on-surface p-margin-mobile md:p-stack-md h-full">
+                    <div class="mb-stack-sm flex justify-between items-end border-b-2 border-on-surface pb-base">
+                        <h2 class="font-headline-md text-headline-md uppercase">Request a Free Quote</h2>
+                        <div class="font-label-bold text-label-bold text-secondary">Step <span
+                                id="current-step">1</span> of 3</div>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div class="w-full h-3 bg-surface-container-highest mb-stack-md border-y-2 border-on-surface flex">
+                        <div class="h-full bg-primary-container border-r-2 border-on-surface transition-all duration-300 w-1/3"
+                            id="progress-bar"></div>
+                    </div>
+                    <form class="flex flex-col h-full" id="quote-form">
+                        <!-- Step 1: Project Type -->
+                        <div class="step-content active flex-grow" id="step-1">
+                            <h3 class="font-headline-sm text-headline-sm mb-base">Select Project Scope</h3>
+                            <p class="font-body-md text-body-md text-secondary mb-stack-sm">Identify the primary
+                                structural requirement.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-base">
+                                <label
+                                    class="flex items-center p-4 border-2 border-on-surface bg-surface-container-low hover:bg-surface-variant cursor-pointer transition-colors group">
+                                    <input checked="" class="custom-radio mr-4" name="project_type" type="radio"
+                                        value="commercial" />
+                                    <span
+                                        class="font-label-bold text-label-bold uppercase group-hover:text-primary-container transition-colors">Commercial
+                                        Building</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 border-2 border-on-surface bg-surface-container-low hover:bg-surface-variant cursor-pointer transition-colors group">
+                                    <input class="custom-radio mr-4" name="project_type" type="radio"
+                                        value="infrastructure" />
+                                    <span
+                                        class="font-label-bold text-label-bold uppercase group-hover:text-primary-container transition-colors">Civil
+                                        Infrastructure</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 border-2 border-on-surface bg-surface-container-low hover:bg-surface-variant cursor-pointer transition-colors group">
+                                    <input class="custom-radio mr-4" name="project_type" type="radio"
+                                        value="industrial" />
+                                    <span
+                                        class="font-label-bold text-label-bold uppercase group-hover:text-primary-container transition-colors">Industrial
+                                        Facility</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 border-2 border-on-surface bg-surface-container-low hover:bg-surface-variant cursor-pointer transition-colors group">
+                                    <input class="custom-radio mr-4" name="project_type" type="radio"
+                                        value="renovation" />
+                                    <span
+                                        class="font-label-bold text-label-bold uppercase group-hover:text-primary-container transition-colors">Structural
+                                        Renovation</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Step 2: Contact Details -->
+                        <div class="step-content flex-grow" id="step-2">
+                            <h3 class="font-headline-sm text-headline-sm mb-base">Contact Information</h3>
+                            <p class="font-body-md text-body-md text-secondary mb-stack-sm">Who should our engineering
+                                team contact?</p>
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex flex-col">
+                                        <label class="font-label-bold text-label-bold mb-1 uppercase"
+                                            for="first_name">First Name</label>
+                                        <input
+                                            class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface"
+                                            id="first_name" name="first_name" required="" type="text" />
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label class="font-label-bold text-label-bold mb-1 uppercase"
+                                            for="last_name">Last Name</label>
+                                        <input
+                                            class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface"
+                                            id="last_name" name="last_name" required="" type="text" />
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="flex flex-col">
+                                        <label class="font-label-bold text-label-bold mb-1 uppercase"
+                                            for="email">Corporate Email</label>
+                                        <input
+                                            class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface"
+                                            id="email" name="email" required="" type="email" />
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <label class="font-label-bold text-label-bold mb-1 uppercase" for="phone">Phone
+                                            Number</label>
+                                        <input
+                                            class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface"
+                                            id="phone" name="phone" required="" type="tel" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-label-bold text-label-bold mb-1 uppercase" for="company">Company
+                                        Name</label>
+                                    <input
+                                        class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface"
+                                        id="company" name="company" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Step 3: Project Details -->
+                        <div class="step-content flex-grow" id="step-3">
+                            <h3 class="font-headline-sm text-headline-sm mb-base">Project Specifications</h3>
+                            <p class="font-body-md text-body-md text-secondary mb-stack-sm">Provide preliminary details
+                                to assist our estimation.</p>
+                            <div class="space-y-4">
+                                <div class="flex flex-col">
+                                    <label class="font-label-bold text-label-bold mb-1 uppercase"
+                                        for="timeline">Estimated Timeline</label>
+                                    <select
+                                        class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface appearance-none rounded-none"
+                                        id="timeline" name="timeline">
+                                        <option value="immediate">Immediate (0-3 Months)</option>
+                                        <option value="short">Short Term (3-6 Months)</option>
+                                        <option value="long">Long Term (6+ Months)</option>
+                                        <option value="planning">Planning Phase</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label class="font-label-bold text-label-bold mb-1 uppercase"
+                                        for="details">Additional Details</label>
+                                    <textarea
+                                        class="input-field bg-surface-container-lowest p-3 w-full font-body-md text-on-surface resize-none"
+                                        id="details" name="details"
+                                        placeholder="Briefly describe the structural requirements, square footage, or specific materials needed..."
+                                        rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form Navigation Buttons -->
+                        <div class="mt-stack-md pt-stack-sm border-t-2 border-on-surface flex justify-between">
+                            <button
+                                class="bg-transparent text-on-surface font-label-bold text-label-bold uppercase px-6 py-3 border-2 border-on-surface hover:bg-on-surface hover:text-on-primary transition-colors hidden"
+                                id="prev-btn" type="button">
+                                Previous
+                            </button>
+                            <button
+                                class="bg-primary-container text-on-surface font-label-bold text-label-bold uppercase px-6 py-3 border-2 border-on-surface hover:bg-primary transition-colors ml-auto shadow-[4px_4px_0px_#191c1e] active:shadow-[0px_0px_0px_#191c1e] active:translate-x-[4px] active:translate-y-[4px]"
+                                id="next-btn" type="button">
+                                Next Step
+                            </button>
+                            <button
+                                class="bg-on-surface text-on-primary font-label-bold text-label-bold uppercase px-6 py-3 border-2 border-on-surface hover:bg-inverse-surface transition-colors ml-auto shadow-[4px_4px_0px_#ff6b00] active:shadow-[0px_0px_0px_#ff6b00] active:translate-x-[4px] active:translate-y-[4px] hidden"
+                                id="submit-btn" type="submit">
+                                Submit Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-stack-lg bg-inverse-surface dark:bg-surface-container-lowest border-t-8 border-primary">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-md max-w-[1200px] mx-auto">
+            <div class="col-span-1 md:col-span-1 flex flex-col justify-between h-full">
+                <span
+                    class="font-headline-sm text-headline-sm font-black text-on-primary uppercase tracking-tighter">CONSTRUCT-PRO</span>
+                <p class="font-body-md text-body-md text-surface-variant dark:text-secondary mt-4 md:mt-0">
+                    © 2024 CONSTRUCT-PRO. BUILT TO LAST.
+                </p>
+            </div>
+            <div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-end">
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Safety Manual</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Careers</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Locations</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Nav Shell (Mobile) -->
+    <div class="md:hidden fixed bottom-0 w-full bg-surface-container-lowest border-t-2 border-on-surface z-50">
+        <div class="flex justify-around items-center h-16">
+            <a class="flex flex-col items-center justify-center w-full h-full text-secondary hover:text-primary-container"
+                href="#">
+                <span class="material-symbols-outlined mb-1">home</span>
+                <span class="text-[10px] font-label-bold uppercase">Home</span>
+            </a>
+            <a class="flex flex-col items-center justify-center w-full h-full text-secondary hover:text-primary-container"
+                href="#">
+                <span class="material-symbols-outlined mb-1">precision_manufacturing</span>
+                <span class="text-[10px] font-label-bold uppercase">Services</span>
+            </a>
+            <a class="flex flex-col items-center justify-center w-full h-full bg-primary-container text-on-surface border-x-2 border-on-surface"
+                href="#">
+                <span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">mail</span>
+                <span class="text-[10px] font-label-bold uppercase">Contact</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const steps = document.querySelectorAll('.step-content');
+            const nextBtn = document.getElementById('next-btn');
+            const prevBtn = document.getElementById('prev-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            const progressBar = document.getElementById('progress-bar');
+            const currentStepSpan = document.getElementById('current-step');
+
+            let currentStep = 1;
+            const totalSteps = steps.length;
+
+            function updateForm() {
+                // Hide all steps
+                steps.forEach(step => step.classList.remove('active'));
+
+                // Show current step
+                document.getElementById(`step-${currentStep}`).classList.add('active');
+
+                // Update text
+                currentStepSpan.textContent = currentStep;
+
+                // Update progress bar
+                progressBar.style.width = `${(currentStep / totalSteps) * 100}%`;
+
+                // Button logic
+                if (currentStep === 1) {
+                    prevBtn.classList.add('hidden');
+                } else {
+                    prevBtn.classList.remove('hidden');
+                }
+
+                if (currentStep === totalSteps) {
+                    nextBtn.classList.add('hidden');
+                    submitBtn.classList.remove('hidden');
+                } else {
+                    nextBtn.classList.remove('hidden');
+                    submitBtn.classList.add('hidden');
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentStep < totalSteps) {
+                    // Basic validation before moving (very minimal for demo)
+                    const currentStepEl = document.getElementById(`step-${currentStep}`);
+                    const inputs = currentStepEl.querySelectorAll('input[required]');
+                    let valid = true;
+                    inputs.forEach(input => {
+                        if (!input.value) valid = false;
+                    });
+
+                    // Allow move even if not valid for demo purposes, but normally would block
+                    currentStep++;
+                    updateForm();
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentStep > 1) {
+                    currentStep--;
+                    updateForm();
+                }
+            });
+
+            // Initial setup
+            updateForm();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TITAN INDUSTRIAL - About Us</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3c4851",
+                        "surface-tint": "#ffb693",
+                        "background": "#131313",
+                        "tertiary": "#9ccaff",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffdbcc",
+                        "on-tertiary-container": "#003357",
+                        "surface-container-high": "#2a2a2a",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#313030",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#9ccaff",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#111d25",
+                        "on-primary-fixed": "#351000",
+                        "on-primary": "#561f00",
+                        "secondary": "#bbc8d3",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#572000",
+                        "primary-fixed-dim": "#ffb693",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#a04100",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed": "#d0e4ff",
+                        "surface-bright": "#393939",
+                        "primary-container": "#ff6b00",
+                        "on-secondary-container": "#adbac5",
+                        "secondary-fixed-dim": "#bbc8d3",
+                        "on-surface-variant": "#e2bfb0",
+                        "on-tertiary-fixed-variant": "#00497b",
+                        "on-secondary": "#26323b",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#003257",
+                        "outline-variant": "#5a4136",
+                        "outline": "#a98a7d",
+                        "secondary-fixed": "#d7e4f0",
+                        "tertiary-container": "#059eff",
+                        "secondary-container": "#3e4b54",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#001d35",
+                        "primary": "#ffb693",
+                        "surface-container": "#20201f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#7a3000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "column-count": "12",
+                        "margin-desktop": "32px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "technical-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "technical-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .blueprint-bg {
+            background-image: linear-gradient(to right, rgba(90, 65, 54, 0.1) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(90, 65, 54, 0.1) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background dark min-h-screen flex flex-col font-body-md text-body-md blueprint-bg">
+<!-- TopNavBar -->
+        <nav class="bg-background w-full top-0 border-b-2 border-outline-variant z-50 sticky">
+                <div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+                        <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                                TITAN INDUSTRIAL
+                        </div>
+                        <div class="hidden md:flex items-center space-x-gutter">
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="services.html">Services</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="industries.html">Industries</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="projects.html">Projects</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="about.html">About</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                                <button
+                                        class="bg-primary-container text-background font-label-caps text-label-caps px-4 py-2 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200">
+                                        Request Technical Specs
+                                </button>
+                        </div>
+                        <div class="md:hidden flex items-center">
+                                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+                        </div>
+                </div>
+        </nav>
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin-desktop py-12 flex flex-col gap-12">
+<!-- Mission Statement / Hero -->
+<section class="border-2 border-outline-variant bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[24px] bg-surface-variant border-b-2 border-outline-variant flex items-center px-4">
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">// MODULE: CORE_MISSION</span>
+</div>
+<div class="p-8 md:p-16 mt-[24px] grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="flex flex-col gap-6">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">PRECISION.<br/><span class="text-primary">SAFETY.</span><br/>INNOVATION.</h1>
+<p class="font-body-lg text-body-lg text-on-secondary-container max-w-xl">
+                        At TITAN INDUSTRIAL, we do not merely construct; we engineer structural certainties. Since our inception, we have systematically optimized every aspect of heavy manufacturing and industrial logistics. Our mission is bound by a rigorous commitment to absolute precision, zero-incident safety protocols, and continuous technical innovation.
+                    </p>
+</div>
+<div class="h-64 lg:h-full min-h-[300px] border-2 border-outline-variant bg-surface-container-low relative">
+<!-- Technical diagram or high contrast structural image -->
+<div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-luminosity" data-alt="A highly detailed, technical blueprint-style photograph of heavy industrial machinery gears and structural steel beams. The lighting is high-contrast, dramatic, and stark, emphasizing the geometric precision and brutalist nature of the manufacturing process. The color palette relies heavily on deep charcoal blacks, stark whites, and intense safety orange accents. The mood is powerful, systematic, and engineered." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEzo0CW9YpfKRl6lV1Nnj0q6OaPtRuq95t3zXnhmYaYZpuKAmLc1QoOOnq4wWgN_Bv6M5xQdPR9LRYH6Lkmj2SiboJE1w_tGdccT9AYTBYK9HZAQD1BVSMhsrd8o5AB5geJ3NDjSCTbdug9gVA1M7nR8lRKHYwwuHNPB2-ZQIpQocIM4DItwgapyr9OEsbDdHmwFOrjDx9zn_LB6gw8WUGCkT-iLXzPF3e5dow4tJyOua0-mc6HHblv4wwPi8oF6BniyEqgg1bq0v5');">
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline -->
+<section class="flex flex-col gap-4">
+<div class="border-b-2 border-outline-variant pb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">Operational History</h2>
+</div>
+<div class="grid grid-cols-1 gap-0 border-2 border-outline-variant bg-surface-container-high">
+<!-- 1985 -->
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] border-b-2 border-outline-variant last:border-b-0">
+<div class="bg-surface-variant border-r-2 border-outline-variant p-4 flex items-center md:justify-center">
+<span class="font-technical-sm text-technical-sm text-primary">1985</span>
+</div>
+<div class="p-6">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-2 uppercase">Foundation &amp; Initial Deployment</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">TITAN INDUSTRIAL is established to provide high-grade structural steel frameworks for domestic manufacturing facilities. First continuous production line activated.</p>
+</div>
+</div>
+<!-- 1998 -->
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] border-b-2 border-outline-variant last:border-b-0">
+<div class="bg-surface-variant border-r-2 border-outline-variant p-4 flex items-center md:justify-center">
+<span class="font-technical-sm text-technical-sm text-primary">1998</span>
+</div>
+<div class="p-6">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-2 uppercase">Automation Protocol Integration</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">Implementation of automated robotic welding systems across all primary facilities, increasing production output precision by 400% while standardizing safety baseline.</p>
+</div>
+</div>
+<!-- 2012 -->
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] border-b-2 border-outline-variant last:border-b-0">
+<div class="bg-surface-variant border-r-2 border-outline-variant p-4 flex items-center md:justify-center">
+<span class="font-technical-sm text-technical-sm text-primary">2012</span>
+</div>
+<div class="p-6">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-2 uppercase">Global Logistics Expansion</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">Launched maritime heavy-lift division and opened high-capacity specialized ports in Europe and Asia, solidifying TITAN's international structural supply chain.</p>
+</div>
+</div>
+<!-- Present -->
+<div class="grid grid-cols-1 md:grid-cols-[120px_1fr] border-b-0 border-outline-variant relative overflow-hidden">
+<div class="absolute left-0 top-0 w-[4px] h-full bg-primary z-10"></div>
+<div class="bg-surface-variant border-r-2 border-outline-variant p-4 flex items-center md:justify-center pl-6">
+<span class="font-technical-sm text-technical-sm text-primary">PRESENT</span>
+</div>
+<div class="p-6">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-2 uppercase">Advanced Materials Research</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">Focusing on high-tensile composite alloys and smart-sensor embedded structural modules for the next generation of industrial infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Team -->
+<section class="flex flex-col gap-4">
+<div class="border-b-2 border-outline-variant pb-2 flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">Command Structure</h2>
+<span class="font-technical-sm text-technical-sm text-on-surface-variant hidden md:block">EXECUTIVE_BOARD</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Leader 1 -->
+<article class="border-2 border-outline-variant bg-surface-container-high flex flex-col">
+<div class="h-[24px] bg-surface-variant border-b-2 border-outline-variant flex items-center px-2">
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">ID: CMD-01</span>
+</div>
+<div class="aspect-square bg-surface-container-low border-b-2 border-outline-variant relative overflow-hidden group">
+<img alt="CEO Portrait" class="object-cover w-full h-full grayscale mix-blend-luminosity group-hover:grayscale-0 transition-all duration-500" data-alt="A professional, high-contrast, technical-style headshot of a stern industrial executive in his 50s. The portrait is taken against a stark, dark grey blueprint grid background. The lighting is harsh and directional, emphasizing facial structure and conveying authority. The image relies heavily on monochrome tones with a subtle, thin safety orange border around the frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhEa0jVdQGzp9bULayxRwaKXH-OKmB3C8_0fEArCTb-cC7ljAlTIpE2yj6D9qrIEFN80oO_uLxSLCoDppAZjXdfwMpxyiePzcqx7GUCIfA8VplEeUBwB0CKzX0RimnT4mLZEaT9sgdRsyljjmA2FP0GeeTz7R5MLgjv30YFcMe697pn56OkZqW0wmftLs2xdYnAV9w5xH1syRvHhJTCjRGajwPO4XM0wmhIt_M-sQ8Zvs0VLca6Tcn4llY43toADnu7GytH5bLunBC"/>
+</div>
+<div class="p-4 bg-surface-container-highest">
+<h3 class="font-headline-md text-headline-md text-on-surface">MARCUS VANCE</h3>
+<p class="font-label-caps text-label-caps text-primary mt-1 uppercase">Chief Executive Officer</p>
+</div>
+</article>
+<!-- Leader 2 -->
+<article class="border-2 border-outline-variant bg-surface-container-high flex flex-col">
+<div class="h-[24px] bg-surface-variant border-b-2 border-outline-variant flex items-center px-2">
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">ID: CMD-02</span>
+</div>
+<div class="aspect-square bg-surface-container-low border-b-2 border-outline-variant relative overflow-hidden group">
+<img alt="COO Portrait" class="object-cover w-full h-full grayscale mix-blend-luminosity group-hover:grayscale-0 transition-all duration-500" data-alt="A sharp, technical-style headshot of a female Chief Operating Officer in her 40s wearing minimal, professional attire. The background is a deep charcoal industrial texture. High-key stark lighting defines the edges of her silhouette, creating an imposing and precise mood. Colors are predominantly grayscale with a rigid, brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATxjPohWUj54rwN6bzzwuCQeU0i1UKtaFRgSCshfGq4R_Chl2D8Xi3T-U_RUAqw1Ti62Q2UkNs_JdTXMSaemFYt72OvjcF1r9FxUsYFoGWjxEQx0cMW5OO3cMzRCaV3N41ZcjeqBuWYhuYtDGaVbv0-bLR4ZM30YN8v8_75lUgF4wbhGjejC1UAuffScbb1qqlRN78Qdo3zOiRr3h2w6K2m8wpv1aeCQWo8CfR9scaGrzuoHjttemiIL-aabVQcr_Qi8UebKjxrRf0"/>
+</div>
+<div class="p-4 bg-surface-container-highest">
+<h3 class="font-headline-md text-headline-md text-on-surface">ELENA ROSTOVA</h3>
+<p class="font-label-caps text-label-caps text-primary mt-1 uppercase">VP of Operations</p>
+</div>
+</article>
+<!-- Leader 3 -->
+<article class="border-2 border-outline-variant bg-surface-container-high flex flex-col">
+<div class="h-[24px] bg-surface-variant border-b-2 border-outline-variant flex items-center px-2">
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">ID: CMD-03</span>
+</div>
+<div class="aspect-square bg-surface-container-low border-b-2 border-outline-variant relative overflow-hidden group">
+<img alt="CTO Portrait" class="object-cover w-full h-full grayscale mix-blend-luminosity group-hover:grayscale-0 transition-all duration-500" data-alt="A dramatic, high-contrast portrait of a male Chief Technology Officer in his 40s. He is looking directly at the camera with a calculated expression. The setting is abstract and technical, featuring subtle grid lines and slate grey tones. Lighting is precise and unforgiving, highlighting the concept of industrial engineering and structural control." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_YxancG1vMqNVsjY7-dWqOpkG8B69yHDCL9QCEi2qLIoq81ciSF5xXt_wSMWELBwITWXAdG9MOQ4s4Shsct8v66lZOvibUuEFD9NpCVN6jb_xMZglxSc7eu8sFydDQNpj0vvlhDZFG3xIGmTHNQF6kpYPlSYsu_SFrtR9m7XJ94iioJatmt81IaomK-WPqXfIlCLITPsi-PeDQWmmMTwiiFxo5sFmmsdAJ--SJjPCjT2OyCGx5TpgL0kdPJwvzd1uH92LIJKZ33c"/>
+</div>
+<div class="p-4 bg-surface-container-highest">
+<h3 class="font-headline-md text-headline-md text-on-surface">DR. J. CHEN</h3>
+<p class="font-label-caps text-label-caps text-primary mt-1 uppercase">Head of Engineering</p>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 border-t-2 border-outline-variant bg-surface-container-lowest transition-all duration-300 ease-in-out relative">
+<div class="absolute inset-0 bg-[url('blueprint-grid.svg')] opacity-10 pointer-events-none"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-12 max-w-[1440px] mx-auto relative z-10">
+<!-- Brand Column -->
+<div class="md:col-span-4 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-black text-on-surface">TITAN INDUSTRIAL</span>
+<p class="font-technical-sm text-technical-sm text-on-secondary-container mt-4">
+                    © 2024 TITAN INDUSTRIAL. ALL RIGHTS RESERVED. ENGINEERED FOR PRECISION.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="md:col-span-8 flex flex-col md:flex-row gap-8 justify-end">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2">Certifications</span>
+<a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors" href="#">ISO 9001 CERTIFIED</a>
+<a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors" href="#">OHSAS 18001 COMPLIANT</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2">Navigation</span>
+<a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors" href="#">Sitemap</a>
+<a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors" href="#">Office Locations</a>
+<a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CONSTRUCT-PRO | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fb",
+                        "surface-tint": "#a04100",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary": "#5c5f62",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#e2bfb0",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "primary": "#a04100",
+                        "on-primary-fixed": "#351000",
+                        "surface-container-highest": "#e1e2e4",
+                        "tertiary-container": "#96999d",
+                        "primary-container": "#ff6b00",
+                        "on-tertiary-container": "#2e3134",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#8e7164",
+                        "inverse-primary": "#ffb693",
+                        "on-primary-container": "#572000",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "secondary-fixed": "#e5e2e3",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed-variant": "#474647",
+                        "secondary": "#5f5e5f",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-container-high": "#e7e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e0e2e6",
+                        "surface-variant": "#e1e2e4",
+                        "secondary-container": "#e2dfe0",
+                        "surface-container-low": "#f3f4f6",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#191c1f",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "background": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#636263"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "16px",
+                        "base": "8px",
+                        "margin-desktop": "48px",
+                        "stack-md": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "900" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Masonry Columns for CSS-only masonry */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-tertiary-container flex flex-col min-h-screen">
+    <!-- TopNavBar Shared Component -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-inverse-surface w-full top-0 sticky border-b-4 border-inverse-surface dark:border-surface-dim z-50">
+        <div class="flex justify-between items-center h-20 px-margin-desktop max-w-[1200px] mx-auto hidden md:flex">
+            <!-- Brand -->
+            <div
+                class="font-headline-md text-headline-md font-black uppercase tracking-tighter text-on-surface dark:text-inverse-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <!-- Links -->
+            <div class="flex space-x-gutter items-center">
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="index.html">Home</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="services.html">Services</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="project.html">Portfolio</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="about.html">About</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Action -->
+            <button
+                class="bg-primary-container text-on-surface font-label-bold text-label-bold uppercase px-6 py-3 rounded-none hover:bg-primary transition-colors border-2 border-transparent">
+                Request a Quote
+            </button>
+        </div>
+        <!-- Mobile Nav Shell -->
+        <div class="md:hidden flex justify-between items-center h-20 px-margin-mobile w-full">
+            <div
+                class="font-headline-lg-mobile text-headline-lg-mobile font-black uppercase tracking-tighter text-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <button class="text-on-surface">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Trailing Action -->
+    <button
+        class="hidden md:block font-label-bold text-label-bold bg-primary-container text-inverse-surface px-6 py-3 uppercase border-2 border-transparent hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 shadow-none rounded-none">
+        Request a Quote
+    </button>
+    <!-- Mobile Menu Icon -->
+    <button class="md:hidden text-on-surface flex items-center">
+        <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+    </button>
+    </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+        <!-- Hero Section -->
+        <section class="mb-stack-lg border-b-4 border-inverse-surface pb-stack-md">
+            <h1
+                class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-inverse-surface uppercase mb-stack-sm">
+                Engineered <br /><span class="text-primary-container">Excellence</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                A definitive archive of structural integrity. Explore our extensive portfolio of high-density commercial
+                developments, critical infrastructure rehabilitation, and precision residential engineering. Built to
+                last.
+            </p>
+        </section>
+        <!-- Filter Bar -->
+        <section class="mb-stack-md flex flex-wrap gap-base items-center">
+            <span class="font-label-bold text-label-bold text-secondary uppercase mr-4 tracking-widest">Filter:</span>
+            <!-- Active Filter -->
+            <button
+                class="font-label-bold text-label-bold bg-primary-container text-inverse-surface border-2 border-primary-container px-6 py-2 uppercase rounded-none transition-colors">
+                All Projects
+            </button>
+            <button
+                class="font-label-bold text-label-bold bg-transparent text-inverse-surface border-2 border-inverse-surface px-6 py-2 uppercase rounded-none hover:bg-inverse-surface hover:text-on-primary transition-colors">
+                Commercial
+            </button>
+            <button
+                class="font-label-bold text-label-bold bg-transparent text-inverse-surface border-2 border-inverse-surface px-6 py-2 uppercase rounded-none hover:bg-inverse-surface hover:text-on-primary transition-colors">
+                Infrastructure
+            </button>
+            <button
+                class="font-label-bold text-label-bold bg-transparent text-inverse-surface border-2 border-inverse-surface px-6 py-2 uppercase rounded-none hover:bg-inverse-surface hover:text-on-primary transition-colors">
+                Residential
+            </button>
+        </section>
+        <!-- Masonry Gallery -->
+        <section class="masonry-grid w-full">
+            <!-- Project Card 1 (Tall) -->
+            <div
+                class="masonry-item group relative overflow-hidden bg-surface-container border-2 border-inverse-surface cursor-pointer">
+                <img alt="Skyscraper under construction"
+                    class="w-full h-auto object-cover aspect-[3/4] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    data-alt="A dramatic, low-angle shot of a towering skyscraper under construction against a clear, high-contrast sky. The steel skeleton of the building is exposed, highlighting the raw architectural engineering. Yellow cranes and safety orange scaffolding provide sharp color accents against the deep charcoal steel beams and bright concrete. The lighting is harsh and direct, emphasizing the massive scale and industrial strength of the structure. The overall aesthetic is raw, professional, and built to last."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisPmgkBgcklTdwwTyyvYAb2DkA-oiJP3js2Qn3mTo4Bl4fmuRnCoTLUpAfoEP6J3W3bj_L9JPsbKcYIwEytd5ZELEbGXzpBii5OFDx944z44AZ7Tehbucr3_EhLzk6ZPVhA67N2ZQLcxowZV15EuIPfF30jBdiennYnD-pOI1oByH27KYjoTr_cHG3puTE6JJi6aRpUeg_dBXZZA14dJJ3vSAVk0K4COREVcLV3YlWulP1ComR5zrFh3sNgjSLRSeWGG9abHI4T7P" />
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-inverse-surface/95 text-on-primary flex flex-col justify-end p-6 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t-4 border-primary-container">
+                    <h3 class="font-headline-md text-headline-md uppercase mb-2">Apex Tower</h3>
+                    <p class="font-label-bold text-label-bold text-primary-container mb-4 tracking-widest uppercase">
+                        Commercial Skyscraper</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-secondary pt-4 mb-4">
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Scope</span>
+                            <span class="font-body-md text-body-md font-bold">45 Stories</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Timeline</span>
+                            <span class="font-body-md text-body-md font-bold">18 Months</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Impact
+                                (Before &amp; After)</span>
+                            <span class="font-body-md text-body-md">Vacant lot to 1.2M sqft Class-A office space.</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <span
+                            class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Client</span>
+                        <span class="font-body-md text-body-md uppercase tracking-wider">Apex Development Group</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 2 (Wide) -->
+            <div
+                class="masonry-item group relative overflow-hidden bg-surface-container border-2 border-inverse-surface cursor-pointer">
+                <img alt="Bridge repair over water"
+                    class="w-full h-auto object-cover aspect-[4/3] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    data-alt="A high-contrast, industrial photograph of a massive steel suspension bridge undergoing structural repairs. The image features heavy machinery and reinforced concrete pylons rising from dark, churning water. Bold safety orange netting and warning signs stand out starkly against the cold, deep charcoal grey of the weathered steel and overcast sky. The composition emphasizes strength, durability, and heavy-duty engineering in a harsh environment."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFMlhWFzhGmOcD6MGBoJ9H_it2TPy8L4VFo91OHkcE_lpbcAUK993sEX0tRAIR7YAKlNm-im9-AoRJvSgCjoLE-exxINCCYnxSc9kocKPqTUkZ95VNGRj_m_i3ZMkxWCG_t4XUlHP3aUcNzBpFBkW-i8SVCBitkP3HShqdkt0EtgoUizHcNSAxfpmniLDSjivkj4eOSOpw0ZuILGFgsCXWyguhT7jVavWwb9LpYkDWjd2NnCBKV9ZjujBUFcx7y3UrJ66CNiDjzigB" />
+                <div
+                    class="absolute inset-0 bg-inverse-surface/95 text-on-primary flex flex-col justify-end p-6 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t-4 border-primary-container">
+                    <h3 class="font-headline-md text-headline-md uppercase mb-2">Narrows Bridge Retrofit</h3>
+                    <p class="font-label-bold text-label-bold text-primary-container mb-4 tracking-widest uppercase">
+                        Infrastructure</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-secondary pt-4 mb-4">
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Span</span>
+                            <span class="font-body-md text-body-md font-bold">1.2 km</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Standard</span>
+                            <span class="font-body-md text-body-md font-bold">Seismic Tier 1</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Impact
+                                (Before &amp; After)</span>
+                            <span class="font-body-md text-body-md">Structurally deficient to modern seismic
+                                resilience.</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <span
+                            class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Client</span>
+                        <span class="font-body-md text-body-md uppercase tracking-wider">Dept. of Transportation</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 3 (Square) -->
+            <div
+                class="masonry-item group relative overflow-hidden bg-surface-container border-2 border-inverse-surface cursor-pointer">
+                <img alt="Modern luxury development"
+                    class="w-full h-auto object-cover aspect-square grayscale group-hover:grayscale-0 transition-all duration-500"
+                    data-alt="A striking architectural photograph of a modern luxury residential development featuring stark, geometric concrete forms and expansive glass panels. The building exhibits an industrial minimalism aesthetic with sharp, angular lines and deep shadows cast by harsh, direct sunlight. Dark charcoal structural frames contrast heavily with bright white concrete facades. The image communicates precision engineering, high-end construction, and unyielding structural integrity."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAic8JRVKZd79uKcnaLMZugGoxUT4LteYVVXN0SBxeUL1GEmNG4GJcx15lWiExY6yjCSmjHDv3zlzvy_uvAdFBRKfhkEaW2Peftwx7cCQ0kPJfN-PPrVaeNYXRjtfxNpvlTmwQ30DG8ZbVomKR59UjuAjfYEPMCBhD5bf7jmKWOYDE-xZ9N1rzS4iznDGFloEv4wT-XQB9ZoD6neoox7sK_Q3O_eRqYO4_oeaeLEExIHiCRt_PWxLXdK-IUZGqdCyW5IfcCg2hdZWpc" />
+                <div
+                    class="absolute inset-0 bg-inverse-surface/95 text-on-primary flex flex-col justify-end p-6 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t-4 border-primary-container">
+                    <h3 class="font-headline-md text-headline-md uppercase mb-2">The Foundry Estates</h3>
+                    <p class="font-label-bold text-label-bold text-primary-container mb-4 tracking-widest uppercase">
+                        Residential Luxury</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-secondary pt-4 mb-4">
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Scale</span>
+                            <span class="font-body-md text-body-md font-bold">120 Units</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Rating</span>
+                            <span class="font-body-md text-body-md font-bold">LEED Gold</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Impact
+                                (Before &amp; After)</span>
+                            <span class="font-body-md text-body-md">Industrial brownfield to premium eco-housing.</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <span
+                            class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Client</span>
+                        <span class="font-body-md text-body-md uppercase tracking-wider">Horizon Urban Partners</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 4 (Wide) -->
+            <div
+                class="masonry-item group relative overflow-hidden bg-surface-container border-2 border-inverse-surface cursor-pointer">
+                <img alt="Industrial facility construction"
+                    class="w-full h-auto object-cover aspect-[16/9] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    data-alt="A wide, highly detailed photograph of a massive industrial logistics facility under construction. The interior shows an expansive grid of heavy steel columns and roof trusses fading into the distance. Bright, high-intensity work lights pierce through the dusty atmosphere, casting deep, sharp shadows on the concrete floor. The color palette is dominated by cold greys and blacks, punctuated by the vibrant safety orange of heavy lifting equipment and structural markings."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7k6ynC8KHA0LurS_1VuKYXPNcoy8w687eFHT6tUwli9_vHzOxf9wrwHByPFunz_whYp12y3fHq2WjtWy5db_NHdtu7oirn3Pg7IesSEDsof_PjeQVDgrnZ78S4OeMOTCggbo8VTqrV1RNTa4EoYqT8_hHzq9A6h3OltPpfWUz_ii7TKpQQ10QptYeIlCYJ6Sfwl6Uebdw4F6AVykAWzmCboiWk8fCunM9JtkfR-4EqRLSB6ZrUAgAmJRVKzEx7AmpRoNZi0--WPus" />
+                <div
+                    class="absolute inset-0 bg-inverse-surface/95 text-on-primary flex flex-col justify-end p-6 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t-4 border-primary-container">
+                    <h3 class="font-headline-md text-headline-md uppercase mb-2">Nexus Logistics Hub</h3>
+                    <p class="font-label-bold text-label-bold text-primary-container mb-4 tracking-widest uppercase">
+                        Industrial Facility</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-secondary pt-4 mb-4">
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Footprint</span>
+                            <span class="font-body-md text-body-md font-bold">500k sqft</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Feature</span>
+                            <span class="font-body-md text-body-md font-bold">Fully Automated</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Impact
+                                (Before &amp; After)</span>
+                            <span class="font-body-md text-body-md">Undeveloped land to high-yield distribution
+                                center.</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <span
+                            class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Client</span>
+                        <span class="font-body-md text-body-md uppercase tracking-wider">Global Freight Inc.</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 5 (Tall) -->
+            <div
+                class="masonry-item group relative overflow-hidden bg-surface-container border-2 border-inverse-surface cursor-pointer">
+                <img alt="Urban concrete structure"
+                    class="w-full h-auto object-cover aspect-[3/5] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    data-alt="A brutalist architectural shot focusing on the raw, textured surface of a massive poured concrete retaining wall in an urban setting. The image is tightly framed to emphasize the sheer weight and solidity of the material. Heavy black rebar structural anchors protrude from the surface, creating high-contrast graphic elements. The lighting is harsh and angular, enhancing the industrial, unyielding aesthetic of heavy-duty construction."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrni30XzO6EPcAkP9-hSQ7iQEU76jrratO68DWNP_nB4ICw-TlyRgVTFBZC8Zu9IrdafxX5ZF4VULVrepZ6GTPGP9YClGhGg3NN6JvHNncz4G9CiXQfALWYBSJMUCE1-sz2FwxwpoeMdwzKpDda3XR5AlTsTS4GWnwgOZuZdi-16g3s5hIRiOz0YFEAH_j-wUkpo43L3uj90Fe5aBxMzg1g4hYKtAXQa4FOV66eKxitNOEWrtIaupnMJ4LyILL0upzSPQ2zt-8uYpH" />
+                <div
+                    class="absolute inset-0 bg-inverse-surface/95 text-on-primary flex flex-col justify-end p-6 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t-4 border-primary-container">
+                    <h3 class="font-headline-md text-headline-md uppercase mb-2">Block 42 Infill</h3>
+                    <p class="font-label-bold text-label-bold text-primary-container mb-4 tracking-widest uppercase">
+                        Commercial Mixed-Use</p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-secondary pt-4 mb-4">
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Structure</span>
+                            <span class="font-body-md text-body-md font-bold">Poured Concrete</span>
+                        </div>
+                        <div>
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Zoning</span>
+                            <span class="font-body-md text-body-md font-bold">High Density</span>
+                        </div>
+                        <div class="col-span-2">
+                            <span
+                                class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Impact
+                                (Before &amp; After)</span>
+                            <span class="font-body-md text-body-md">Derelict block to vibrant mixed-use
+                                retail/office.</span>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <span
+                            class="block font-label-bold text-label-bold text-secondary uppercase text-[10px]">Client</span>
+                        <span class="font-body-md text-body-md uppercase tracking-wider">Core Urban Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section
+            class="mt-stack-lg border-t-4 border-inverse-surface pt-stack-md flex flex-col md:flex-row justify-between items-start md:items-center bg-surface p-8 border-2">
+            <div class="mb-6 md:mb-0">
+                <h2
+                    class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase mb-2">
+                    Ready to Build?</h2>
+                <p class="font-body-lg text-body-lg text-secondary">Initiate your next project with structural
+                    certainty.</p>
+            </div>
+            <button
+                class="font-label-bold text-label-bold bg-primary-container text-inverse-surface px-8 py-4 uppercase border-4 border-inverse-surface hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 hover:translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0px_0px_rgba(46,49,50,1)] hover:shadow-none">
+                Start Consultation
+            </button>
+        </section>
+    </main>
+    <!-- Footer Shared Component -->
+    <footer class="w-full mt-stack-lg bg-inverse-surface dark:bg-surface-container-lowest border-t-8 border-primary">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-md max-w-[1200px] mx-auto">
+            <div class="col-span-1 md:col-span-1 flex flex-col justify-between h-full">
+                <span
+                    class="font-headline-sm text-headline-sm font-black text-on-primary uppercase tracking-tighter">CONSTRUCT-PRO</span>
+                <p class="font-body-md text-body-md text-surface-variant dark:text-secondary mt-4 md:mt-0">
+                    © 2024 CONSTRUCT-PRO. BUILT TO LAST.
+                </p>
+            </div>
+            <div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-end">
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Safety Manual</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Careers</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Locations</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

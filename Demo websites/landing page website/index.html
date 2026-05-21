@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina - Precision in every pixel.</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#4c4546",
+                      "outline": "#7e7576",
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "primary-container": "#1b1b1b",
+                      "error-container": "#ffdad6",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "secondary-fixed-dim": "#b7c4ff",
+                      "surface-variant": "#e2e2e2",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-tertiary-container": "#838484",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "on-secondary-fixed-variant": "#0038b6",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-container": "#1a1c1c",
+                      "primary-fixed": "#e2e2e2",
+                      "primary": "#000000",
+                      "on-primary-container": "#848484",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c6c6c6",
+                      "on-secondary-fixed": "#001452",
+                      "secondary": "#003ec6",
+                      "surface-tint": "#5e5e5e",
+                      "on-primary-fixed": "#1b1b1b",
+                      "secondary-container": "#0052fe",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "on-primary-fixed-variant": "#474747",
+                      "tertiary": "#000000",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-background": "#1a1c1c",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "background": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1a1c1c",
+                      "outline-variant": "#cfc4c5",
+                      "inverse-on-surface": "#f1f1f1",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-container": "#dfe3ff",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#eeeeee",
+                      "surface": "#f9f9f9",
+                      "secondary-fixed": "#dde1ff",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-lg": "32px",
+                      "section-gap": "120px",
+                      "margin-mobile": "24px",
+                      "container-max": "1280px",
+                      "stack-md": "16px",
+                      "margin-desktop": "80px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Hanken Grotesk"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg": ["72px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                      "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "body-lg": ["18px", { "lineHeight": "1.7", "letterSpacing": "0em", "fontWeight": "400" }],
+                      "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                      "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                      "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Component -->
+<header class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-on-primary-container border-b border-outline-variant dark:border-outline sticky top-0 z-50 bg-opacity-95 backdrop-blur-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary dark:text-on-primary-container scale-95 active:scale-90 transition-transform" href="#">
+                Lumina
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-stack-lg">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#features">Features</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#how-it-works">How it Works</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#pricing">Pricing</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center">
+<a class="bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[16px] hover:bg-secondary transition-colors duration-300 flex items-center justify-center scale-95 active:scale-90 uppercase tracking-widest" href="#pricing">
+                    Get Started
+                </a>
+</div>
+</div>
+</header>
+<main>
+<!-- 1. Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop pt-[160px] pb-section-gap max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-gutter min-h-[870px]">
+<div class="w-full md:w-7/12 flex flex-col items-start gap-stack-lg z-10">
+<h1 class="font-display-lg text-display-lg text-primary max-w-[800px] leading-tight">
+                    Precision in every pixel.<br/>
+<span class="text-outline">Design that scales with your ambition.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[500px]">
+                    Experience high-contrast minimalism built for professionals. Strip away the noise and focus entirely on execution, clarity, and uncompromising quality.
+                </p>
+<div class="flex flex-wrap gap-stack-md pt-stack-md">
+<a class="bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[16px] hover:bg-secondary transition-colors duration-300 uppercase tracking-widest" href="#pricing">
+                        Get Started Now
+                    </a>
+<a class="bg-transparent text-primary font-label-sm text-label-sm px-[32px] py-[16px] border-[1.5px] border-primary hover:bg-surface-container transition-colors duration-300 uppercase tracking-widest" href="#features">
+                        Explore Platform
+                    </a>
+</div>
+</div>
+<div class="w-full md:w-5/12 relative mt-section-gap md:mt-0">
+<div class="aspect-square bg-surface-container-high rounded-full overflow-hidden relative" style="box-shadow: inset 0 0 100px rgba(0,0,0,0.05);">
+<img alt="Minimalist geometric abstraction" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-90" data-alt="A stark, minimalist architectural interior showcasing high-contrast lighting. Sharp geometric lines intersect in a pristine white space, disrupted only by deep, absolute black shadows. The scene evokes a sense of cold precision, modernism, and ruthless efficiency, perfectly aligning with a high-end corporate or technical aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDePYEeTyzyL7AZLDp7wHUiuaduBKqRUr-6ET_3G4PXY2QIZ_Iia2PXGFD7nXnnuMXrwgBsdXVRCe0PwTm1LemBOZLHB7CJgu_mWZ_dQoKsRGi1cS6UQeaSfmnZPoHS0K-7lD2acXPhKe7wOFBTAak0VlMABnJTYerFEEerbA7wYsZSM9OGVjfUvPWnuqEQGlW8GifzLzqu36l32CR2g7E-ciHaDFxgWqpb3_nT84UG6kPk_ALSstvDYOw6xluDfCONlVDXxWWDubRE"/>
+</div>
+</div>
+</section>
+<!-- 2. Problem/Agitation -->
+<section class="bg-primary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 flex flex-col justify-center gap-stack-lg">
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-surface-tint mb-stack-sm bg-inverse-surface self-start px-2 py-1">The Friction</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">
+                        Clutter is the enemy of execution.
+                    </h2>
+</div>
+<div class="md:col-span-1"></div>
+<div class="md:col-span-6 flex flex-col justify-center">
+<p class="font-body-lg text-body-lg text-outline-variant mb-stack-lg border-l-2 border-outline pl-stack-md">
+                        Low-contrast interfaces, endless configuration options, and bloated visual hierarchies drain cognitive load. When tools demand your attention to operate, they steal focus from your actual work.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg pt-stack-md">
+<div>
+<span class="material-symbols-outlined text-[32px] text-error mb-stack-sm" data-weight="fill">warning</span>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Cognitive Overload</h3>
+<p class="font-body-md text-surface-tint">Too many choices paralyze decision-making and slow down critical workflows.</p>
+</div>
+<div>
+<span class="material-symbols-outlined text-[32px] text-error mb-stack-sm" data-weight="fill">visibility_off</span>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Poor Legibility</h3>
+<p class="font-body-md text-surface-tint">Soft contrasts and decorative elements bury essential data beneath aesthetic noise.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Solution & Features -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="features">
+<div class="mb-[80px] max-w-[600px]">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-stack-lg">
+                    Minimalism engineered for maximum impact.
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Lumina provides a restrictive, highly curated environment. By removing options, we enforce best practices and surface what actually matters.
+                </p>
+</div>
+<!-- Bento Grid approach -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[minmax(300px,auto)]">
+<!-- Speed -->
+<div class="md:col-span-8 bg-surface-bright border border-surface-container-high p-[40px] flex flex-col justify-between group hover:border-outline transition-colors">
+<div>
+<span class="material-symbols-outlined text-[40px] text-primary mb-stack-md">bolt</span>
+<h3 class="font-headline-md text-[24px] text-primary mb-stack-sm font-bold">Uncompromising Speed</h3>
+<p class="font-body-md text-on-surface-variant max-w-[400px]">
+                            Built on a lightweight architecture that loads instantaneously. No heavy client-side rendering, just raw performance.
+                        </p>
+</div>
+<div class="mt-stack-lg h-[120px] bg-surface-container flex items-end px-stack-md pb-stack-sm overflow-hidden relative">
+<!-- Abstract speed viz -->
+<div class="w-full h-[2px] bg-primary absolute top-1/2 left-0 transform -translate-y-1/2 scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+<div class="w-full h-[1px] bg-outline-variant absolute top-[40%] left-0"></div>
+<div class="w-full h-[1px] bg-outline-variant absolute top-[60%] left-0"></div>
+</div>
+</div>
+<!-- Clarity -->
+<div class="md:col-span-4 bg-primary text-on-primary p-[40px] flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-[40px] text-on-primary mb-stack-md">contrast</span>
+<h3 class="font-headline-md text-[24px] mb-stack-sm font-bold">Absolute Clarity</h3>
+<p class="font-body-md text-outline-variant">
+                            Strict black and white typographic hierarchy. Data is impossible to misread.
+                        </p>
+</div>
+<div class="mt-stack-lg">
+<div class="bg-inverse-surface p-stack-md border border-[#333]">
+<div class="font-label-sm text-surface-tint mb-1">Status</div>
+<div class="font-body-lg text-on-primary flex items-center gap-2">
+<div class="w-2 h-2 bg-on-primary rounded-none"></div> Optimal
+                            </div>
+</div>
+</div>
+</div>
+<!-- Precision -->
+<div class="md:col-span-12 bg-surface-bright border border-surface-container-high p-[40px] flex flex-col md:flex-row gap-gutter items-center">
+<div class="w-full md:w-1/3">
+<span class="material-symbols-outlined text-[40px] text-primary mb-stack-md">architecture</span>
+<h3 class="font-headline-md text-[24px] text-primary mb-stack-sm font-bold">Surgical Precision</h3>
+<p class="font-body-md text-on-surface-variant">
+                            Every pixel is accounted for. Alignments are mathematical. Margins are fixed. The result is a UI that feels solid, trustworthy, and permanent.
+                        </p>
+</div>
+<div class="w-full md:w-2/3 h-[200px] border border-outline-variant relative bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9IiNFMkUyRTIiLz48L3N2Zz4=')]">
+<!-- Grid visualization fallback using inline css pattern since base64 SVG was restricted in prompt, wait, prompt says "Do NOT output data:image/png;base64... Use tailwind gradient/pattern CSS properties instead". Let me fix that. -->
+<div class="absolute inset-0" style="background-image: radial-gradient(#e2e2e2 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-primary bg-surface-container-lowest p-stack-md shadow-[0_10px_40px_rgba(0,0,0,0.04)] w-[240px]">
+<div class="w-full h-[1px] bg-outline-variant mb-stack-sm relative">
+<div class="absolute -left-2 -top-[6px] text-[10px] text-outline font-mono">X: 120</div>
+</div>
+<div class="font-label-sm text-primary uppercase">Component_Alpha</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Pricing -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-b border-surface-container-high" id="pricing">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="w-full md:w-1/2 max-w-[500px]">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-stack-md">
+                        One transparent tier.
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                        No convoluted feature matrices. No hidden fees. Full access to the entire platform architecture for a single monthly flat rate.
+                    </p>
+</div>
+<div class="w-full md:w-5/12 bg-surface-container-lowest border border-primary p-[48px] shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-2 hover:translate-y-2 transition-all duration-200">
+<div class="flex justify-between items-end border-b border-outline-variant pb-stack-md mb-stack-lg">
+<h3 class="font-headline-md text-[28px] font-bold">Lumina Pro</h3>
+<div class="text-right">
+<span class="font-display-lg text-[48px] font-bold leading-none">$49</span>
+<span class="font-body-md text-outline">/mo</span>
+</div>
+</div>
+<ul class="flex flex-col gap-stack-md mb-stack-lg font-body-md">
+<li class="flex items-center gap-3 text-primary"><div class="w-[4px] h-[4px] bg-primary"></div> Unlimited Projects</li>
+<li class="flex items-center gap-3 text-primary"><div class="w-[4px] h-[4px] bg-primary"></div> Dedicated Node Architecture</li>
+<li class="flex items-center gap-3 text-primary"><div class="w-[4px] h-[4px] bg-primary"></div> SLA Guarantee (99.99%)</li>
+<li class="flex items-center gap-3 text-primary"><div class="w-[4px] h-[4px] bg-primary"></div> Priority SSH Support</li>
+</ul>
+<button class="w-full bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[20px] hover:bg-secondary transition-colors duration-300 uppercase tracking-widest text-center">
+                        Subscribe Now
+                    </button>
+</div>
+</div>
+</section>
+<!-- 7. Final CTA -->
+<section class="py-[200px] px-margin-mobile md:px-margin-desktop text-center max-w-[800px] mx-auto">
+<h2 class="font-display-lg text-[64px] leading-none font-bold text-primary mb-stack-lg tracking-tighter">
+                Ready to strip away the noise?
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-[64px] max-w-[500px] mx-auto">
+                Join the standard for high-contrast execution. Start building with Lumina today.
+            </p>
+<a class="inline-block bg-primary text-on-primary font-label-sm text-label-sm px-[48px] py-[24px] hover:bg-secondary transition-colors duration-300 uppercase tracking-widest text-lg" href="#pricing">
+                Claim Your Free Trial
+            </a>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-on-primary-container border-t border-outline-variant dark:border-outline opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto gap-stack-lg">
+<div class="flex flex-col items-center md:items-start gap-stack-sm">
+<div class="font-display-lg text-headline-md font-bold text-primary dark:text-on-primary-container">
+                    Lumina
+                </div>
+<div class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    © 2024 Lumina. Precision in every pixel.
+                </div>
+</div>
+<nav class="flex flex-wrap justify-center gap-stack-md font-label-sm text-label-sm">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Cookies</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Support</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim underline transition-all" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+</body></html>

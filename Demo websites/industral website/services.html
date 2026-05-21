@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TITAN INDUSTRIAL - Services &amp; Capabilities</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-secondary-fixed-variant": "#3c4851",
+                                                "surface-tint": "#ffb693",
+                                                "background": "#131313",
+                                                "tertiary": "#9ccaff",
+                                                "error-container": "#93000a",
+                                                "primary-fixed": "#ffdbcc",
+                                                "on-tertiary-container": "#003357",
+                                                "surface-container-high": "#2a2a2a",
+                                                "error": "#ffb4ab",
+                                                "inverse-on-surface": "#313030",
+                                                "on-error-container": "#ffdad6",
+                                                "tertiary-fixed-dim": "#9ccaff",
+                                                "on-surface": "#e5e2e1",
+                                                "surface": "#131313",
+                                                "on-background": "#e5e2e1",
+                                                "on-secondary-fixed": "#111d25",
+                                                "on-primary-fixed": "#351000",
+                                                "on-primary": "#561f00",
+                                                "secondary": "#bbc8d3",
+                                                "surface-container-lowest": "#0e0e0e",
+                                                "on-primary-container": "#572000",
+                                                "primary-fixed-dim": "#ffb693",
+                                                "surface-container-highest": "#353535",
+                                                "inverse-primary": "#a04100",
+                                                "inverse-surface": "#e5e2e1",
+                                                "surface-dim": "#131313",
+                                                "tertiary-fixed": "#d0e4ff",
+                                                "surface-bright": "#393939",
+                                                "primary-container": "#ff6b00",
+                                                "on-secondary-container": "#adbac5",
+                                                "secondary-fixed-dim": "#bbc8d3",
+                                                "on-surface-variant": "#e2bfb0",
+                                                "on-tertiary-fixed-variant": "#00497b",
+                                                "on-secondary": "#26323b",
+                                                "surface-variant": "#353535",
+                                                "on-tertiary": "#003257",
+                                                "outline-variant": "#5a4136",
+                                                "outline": "#a98a7d",
+                                                "secondary-fixed": "#d7e4f0",
+                                                "tertiary-container": "#059eff",
+                                                "secondary-container": "#3e4b54",
+                                                "on-error": "#690005",
+                                                "on-tertiary-fixed": "#001d35",
+                                                "primary": "#ffb693",
+                                                "surface-container": "#20201f",
+                                                "surface-container-low": "#1c1b1b",
+                                                "on-primary-fixed-variant": "#7a3000"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "column-count": "12",
+                                                "margin-desktop": "32px",
+                                                "base": "8px",
+                                                "margin-mobile": "16px",
+                                                "gutter": "16px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-md": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "technical-sm": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "headline-lg": [
+                                                        "Hanken Grotesk"
+                                                ],
+                                                "body-md": [
+                                                        "Inter"
+                                                ],
+                                                "body-lg": [
+                                                        "Inter"
+                                                ],
+                                                "label-caps": [
+                                                        "JetBrains Mono"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "headline-md": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "technical-sm": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "1.4",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "1.1",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "800"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "1.5",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "label-caps": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ]
+                                        }
+                                }
+                        }
+                }
+        </script>
+        <style>
+                body {
+                        background-color: #1A1A1A;
+                        background-image: linear-gradient(#333F48 1px, transparent 1px), linear-gradient(90deg, #333F48 1px, transparent 1px);
+                        background-size: 32px 32px;
+                        background-position: -1px -1px;
+                }
+        </style>
+</head>
+
+<body class="text-on-background min-h-screen flex flex-col">
+        <!-- TopNavBar -->
+        <nav class="bg-background w-full top-0 border-b-2 border-outline-variant z-50 sticky">
+                <div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+                        <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                                TITAN INDUSTRIAL
+                        </div>
+                        <div class="hidden md:flex items-center space-x-gutter">
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="services.html">Services</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="industries.html">Industries</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="projects.html">Projects</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="about.html">About</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                                <button
+                                        class="bg-primary-container text-background font-label-caps text-label-caps px-4 py-2 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200">
+                                        Request Technical Specs
+                                </button>
+                        </div>
+                        <div class="md:hidden flex items-center">
+                                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+                        </div>
+                </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex-grow max-w-[1440px] mx-auto w-full px-margin-desktop py-12 space-y-16">
+                <!-- Header Section -->
+                <header
+                        class="border-l-4 border-primary pl-6 py-4 bg-surface-container-high/80 border-t-2 border-r-2 border-b-2 border-surface-container-high backdrop-blur-sm">
+                        <h1 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-4">Services &amp;
+                                Capabilities</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                                Comprehensive technical engineering and manufacturing services designed for high-stakes
+                                industrial environments. Absolute precision. Uncompromising structural integrity.
+                        </p>
+                </header>
+                <!-- Precision Machining Module -->
+                <section class="bg-[#333F48] border-2 border-[#5a4136]">
+                        <div class="h-6 bg-[#2a2a2a] border-b-2 border-[#5a4136] flex items-center px-4">
+                                <span class="font-technical-sm text-technical-sm text-primary uppercase">Module 01 //
+                                        Precision Machining</span>
+                        </div>
+                        <div class="p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                                <!-- Content Area -->
+                                <div class="col-span-1 lg:col-span-7 space-y-6">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface">Advanced CNC &amp;
+                                                Milling Operations</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                Our precision machining division operates at the highest tolerances
+                                                required by aerospace, defense, and heavy logistics sectors. Utilizing
+                                                5-axis CNC centers and automated robotic handling, we ensure exact
+                                                repeatability across high-volume production runs.
+                                        </p>
+                                        <!-- Spec Table -->
+                                        <div class="border-2 border-[#5a4136] bg-[#1A1A1A]">
+                                                <table class="w-full text-left border-collapse">
+                                                        <thead>
+                                                                <tr class="border-b-2 border-[#5a4136] bg-[#2a2a2a]">
+                                                                        <th
+                                                                                class="p-3 font-label-caps text-label-caps text-on-surface uppercase">
+                                                                                Specification</th>
+                                                                        <th
+                                                                                class="p-3 font-label-caps text-label-caps text-on-surface uppercase border-l-2 border-[#5a4136]">
+                                                                                Value / Capability</th>
+                                                                </tr>
+                                                        </thead>
+                                                        <tbody
+                                                                class="font-technical-sm text-technical-sm text-on-surface-variant">
+                                                                <tr class="border-b border-[#333F48]">
+                                                                        <td class="p-3 bg-[#333F48]/50">Max Machining
+                                                                                Vol.</td>
+                                                                        <td class="p-3 border-l-2 border-[#5a4136]">
+                                                                                4000mm x 2000mm x 1500mm</td>
+                                                                </tr>
+                                                                <tr class="border-b border-[#333F48]">
+                                                                        <td class="p-3">Standard Tolerance</td>
+                                                                        <td
+                                                                                class="p-3 border-l-2 border-[#5a4136] text-primary">
+                                                                                ± 0.005mm (5 Microns)</td>
+                                                                </tr>
+                                                                <tr class="border-b border-[#333F48]">
+                                                                        <td class="p-3 bg-[#333F48]/50">Primary
+                                                                                Equipment</td>
+                                                                        <td class="p-3 border-l-2 border-[#5a4136]">
+                                                                                Mazak Integrex i-400, Haas UMC-1000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td class="p-3">Materials</td>
+                                                                        <td class="p-3 border-l-2 border-[#5a4136]">
+                                                                                Titanium, Inconel, 316L Stainless,
+                                                                                Hardened Steel</td>
+                                                                </tr>
+                                                        </tbody>
+                                                </table>
+                                        </div>
+                                        <button
+                                                class="mt-4 bg-primary text-on-primary border-2 border-primary font-label-caps text-label-caps px-6 py-3 hover:bg-surface-tint transition-colors uppercase tracking-widest flex items-center space-x-2">
+                                                <span>Request Specs</span>
+                                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                                        </button>
+                                </div>
+                                <!-- Visual Area -->
+                                <div
+                                        class="col-span-1 lg:col-span-5 relative border-2 border-[#5a4136] bg-[#1A1A1A] p-2">
+                                        <img alt="CNC Machining"
+                                                class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                                                data-alt="A highly detailed close-up of a 5-axis CNC milling machine cutting a complex geometric titanium part. Sparks and cooling fluid are visible. The lighting is harsh and industrial, emphasizing the cold metallic surfaces and the safety orange accents of the machinery. The aesthetic is raw, technical, and brutalist, set against a dark factory background."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6pIl0APPN6ma1wLJ_rlS5Wm2ZwMtOGzfoY4SBEtkxODdQAbl9d9DcmUVUjkBcfu6_s0ei3UN_YEwDykfnrhPV18S2wxIuZX1J6WiAo1ltii4Ph8831Otjh0SfnlyMAMwr0F3u_HPgyFq0stfT3FZUv9U6B9J-onstCjiuy7jMMX825dZh-1zSy-rQgSyBnRfut5EqplZjAHxwyWdiGkp-z_M6bCsNynVrloztONS2TjK2WeU4wgbTtmWCJn6SWltDuz0Vb6YOzOzN" />
+                                        <!-- Overlay Badge -->
+                                        <div
+                                                class="absolute top-4 right-4 bg-primary text-on-primary font-label-caps text-label-caps px-2 py-1 border-2 border-background flex items-center space-x-1">
+                                                <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                                <span>ISO 9001</span>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Custom Fabrication Module -->
+                <section class="bg-[#333F48] border-2 border-[#5a4136]">
+                        <div class="h-6 bg-[#2a2a2a] border-b-2 border-[#5a4136] flex items-center px-4">
+                                <span class="font-technical-sm text-technical-sm text-primary uppercase">Module 02 //
+                                        Custom Fabrication</span>
+                        </div>
+                        <div class="p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 flex-col-reverse lg:flex-row">
+                                <!-- Visual Area -->
+                                <div
+                                        class="col-span-1 lg:col-span-5 relative border-2 border-[#5a4136] bg-[#1A1A1A] p-2 order-2 lg:order-1">
+                                        <img alt="Industrial Welding"
+                                                class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-500"
+                                                data-alt="A wide angle shot of a massive industrial fabrication floor. Sparks from TIG welding illuminate structural steel beams. The environment is dark and moody, punctuated by the bright blue-white flashes of welding arcs and the deep charcoal grey of the heavy machinery. The composition is highly structured, emphasizing grid lines and brutalist engineering."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnzuvyv0dwivQgkf1auF5rwaKN9Q4uqCcHqq9a-4h3PrhBXM5R7-8zlj9hH2q_Yqc1VW1Y0JX29Yvig5EeYvUpLH-lu5LnkMrOcr4_hhAn4W9ihQSTP8I64Inh0I-kgXm66FDHCHoQ6_LvFQpASiWiBV26q-junk1aZxsFybr6yqUIrc9KSD-2en2l3ikIhyiXDx3bNsJRu8sfhPlLcZ9ptthVBSBUldPwYraCBaf41C_Y9-lA72yjiHsdtLa2TIXxCfWqhdWPgX0" />
+                                        <!-- Overlay Badge -->
+                                        <div
+                                                class="absolute top-4 left-4 bg-error text-on-error font-label-caps text-label-caps px-2 py-1 border-2 border-background flex items-center space-x-1">
+                                                <span class="material-symbols-outlined text-[14px]">warning</span>
+                                                <span>AWS D1.1</span>
+                                        </div>
+                                </div>
+                                <!-- Content Area -->
+                                <div class="col-span-1 lg:col-span-7 space-y-6 order-1 lg:order-2">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface">Heavy Structural
+                                                Assembly &amp; Welding</h2>
+                                        <p class="font-body-md text-body-md text-on-surface-variant">
+                                                Providing end-to-end fabrication for large-scale industrial
+                                                infrastructure. Our certified welders and automated robotic cells handle
+                                                complex geometries and heavy-gauge materials, ensuring structural
+                                                integrity under extreme dynamic loads.
+                                        </p>
+                                        <!-- Material List (Bento Grid Style) -->
+                                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                                <div
+                                                        class="border-2 border-[#5a4136] bg-[#1A1A1A] p-4 flex flex-col justify-between h-32 hover:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mb-2">view_in_ar</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-caps text-label-caps text-on-surface">
+                                                                        Carbon Steel</h3>
+                                                                <p
+                                                                        class="font-technical-sm text-technical-sm text-on-surface-variant mt-1">
+                                                                        A36, A572, A514</p>
+                                                        </div>
+                                                </div>
+                                                <div
+                                                        class="border-2 border-[#5a4136] bg-[#1A1A1A] p-4 flex flex-col justify-between h-32 hover:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mb-2">layers</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-caps text-label-caps text-on-surface">
+                                                                        Aluminum</h3>
+                                                                <p
+                                                                        class="font-technical-sm text-technical-sm text-on-surface-variant mt-1">
+                                                                        6061-T6, 5083</p>
+                                                        </div>
+                                                </div>
+                                                <div
+                                                        class="border-2 border-[#5a4136] bg-[#1A1A1A] p-4 flex flex-col justify-between h-32 hover:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mb-2">science</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-caps text-label-caps text-on-surface">
+                                                                        Specialty Alloys</h3>
+                                                                <p
+                                                                        class="font-technical-sm text-technical-sm text-on-surface-variant mt-1">
+                                                                        AR400, Hastelloy</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="flex space-x-4 pt-4">
+                                                <button
+                                                        class="bg-primary text-on-primary border-2 border-primary font-label-caps text-label-caps px-6 py-3 hover:bg-surface-tint transition-colors uppercase tracking-widest flex items-center space-x-2">
+                                                        <span>Request Specs</span>
+                                                        <span
+                                                                class="material-symbols-outlined text-[18px]">file_download</span>
+                                                </button>
+                                                <button
+                                                        class="bg-[#333F48] text-on-surface border-2 border-on-surface font-label-caps text-label-caps px-6 py-3 hover:bg-[#2a2a2a] transition-colors uppercase tracking-widest">
+                                                        View Certifications
+                                                </button>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+        <!-- Footer -->
+        <footer
+                class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full bottom-0 border-t-2 border-outline-variant dark:border-outline-variant bg-[url('blueprint-grid.svg')] flat no shadows mt-auto">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-12 max-w-[1440px] mx-auto Transition: all 0.3s ease-in-out">
+                        <div class="col-span-1 md:col-span-4 flex flex-col justify-between">
+                                <div
+                                        class="font-headline-md text-headline-md font-black text-on-surface dark:text-on-surface">
+                                        TITAN INDUSTRIAL
+                                </div>
+                                <div
+                                        class="font-technical-sm text-technical-sm text-on-secondary-container dark:text-on-secondary-container mt-8">
+                                        © 2024 TITAN INDUSTRIAL. ALL RIGHTS RESERVED. ENGINEERED FOR PRECISION.
+                                </div>
+                        </div>
+                        <div class="col-span-1 md:col-span-8 flex flex-wrap justify-end gap-6 items-end mt-8 md:mt-0">
+                                <a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container uppercase border-b border-transparent hover:border-primary-container"
+                                        href="#">ISO 9001 CERTIFIED</a>
+                                <a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container uppercase border-b border-transparent hover:border-primary-container"
+                                        href="#">OHSAS 18001 COMPLIANT</a>
+                                <a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container border-b border-transparent hover:border-primary-container"
+                                        href="#">Sitemap</a>
+                                <a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container border-b border-transparent hover:border-primary-container"
+                                        href="#">Office Locations</a>
+                                <a class="font-label-caps text-label-caps text-on-secondary-container dark:text-on-secondary-container hover:text-primary-container dark:hover:text-primary-container border-b border-transparent hover:border-primary-container"
+                                        href="#">Terms of Service</a>
+                        </div>
+                </div>
+        </footer>
+</body>
+
+</html>

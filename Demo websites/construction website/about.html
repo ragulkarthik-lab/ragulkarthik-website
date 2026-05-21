@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | CONSTRUCT-PRO</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9fb",
+                        "surface-tint": "#a04100",
+                        "inverse-on-surface": "#f0f1f3",
+                        "tertiary": "#5c5f62",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#e2bfb0",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "primary": "#a04100",
+                        "on-primary-fixed": "#351000",
+                        "surface-container-highest": "#e1e2e4",
+                        "tertiary-container": "#96999d",
+                        "primary-container": "#ff6b00",
+                        "on-tertiary-container": "#2e3134",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#8e7164",
+                        "inverse-primary": "#ffb693",
+                        "on-primary-container": "#572000",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "secondary-fixed": "#e5e2e3",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed-variant": "#474647",
+                        "secondary": "#5f5e5f",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-container-high": "#e7e8ea",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e0e2e6",
+                        "surface-variant": "#e1e2e4",
+                        "secondary-container": "#e2dfe0",
+                        "surface-container-low": "#f3f4f6",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#191c1f",
+                        "primary-fixed-dim": "#ffb693",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fb",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#5a4136",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "background": "#f8f9fb",
+                        "surface-container": "#edeef0",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#636263"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "16px",
+                        "base": "8px",
+                        "margin-desktop": "48px",
+                        "stack-md": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "1.1", "fontWeight": "900" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-surface-bright text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-inverse-surface w-full top-0 sticky border-b-4 border-inverse-surface dark:border-surface-dim z-50">
+        <div class="flex justify-between items-center h-20 px-margin-desktop max-w-[1200px] mx-auto hidden md:flex">
+            <!-- Brand -->
+            <div
+                class="font-headline-md text-headline-md font-black uppercase tracking-tighter text-on-surface dark:text-inverse-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <!-- Links -->
+            <div class="flex space-x-gutter items-center">
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="index.html">Home</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="services.html">Services</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="project.html">Portfolio</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="about.html">About</a>
+                <a class="font-label-bold text-label-bold text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors hover:bg-inverse-surface hover:text-on-primary transition-all duration-150 py-2 px-3"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Action -->
+            <button
+                class="bg-primary-container text-on-surface font-label-bold text-label-bold uppercase px-6 py-3 rounded-none hover:bg-primary transition-colors border-2 border-transparent">
+                Request a Quote
+            </button>
+        </div>
+        <!-- Mobile Nav Shell -->
+        <div class="md:hidden flex justify-between items-center h-20 px-margin-mobile w-full">
+            <div
+                class="font-headline-lg-mobile text-headline-lg-mobile font-black uppercase tracking-tighter text-on-surface">
+                CONSTRUCT-PRO
+            </div>
+            <button class="text-on-surface">
+                <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+            </button>
+        </div>
+    </nav>
+    <main class="w-full">
+        <!-- Hero Section -->
+        <section
+            class="relative w-full h-[614px] min-h-[500px] flex items-center justify-center border-b-4 border-inverse-surface overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Construction site" class="w-full h-full object-cover"
+                    data-alt="A sweeping, high-contrast photograph of a massive structural steel construction site at dawn. The raw, heavy-duty girders dominate the foreground, silhouetted against a pale, industrial sky. Bright safety orange accents are visible on the heavy machinery in the background. The mood is powerful, engineered, and built to last, perfectly embodying an industrial minimalist aesthetic with a charcoal and concrete color palette."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSy9i5L2s99TIUJDNKcOKAdh_mF3hutk94KGW6ImxjuO8bAJWxjdel0S8bSciEJGy83aQuk8LE3cUfNiqb9ErUFGoelwdL8zV3SV_r5585Da3A4wDofuKAnCDh6fmN9ESnX2xj08wcy1V7h41s0MRIJ-RrPdbittD5I8HD-GDg5Sqk7nAc6I7Ah8XwBZiJTvsHbUwQXwfp77UCKsggEh22XgylVrDcjP3qwXoeHLL-OdvIBPdT8XaNnaykCrDl6209lb6aOvxH4Ytd" />
+                <div class="absolute inset-0 bg-inverse-surface/60"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto">
+                <h1
+                    class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-primary uppercase mb-stack-sm">
+                    Built on <span class="text-primary-container">Integrity</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-surface-container-lowest max-w-2xl mx-auto">
+                    Forging the future of infrastructure with unwavering commitment to safety, strength, and structural
+                    excellence since 1999.
+                </p>
+            </div>
+        </section>
+        <!-- Stats / Experience Counter -->
+        <section class="bg-primary-container text-on-primary-container py-stack-md border-b-4 border-inverse-surface">
+            <div
+                class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-inverse-surface mb-base">25+</span>
+                    <span class="font-label-bold text-label-bold uppercase tracking-wider">Years Active</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-inverse-surface mb-base">450+</span>
+                    <span class="font-label-bold text-label-bold uppercase tracking-wider">Projects Built</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-inverse-surface mb-base">Zero</span>
+                    <span class="font-label-bold text-label-bold uppercase tracking-wider">Safety Incidents</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-inverse-surface mb-base">100%</span>
+                    <span class="font-label-bold text-label-bold uppercase tracking-wider">OSHA Compliant</span>
+                </div>
+            </div>
+        </section>
+        <!-- Mission & Values Bento Grid -->
+        <section class="py-stack-lg max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-stack-md">
+                <h2
+                    class="font-headline-md text-headline-md text-inverse-surface uppercase border-l-4 border-primary-container pl-4">
+                    Our Mission</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Large Feature Cell -->
+                <div
+                    class="md:col-span-2 bg-surface-container-highest p-gutter border-2 border-inverse-surface flex flex-col justify-between">
+                    <span class="material-symbols-outlined text-primary-container mb-stack-sm"
+                        style="font-size: 48px; font-variation-settings: 'FILL' 1;">architecture</span>
+                    <h3 class="font-headline-sm text-headline-sm text-inverse-surface uppercase mb-base">Structural
+                        Dominance</h3>
+                    <p class="font-body-md text-body-md text-on-surface">
+                        We do not merely build; we engineer permanence. Every project undertaken by CONSTRUCT-PRO is
+                        executed with industrial precision, ensuring that our infrastructure withstands the test of
+                        time, environmental stress, and heavy utilization.
+                    </p>
+                </div>
+                <!-- Vertical Stack Cell -->
+                <div
+                    class="bg-surface-container-lowest p-gutter border-2 border-inverse-surface flex flex-col justify-center items-center text-center">
+                    <span class="material-symbols-outlined text-inverse-surface mb-stack-sm"
+                        style="font-size: 40px; font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                    <h3 class="font-headline-sm text-headline-sm text-inverse-surface uppercase mb-base">Uncompromising
+                        Safety</h3>
+                    <p class="font-body-md text-body-md text-on-surface">
+                        Safety is not a guideline; it is our foundational law. We maintain rigorous standards to protect
+                        our crew and our clients.
+                    </p>
+                </div>
+                <div
+                    class="bg-inverse-surface p-gutter border-2 border-primary-container text-on-primary flex flex-col justify-center">
+                    <span class="material-symbols-outlined text-primary-container mb-stack-sm"
+                        style="font-size: 40px; font-variation-settings: 'FILL' 1;">handshake</span>
+                    <h3 class="font-headline-sm text-headline-sm text-surface-container-lowest uppercase mb-base">
+                        Ironclad Integrity</h3>
+                    <p class="font-body-md text-body-md text-surface-variant">
+                        Transparent contracts, honest material sourcing, and accountability at every stage of the build.
+                    </p>
+                </div>
+                <div
+                    class="md:col-span-2 bg-surface-container-highest border-2 border-inverse-surface overflow-hidden relative min-h-[300px]">
+                    <img alt="Architectural Blueprint"
+                        class="absolute inset-0 w-full h-full object-cover grayscale opacity-50 mix-blend-multiply"
+                        data-alt="A highly detailed close-up of architectural blueprints spread across a rough concrete table. Heavy-duty metal calipers and a yellow hard hat sit atop the plans. The lighting is harsh and directional, emphasizing the texture of the concrete and the crisp lines of the schematic. The color palette focuses on slate grays, stark whites, and stark safety yellow accents, conveying a sense of engineered precision."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQbXW7RSgg8Oit8FadgJDbbVRqbs57OnxZZwsg9rh-ECAUgmECaEeuayKW92VjMmi6jUJqUVjONus5thVstD0gWY-bfRc2fWsPYYzKKr4yuzIZ6U7GolagxNMSLIgsJoXhUbh70kXsrh1W0LRFYyEwrN0VckEpjkUYBS0X0IggtRjxrdQI2841OHfa2J0V_8JYI93peAKSk3sZdX0tJaoSmoLx6ebBcoQZup_Bbt7qnf8yGXBr_bzkP7RAsuRwTtz6aPB3R9GsXSf" />
+                    <div
+                        class="absolute inset-0 p-gutter flex flex-col justify-end bg-gradient-to-t from-inverse-surface to-transparent">
+                        <h3 class="font-headline-md text-headline-md text-surface-container-lowest uppercase mb-base">
+                            Blueprint to Reality</h3>
+                        <p class="font-body-md text-body-md text-surface-variant max-w-lg">
+                            Translating complex architectural schematics into physical monuments of strength.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Leadership Team -->
+        <section class="bg-surface-container py-stack-lg border-y-4 border-inverse-surface">
+            <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="mb-stack-md flex justify-between items-end">
+                    <h2
+                        class="font-headline-md text-headline-md text-inverse-surface uppercase border-l-4 border-primary-container pl-4">
+                        Command Core</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+                    <!-- Team Member 1 -->
+                    <div class="group">
+                        <div
+                            class="border-2 border-inverse-surface overflow-hidden bg-surface-container-lowest mb-base relative">
+                            <div
+                                class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <img alt="Chief Engineer"
+                                class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                data-alt="A striking portrait of a female Chief Engineer wearing a high-visibility orange safety vest and a white hard hat. She is standing on an active construction site with raw steel girders in the background. The lighting is natural but high-contrast, casting strong shadows that emphasize the harsh industrial environment. Her expression is focused and authoritative, aligning with the heavy-duty, professional aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXIwoU6CmCa_bq6FACwbLTWsJjmnnN7TH-7nUFZLi8vi30UfiIr_MFR8nWIzni7lHz9Ij_klVFFIhY_cInjGhfBfV9vzaiW_A2Xh3jbPJa3-03i0txdsgujfY093HcfayiU6mkb1Nef05VusRX0aZFg5y0ZDSBiN_8Vp279YLzIs2YDLgPQcPwFpAQJEau4vjTO2UL57N9p8AvxTra9I78j2IhDX_yyL_mAiJ0AnuCjFo7H_PptsFNlLUs5e3Ty9bXu8y4Kgzaizzi" />
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-inverse-surface uppercase">Sarah Jenkins</h4>
+                        <p class="font-label-bold text-label-bold text-primary-container uppercase">Chief Engineer</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="group">
+                        <div
+                            class="border-2 border-inverse-surface overflow-hidden bg-surface-container-lowest mb-base relative">
+                            <div
+                                class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <img alt="Project Director"
+                                class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                data-alt="A bold, high-contrast portrait of a male Project Director on a construction site. He is wearing a rugged charcoal jacket and an orange hard hat. The background features blurred concrete pillars and heavy machinery. The mood is serious and robust, utilizing a gritty industrial aesthetic with deep shadows and sharp, structural details."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6--0S0RJ_cQC-zF0aUxpbBDwYTX7iObLejUNrV-oUDcp3ipwSShKXYeewN4sQWuCWcucja46BZ8Aq-anYVsEF7731TpMCFGwqheOyiyDLeJ2lzGyBUsdC7py44Skx3iQ9IbQ5FZKsCikw_-GaOStH26rwunQgZn0P24IKsqbCagu9kzBji_E8Pd_4qYzBJbZnbi4KTp7mc9bAra8VI3xMXf5ShRBk7zbbVW5JwwTLdScy1vLiZh1eMNuGH0wM1cuhqTA5GbF-bpzR" />
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-inverse-surface uppercase">Marcus Vance</h4>
+                        <p class="font-label-bold text-label-bold text-primary-container uppercase">Project Director</p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="group">
+                        <div
+                            class="border-2 border-inverse-surface overflow-hidden bg-surface-container-lowest mb-base relative">
+                            <div
+                                class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <img alt="Safety Supervisor"
+                                class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                data-alt="A professional headshot of a Safety Supervisor at a construction site. He wears safety goggles, a bright orange high-visibility vest, and a white hard hat. The background shows scaffolding in soft focus. The lighting is bright and clear, highlighting the safety gear against a raw concrete and steel environment. The overall tone is vigilant, industrial, and highly structural."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsdlStVYs0LydXflQ3kf6fI7RTefkl5tUwFJvOKls5vgw0qnjYEUM60FwcQFTyuG9B2hrPedGGWJhmtEtEIMNvNMitzC6vEYr5SZUWgg1uXCmBeBhM2L6HADegWbz1t-XVfkQpzLrAU6H3oHBfzPeH37VFg3u2HYtlrK4wqoHhm8HPU0hZadE0fE1SGFLlARgUKq2BdNHPQMf8GfC91zN-I_rdI6jIuKBAmEdEgGxsC_Y2nXIUiUZamXxOn-2k6Usq3TQ-tWZ2pbOB" />
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-inverse-surface uppercase">David O'Connor</h4>
+                        <p class="font-label-bold text-label-bold text-primary-container uppercase">Safety Supervisor
+                        </p>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="group">
+                        <div
+                            class="border-2 border-inverse-surface overflow-hidden bg-surface-container-lowest mb-base relative">
+                            <div
+                                class="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                            </div>
+                            <img alt="Lead Architect"
+                                class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                                data-alt="A confident portrait of a female Lead Architect reviewing blueprints on site. She wears a crisp white button-down shirt under a high-visibility vest, topped with a yellow hard hat. The environment is a partially finished commercial building interior with exposed concrete walls. The composition is rigid and geometric, utilizing a heavy-duty industrial style with strong, dark outlines and bold contrasting colors."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGDqjBzeTAtpN44XYks0VBXiwiUVCiYtg_DRjq14WbuyvoBfaPtAyneMQCRpRAMhsKd8p8FLDnADwM-tDAa2-154r5Cisi14nAgC2sowRBldMojFBHRcoj24R5u7UUwCUb6xSXZu1_x8ZXmbqK0W8kCY5WN7DJx6sfJb0kmfUFTTXDdn0t9hTZittiCsOAwsxRfUjDVzP9RPk6YvsFzZLjZW956RHaySjza-AcyagggswCxl6LUhSXcaU5vn2wTwqKWInwutf-9riH" />
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-inverse-surface uppercase">Elena Rostova</h4>
+                        <p class="font-label-bold text-label-bold text-primary-container uppercase">Lead Architect</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certifications & Trust Badges -->
+        <section class="py-stack-lg max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+            <h2
+                class="font-headline-md text-headline-md text-inverse-surface uppercase mb-stack-md inline-block border-b-4 border-primary-container pb-2">
+                Certified to Build</h2>
+            <div class="flex flex-wrap justify-center gap-gutter items-center">
+                <div
+                    class="bg-surface-container-lowest border-2 border-inverse-surface px-8 py-6 flex items-center gap-4 hover:border-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-inverse-surface"
+                        style="font-size: 36px;">verified_user</span>
+                    <span class="font-headline-sm text-headline-sm text-inverse-surface uppercase">OSHA 30</span>
+                </div>
+                <div
+                    class="bg-surface-container-lowest border-2 border-inverse-surface px-8 py-6 flex items-center gap-4 hover:border-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-inverse-surface" style="font-size: 36px;">gavel</span>
+                    <span class="font-headline-sm text-headline-sm text-inverse-surface uppercase">Class A
+                        Contractor</span>
+                </div>
+                <div
+                    class="bg-surface-container-lowest border-2 border-inverse-surface px-8 py-6 flex items-center gap-4 hover:border-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-inverse-surface" style="font-size: 36px;">eco</span>
+                    <span class="font-headline-sm text-headline-sm text-inverse-surface uppercase">LEED Certified</span>
+                </div>
+                <div
+                    class="bg-surface-container-lowest border-2 border-inverse-surface px-8 py-6 flex items-center gap-4 hover:border-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-inverse-surface"
+                        style="font-size: 36px;">engineering</span>
+                    <span class="font-headline-sm text-headline-sm text-inverse-surface uppercase">ISO 9001</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-stack-lg bg-inverse-surface dark:bg-surface-container-lowest border-t-8 border-primary">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-md max-w-[1200px] mx-auto">
+            <div class="col-span-1 md:col-span-1 flex flex-col justify-between h-full">
+                <span
+                    class="font-headline-sm text-headline-sm font-black text-on-primary uppercase tracking-tighter">CONSTRUCT-PRO</span>
+                <p class="font-body-md text-body-md text-surface-variant dark:text-secondary mt-4 md:mt-0">
+                    © 2024 CONSTRUCT-PRO. BUILT TO LAST.
+                </p>
+            </div>
+            <div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-end">
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Safety Manual</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Careers</a>
+                <a class="font-body-md text-body-md text-surface-variant dark:text-secondary hover:text-on-primary transition-colors hover:underline decoration-primary decoration-2"
+                    href="#">Locations</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

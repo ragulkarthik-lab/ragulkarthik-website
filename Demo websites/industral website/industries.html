@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Industries Served - TITAN INDUSTRIAL</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-secondary-fixed-variant": "#3c4851",
+                                                "surface-tint": "#ffb693",
+                                                "background": "#131313",
+                                                "tertiary": "#9ccaff",
+                                                "error-container": "#93000a",
+                                                "primary-fixed": "#ffdbcc",
+                                                "on-tertiary-container": "#003357",
+                                                "surface-container-high": "#2a2a2a",
+                                                "error": "#ffb4ab",
+                                                "inverse-on-surface": "#313030",
+                                                "on-error-container": "#ffdad6",
+                                                "tertiary-fixed-dim": "#9ccaff",
+                                                "on-surface": "#e5e2e1",
+                                                "surface": "#131313",
+                                                "on-background": "#e5e2e1",
+                                                "on-secondary-fixed": "#111d25",
+                                                "on-primary-fixed": "#351000",
+                                                "on-primary": "#561f00",
+                                                "secondary": "#bbc8d3",
+                                                "surface-container-lowest": "#0e0e0e",
+                                                "on-primary-container": "#572000",
+                                                "primary-fixed-dim": "#ffb693",
+                                                "surface-container-highest": "#353535",
+                                                "inverse-primary": "#a04100",
+                                                "inverse-surface": "#e5e2e1",
+                                                "surface-dim": "#131313",
+                                                "tertiary-fixed": "#d0e4ff",
+                                                "surface-bright": "#393939",
+                                                "primary-container": "#ff6b00",
+                                                "on-secondary-container": "#adbac5",
+                                                "secondary-fixed-dim": "#bbc8d3",
+                                                "on-surface-variant": "#e2bfb0",
+                                                "on-tertiary-fixed-variant": "#00497b",
+                                                "on-secondary": "#26323b",
+                                                "surface-variant": "#353535",
+                                                "on-tertiary": "#003257",
+                                                "outline-variant": "#5a4136",
+                                                "outline": "#a98a7d",
+                                                "secondary-fixed": "#d7e4f0",
+                                                "tertiary-container": "#059eff",
+                                                "secondary-container": "#3e4b54",
+                                                "on-error": "#690005",
+                                                "on-tertiary-fixed": "#001d35",
+                                                "primary": "#ffb693",
+                                                "surface-container": "#20201f",
+                                                "surface-container-low": "#1c1b1b",
+                                                "on-primary-fixed-variant": "#7a3000"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "column-count": "12",
+                                                "margin-desktop": "32px",
+                                                "base": "8px",
+                                                "margin-mobile": "16px",
+                                                "gutter": "16px"
+                                        },
+                                        "fontFamily": {
+                                                "headline-md": ["Hanken Grotesk"],
+                                                "technical-sm": ["JetBrains Mono"],
+                                                "headline-lg": ["Hanken Grotesk"],
+                                                "body-md": ["Inter"],
+                                                "body-lg": ["Inter"],
+                                                "label-caps": ["JetBrains Mono"]
+                                        },
+                                        "fontSize": {
+                                                "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                                                "technical-sm": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                                                "headline-lg": ["40px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                                                "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                                                "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                                                "label-caps": ["12px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                                        }
+                                }
+                        }
+                }
+        </script>
+        <style>
+                body {
+                        background-color: #131313;
+                        background-image: linear-gradient(#333F48 1px, transparent 1px),
+                                linear-gradient(90deg, #333F48 1px, transparent 1px);
+                        background-size: 32px 32px;
+                        background-position: -1px -1px;
+                }
+        </style>
+</head>
+
+<body class="text-on-background min-h-screen flex flex-col">
+        <!-- TopNavBar -->
+        <nav class="bg-background w-full top-0 border-b-2 border-outline-variant z-50 sticky">
+                <div class="flex justify-between items-center h-16 px-margin-desktop max-w-[1440px] mx-auto">
+                        <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                                TITAN INDUSTRIAL
+                        </div>
+                        <div class="hidden md:flex items-center space-x-gutter">
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="services.html">Services</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="industries.html">Industries</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="projects.html">Projects</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="about.html">About</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <div class="hidden md:flex items-center">
+                                <button
+                                        class="bg-primary-container text-background font-label-caps text-label-caps px-4 py-2 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200">
+                                        Request Technical Specs
+                                </button>
+                        </div>
+                        <div class="md:hidden flex items-center">
+                                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+                        </div>
+                </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="flex-grow px-margin-desktop max-w-[1440px] mx-auto w-full py-12">
+                <!-- Header Section -->
+                <div class="mb-12 border-b-2 border-outline-variant pb-6">
+                        <h1 class="font-headline-lg text-headline-lg text-on-surface mb-4">ENGINEERED FOR EXTREMES</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Delivering
+                                precision-engineered solutions across high-stakes sectors. Our structural and logistical
+                                frameworks are designed to exceed compliance in the most demanding environments on
+                                Earth.</p>
+                </div>
+                <!-- Industries Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Aerospace -->
+                        <article class="bg-surface-variant border-2 border-outline-variant flex flex-col group">
+                                <div
+                                        class="h-6 bg-surface-container-high border-b border-outline-variant px-3 flex items-center">
+                                        <span
+                                                class="font-technical-sm text-technical-sm text-on-surface-variant uppercase tracking-widest">IND-01:
+                                                AEROSPACE</span>
+                                </div>
+                                <div class="h-48 bg-surface border-b-2 border-outline-variant relative overflow-hidden">
+                                        <img alt="Aerospace"
+                                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0 duration-500"
+                                                data-alt="A highly detailed close-up shot of complex aerospace engineering machinery. The image focuses on metallic turbine blades and structural components, rendered in a brutalist, industrial aesthetic. The lighting is harsh and directional, emphasizing the textures of the metal and the precision of the engineering. Deep shadows contrast with gleaming highlights, creating a sense of technical rigor and uncompromising reliability."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSXGyiWezBvAknjq-fuki7dEj52tZbZBd6Zx6XTbb39yV8rBcs9DQpQEvFvpRXR0z_bkc3fCHw-xnnCwQcRjF_SRVIQvcvm8ur48Stt2igK4G9NrhK0Ls_B_GCjsaL1LjzOyC_jBCJRYAuItu8SA77qqhyxZiJspCqP8vEI6NFZQLfuBNy7OOD0T_zITx0woFEOey1Q7XNQOxh5ZohfQHVLT1BJLo06cUcDwHdf2M3bNDG02DTlpsb-msh2Pxwk7fEwFKY0SEZ7CXN" />
+                                </div>
+                                <div class="p-6 flex-grow flex flex-col">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Aerospace
+                                                &amp; Defense</h2>
+                                        <div class="mb-6">
+                                                <h3 class="font-label-caps text-label-caps text-primary mb-2">
+                                                        APPLICATIONS</h3>
+                                                <ul
+                                                        class="font-body-md text-body-md text-on-surface-variant space-y-1 list-none">
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Orbital Structural Supports</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                High-G Reinforcements</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Thermal Shield Integration</li>
+                                                </ul>
+                                        </div>
+                                        <div class="mt-auto">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">AS9100D</span>
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">ITAR</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex items-center bg-[#1e4620] border-2 border-[#4caf50] px-3 py-1">
+                                                        <span
+                                                                class="material-symbols-outlined text-[#4caf50] text-sm mr-1">verified</span>
+                                                        <span
+                                                                class="font-label-caps text-label-caps text-[#4caf50]">COMPLIANT</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </article>
+                        <!-- Renewable Energy -->
+                        <article class="bg-surface-variant border-2 border-outline-variant flex flex-col group">
+                                <div
+                                        class="h-6 bg-surface-container-high border-b border-outline-variant px-3 flex items-center">
+                                        <span
+                                                class="font-technical-sm text-technical-sm text-on-surface-variant uppercase tracking-widest">IND-02:
+                                                RENEWABLE</span>
+                                </div>
+                                <div class="h-48 bg-surface border-b-2 border-outline-variant relative overflow-hidden">
+                                        <img alt="Renewable Energy"
+                                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0 duration-500"
+                                                data-alt="A massive offshore wind turbine structure under construction. The scene is dominated by massive steel pylons and industrial scaffolding against a dark, stormy sky. The image uses a high-contrast, desaturated color palette to emphasize the brutalist scale of the engineering project. Bright safety orange accents from construction equipment provide sharp focal points against the grim, technical background."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjLqiaIaDQ_UUc8BUDeCnCivu4YdVX4WmV6517v_Qj-iya8GyH0nLuuyr88iD3qYYPoPQ7CznkgXAld-UUriUbznDw6jeka0dp4tn09JwniVktyHAj5O5MsspnQSyYrUbWHKk8GOOGVkT33oDTj-fTieNRjyh5N4jaG9jGgl2xOu0HWU7IC8CsvnapQTyAfbTrULXHSka0PeTHUuM79x2Ffuwj1HQ4cxri8dnMqA8XAYrPs8ZMxzGfWslG2X3dewIaCYZkDyG7_Yvw" />
+                                </div>
+                                <div class="p-6 flex-grow flex flex-col">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Renewable
+                                                Infrastructure</h2>
+                                        <div class="mb-6">
+                                                <h3 class="font-label-caps text-label-caps text-primary mb-2">
+                                                        APPLICATIONS</h3>
+                                                <ul
+                                                        class="font-body-md text-body-md text-on-surface-variant space-y-1 list-none">
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Offshore Wind Foundations</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Solar Array Frameworks</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Hydro-Turbine Housings</li>
+                                                </ul>
+                                        </div>
+                                        <div class="mt-auto">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">ISO
+                                                                14001</span>
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">IEC
+                                                                61400</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex items-center bg-[#1e4620] border-2 border-[#4caf50] px-3 py-1">
+                                                        <span
+                                                                class="material-symbols-outlined text-[#4caf50] text-sm mr-1">verified</span>
+                                                        <span
+                                                                class="font-label-caps text-label-caps text-[#4caf50]">COMPLIANT</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </article>
+                        <!-- Oil & Gas -->
+                        <article class="bg-surface-variant border-2 border-outline-variant flex flex-col group">
+                                <div
+                                        class="h-6 bg-surface-container-high border-b border-outline-variant px-3 flex items-center">
+                                        <span
+                                                class="font-technical-sm text-technical-sm text-on-surface-variant uppercase tracking-widest">IND-03:
+                                                OIL &amp; GAS</span>
+                                </div>
+                                <div class="h-48 bg-surface border-b-2 border-outline-variant relative overflow-hidden">
+                                        <img alt="Oil and Gas"
+                                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0 duration-500"
+                                                data-alt="A heavy industrial oil rig facility at dusk. The complex network of pipes, valves, and steel superstructures is silhouetted against a moody sky. The scene is lit by harsh artificial floodlights, creating stark shadows and emphasizing the structural brutality of the environment. The color grading leans into deep charcoals and slate greys, reflecting a technical, uncompromising aesthetic."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw4iFZTqTR4DftKaM5cL5DdA2fl5H7LbckCvAttdGQQqsBFSwxDECIS3GA53_2HfUv48LbbJlQ-3DK9QwH0PyevMGDeREPRV494_r2rKOkeP485QLRNr5Ul8arQ8QwDA_rVu-K88aiutqkk8I2PLPAB3TExVS1BYnAw0BHnPvghZ8X_H6lmtp6W1sPxukDO83ZAr2iS-lM6u2R0hF8m61fIlhqQNs8GaHginif7fdOUWLko-JPc5iNIEB997RUzWCZSCgTQOUt5OLs" />
+                                </div>
+                                <div class="p-6 flex-grow flex flex-col">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Deepwater
+                                                Extraction</h2>
+                                        <div class="mb-6">
+                                                <h3 class="font-label-caps text-label-caps text-primary mb-2">
+                                                        APPLICATIONS</h3>
+                                                <ul
+                                                        class="font-body-md text-body-md text-on-surface-variant space-y-1 list-none">
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Subsea Manifolds</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                High-Pressure Piping Systems</li>
+                                                        <li class="flex items-start"><span
+                                                                        class="material-symbols-outlined text-primary text-sm mr-2 mt-1">check_box</span>
+                                                                Rig Superstructures</li>
+                                                </ul>
+                                        </div>
+                                        <div class="mt-auto">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">API
+                                                                Spec Q1</span>
+                                                        <span
+                                                                class="bg-surface-container-high border border-outline-variant px-2 py-1 font-technical-sm text-technical-sm text-on-surface">ISO
+                                                                29001</span>
+                                                </div>
+                                                <div
+                                                        class="inline-flex items-center bg-[#5c2b00] border-2 border-[#ff9800] px-3 py-1">
+                                                        <span
+                                                                class="material-symbols-outlined text-[#ff9800] text-sm mr-1">warning</span>
+                                                        <span class="font-label-caps text-label-caps text-[#ff9800]">STRICT
+                                                                OVERSIGHT</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </article>
+                </div>
+        </main>
+        <!-- Footer -->
+        <footer
+                class="bg-surface-container-lowest border-t-2 border-outline-variant bg-[url('blueprint-grid.svg')] w-full bottom-0 mt-auto">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-12 max-w-[1440px] mx-auto transition-all duration-300 ease-in-out">
+                        <div class="md:col-span-4 flex flex-col gap-4">
+                                <span class="font-headline-md text-headline-md font-black text-on-surface">TITAN
+                                        INDUSTRIAL</span>
+                                <p class="font-technical-sm text-technical-sm text-on-secondary-container max-w-xs">
+                                        ENGINEERED FOR PRECISION. BUILT FOR EXTREMES.
+                                </p>
+                                <div class="mt-4 font-technical-sm text-technical-sm text-on-secondary-container">
+                                        © 2024 TITAN INDUSTRIAL. ALL RIGHTS RESERVED. ENGINEERED FOR PRECISION.
+                                </div>
+                        </div>
+                        <div class="md:col-span-8 flex flex-wrap gap-8 md:justify-end">
+                                <div class="flex flex-col gap-2">
+                                        <span
+                                                class="font-label-caps text-label-caps text-primary mb-2">CERTIFICATIONS</span>
+                                        <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors"
+                                                href="#">ISO 9001 CERTIFIED</a>
+                                        <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors"
+                                                href="#">OHSAS 18001 COMPLIANT</a>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                        <span
+                                                class="font-label-caps text-label-caps text-primary mb-2">NAVIGATION</span>
+                                        <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors"
+                                                href="#">Sitemap</a>
+                                        <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors"
+                                                href="#">Office Locations</a>
+                                        <a class="font-technical-sm text-technical-sm text-on-secondary-container hover:text-primary-container transition-colors"
+                                                href="#">Terms of Service</a>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+</body>
+
+</html>

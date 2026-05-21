@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Doctors - St. Jude Clinical</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Public+Sans:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#86a0cd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#cae6ff",
+                        "inverse-primary": "#adc7f7",
+                        "on-tertiary-fixed": "#00201c",
+                        "primary-container": "#1a365d",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#004a6d",
+                        "outline-variant": "#c4c6cf",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "on-tertiary-container": "#43af9f",
+                        "primary": "#002045",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#002521",
+                        "surface-dim": "#d8dadc",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#adc7f7",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-container": "#003d36",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-background": "#191c1e",
+                        "outline": "#74777f",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-fixed-dim": "#70d8c8",
+                        "secondary-container": "#58bcfd",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed-variant": "#004b6f",
+                        "secondary": "#006492",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-fixed": "#8df5e4",
+                        "surface-tint": "#455f88",
+                        "on-tertiary-fixed-variant": "#005048",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed-dim": "#8ccdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "baseline": "8px",
+                        "container-max": "1200px",
+                        "section-gap-sm": "40px",
+                        "margin-mobile": "16px",
+                        "section-gap-lg": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Public Sans"],
+                        "headline-sm": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "portal-button": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "portal-button": ["14px", { "lineHeight": "1", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 32, 69, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+    <!-- Emergency Banner -->
+    <div
+        class="bg-error dark:bg-error-container text-on-error dark:text-on-error-container w-full min-h-[40px] flex items-center justify-center text-center px-gutter py-2 cursor-default hover:brightness-110 transition-all z-50 relative">
+        <span class="font-label-caps text-label-caps uppercase tracking-widest">EMERGENCY: If you are experiencing a
+            medical emergency, please call 108 immediately.</span>
+    </div>
+    <!-- TopNavBar -->
+    <header class="w-full bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline">
+        <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+            <div class="flex items-center gap-4">
+                <span
+                    class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed uppercase tracking-tight">St.
+                    Jude Clinical</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="service.html">Services</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="meet.html">Doctors</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="patient.html">Patient Info</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:flex items-center gap-2 border border-outline-variant px-4 py-2 rounded-full text-primary hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined" data-icon="lock">lock</span>
+                    <span class="font-portal-button text-portal-button">Patient Portal</span>
+                </button>
+                <button
+                    class="bg-primary text-on-primary px-6 py-3 rounded-full font-portal-button text-portal-button hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_20px_rgba(0,32,69,0.15)]">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main
+        class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap-sm md:py-section-gap-lg">
+        <!-- Page Header & Search/Filter Section -->
+        <section class="mb-section-gap-sm">
+            <h1
+                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+                Our Medical Professionals</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">Dedicated experts providing
+                compassionate, world-class care across a comprehensive range of specialties.</p>
+            <div
+                class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow border-t border-surface-variant flex flex-col md:flex-row gap-4 items-end">
+                <div class="w-full md:w-1/3 flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Search Doctor
+                        Name</label>
+                    <div class="relative w-full">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+                        <input
+                            class="w-full h-12 pl-10 pr-4 border border-outline-variant rounded bg-surface focus:ring-1 focus:ring-primary focus:border-primary outline-none text-body-md font-body-md"
+                            placeholder="Dr. Smith..." type="text" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/4 flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Specialty</label>
+                    <select
+                        class="w-full h-12 px-4 border border-outline-variant rounded bg-surface focus:ring-1 focus:ring-primary focus:border-primary outline-none text-body-md font-body-md text-on-surface">
+                        <option>All Specialties</option>
+                        <option>Cardiology</option>
+                        <option>Neurology</option>
+                        <option>Pediatrics</option>
+                        <option>Oncology</option>
+                    </select>
+                </div>
+                <div class="w-full md:w-1/4 flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Location</label>
+                    <select
+                        class="w-full h-12 px-4 border border-outline-variant rounded bg-surface focus:ring-1 focus:ring-primary focus:border-primary outline-none text-body-md font-body-md text-on-surface">
+                        <option>All Locations</option>
+                        <option>Main Campus</option>
+                        <option>North Clinic</option>
+                        <option>Westside Center</option>
+                    </select>
+                </div>
+                <div class="w-full md:w-auto">
+                    <button
+                        class="w-full md:w-auto h-12 bg-surface-variant text-primary px-6 rounded font-portal-button text-portal-button hover:bg-outline-variant transition-colors flex items-center justify-center">
+                        <span class="material-symbols-outlined mr-2" style="font-size: 18px;">filter_list</span> Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Doctors Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Doctor Card 1 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. Sarah Jenkins headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a female doctor in a crisp white lab coat over scrubs, smiling warmly in a brightly lit, modern clinical setting with soft depth of field. High-key lighting, cool tones, portraying trust and expertise."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaoK9ob7ogkt0cI9Egfkeh_zzOc7KOaX0PwwWLLUEZ6psmNvR9K0wRVKCLSCs_dfWDcbhqj25bq9wKQe32xya7kXqOnFP4H9GkLzGWM4mycNpyPMBAzm9IRG-agZTJxuWo06ZA_bD_InfL8pVwtYq287g_wAHv1Xt9VxCHW5Ctqcm_4SEE-Aeadnoq_ZOLHRdUP-fS-xJXufIWurCqKYKOpWGBR1JESv2Q6eGgP6iUQcNVhMzEFfWKxFNwHDEfObepouuxcng8e6I" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Sarah Jenkins</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Cardiology</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Board-certified
+                    cardiologist specializing in interventional procedures and preventative heart care with over 15
+                    years of experience.</p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>MD, Harvard Medical School</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+            <!-- Doctor Card 2 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. Marcus Chen headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a male doctor wearing a stethoscope around his neck and a white coat, looking directly at the camera with a calm, reassuring expression. The background is a slightly blurred modern hospital corridor with cool, sterile lighting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFqcK4XVEH6Ubpr5xKPI65bik47osWkUC5vmhMdb4lbl1obGnzrl6wf8VRsCPixPlEQxKi2MPFk_fQ-mUux2pwtbzGkpjWshQaWrH3dOYUUikI7-EvuyWJx1a15ZU85KdHiSl9BIntxy_L_RBMg4X2TgnEcFkwIoW_qcj8WTPBPW1M7XIPGKVx7LbKmDr9cW561GiL1cEdBwVn52bjk6RmcwA5kGReulqA0nQhRlPjcMEza8eV1_VCBrawRUE6AQ5Suf_XYGyE2gA" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Marcus Chen</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Neurology</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Expert in comprehensive
+                    neurological disorders, focusing on innovative treatments for stroke recovery and neurodegenerative
+                    diseases.</p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>MD, Johns Hopkins</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+            <!-- Doctor Card 3 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. Emily Patel headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a female pediatrician of South Asian descent, wearing cheerful scrubs and a stethoscope, smiling brightly. The setting is a well-lit clinic room with soft, welcoming natural light and a hint of child-friendly decor in the blurred background."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvge-Ht_oqB3Of2q7h0er0oLRwGFgA63MKB2R2e1qAnwiZfbYOMPjfad38dk2flzBT0-rB3kElGajH81k0hF_urf5dc8JIKQPf0ju_86L8s6HxruuL_cXmu8gkePwAeqIeqDGyAYbvhwtni8giUDv5D5wpXMwdEB4tlTyxHTTugNy6f7sSHQko7fiVY_pqurP5uOkpuA4kaYCDhk24AhtL2v-x7C-PI21pG3ba-HOQTFYoVJVwZ1Bbu9btV4FNiD35lwV-ZWPBdBs" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Emily Patel</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Pediatrics</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Dedicated pediatrician
+                    committed to providing compassionate, evidence-based care for infants, children, and adolescents.
+                </p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>DO, Stanford Medicine</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+            <!-- Doctor Card 4 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. Robert Hayes headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of an older male doctor with grey hair, wearing glasses and a lab coat over a shirt and tie. He has a seasoned, confident demeanor. Shot against a neutral, soft grey background typical of a corporate medical portrait, utilizing balanced studio lighting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEd-nInOBAEMvSwkXWB-tBduF7I5G3BxpfdZqHm6JO3ILvpG_qNLUFF4agnG0ZoEs2HdIvjAqms7Y7r5pVfKilAKSxs0wrQdorEy8WExdYBdRQf4zXO7w7MSv4xUYitThSho9g0jKdHQNMMbBPrIVhVU1sB0AwpbraRMh3FR8utF2CIpq7CqjDQzZryebpkjV7LrYRfdxdiw_FAZcDzrFCVhP5Rw4i1hUHbu6vB6KinKDJKnQVRVl8xLHU-5cmfz0SvuuZq55QC50" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Robert Hayes</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Oncology</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Leading oncologist
+                    specializing in targeted therapies and personalized cancer treatment plans, focusing on patient
+                    quality of life.</p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>MD, PhD, Mayo Clinic Alix</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+            <!-- Doctor Card 5 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. Alicia Torres headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a female doctor in a crisp white lab coat over scrubs, smiling warmly in a brightly lit, modern clinical setting with soft depth of field. High-key lighting, cool tones, portraying trust and expertise."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6Z0sU2wxvSdNUXetvv0aA25rfYjTTs1rvQipoR2Nrz3rI-x377lENapoZebLRTuoV3CmfHmlFfnzTuLsxCMArtzdPejXX7qGs-nn4ZiJ_5loMC_l2oICBeS-A3vNEhpUUw8eDkO9n1aB4BMJIZp3lAHtY4IuxbrCJYbdjERSpQb2hu1ThdPDkCHfavUtA7CNx5-cfNcd_b8IAtpkqweU7N8Zi6L8SYBgXH6duQ5sRzCnoPAqYLUPJ2luO7gdMElzVefj5YlvK_c" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. Alicia Torres</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Orthopedics</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Specialist in sports
+                    medicine and minimally invasive joint replacement surgery, dedicated to restoring patient mobility.
+                </p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>MD, UCSF</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+            <!-- Doctor Card 6 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl ambient-shadow border-t border-tertiary p-6 flex flex-col items-center text-center group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-surface bg-surface-variant">
+                    <img alt="Dr. James Wilson headshot" class="w-full h-full object-cover"
+                        data-alt="A professional headshot of a male doctor wearing a stethoscope around his neck and a white coat, looking directly at the camera with a calm, reassuring expression. The background is a slightly blurred modern hospital corridor with cool, sterile lighting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw8bRcH2Vfhr1aM_u_dE8Xv7bThvU74ydeMT8WnmkZIsd8GHhQRIhG-9PRsKzZgdUCHHLv_AL2IpazgGX-p1ENN5w7u4J7j-g3qEWZS5FgK9-JbtcQEclIFDgtG-ZQblHUuISIOdSfihOqmeYL1BXL3Xhi0tNQrLlQLr7bFU6d2_58bpZK3HbI9Gjkk2nClpnqyO0_mfVobYpL75F3T4TSC-NLDKSM2J5ZJ0hHBfPPO_OKP4Re0XraB_7_C1ptOct-ALvNPuHCh4E" />
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-1">Dr. James Wilson</h3>
+                <span class="text-secondary font-portal-button text-portal-button mb-3">Internal Medicine</span>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Comprehensive adult care
+                    physician managing complex chronic conditions and prioritizing preventative health strategies.</p>
+                <div class="mt-auto w-full flex flex-col gap-3">
+                    <div
+                        class="flex items-center justify-center gap-2 text-on-surface-variant font-label-caps text-label-caps">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">school</span>
+                        <span>MD, Yale School of Medicine</span>
+                    </div>
+                    <button
+                        class="w-full border border-primary text-primary py-2 rounded font-portal-button text-portal-button hover:bg-primary hover:text-on-primary transition-colors">
+                        View Profile
+                    </button>
+                </div>
+            </article>
+        </section>
+        <!-- Pagination (Simple) -->
+        <div class="mt-section-gap-sm flex justify-center gap-2">
+            <button
+                class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded text-on-surface-variant hover:bg-surface-variant transition-colors">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button
+                class="w-10 h-10 flex items-center justify-center bg-primary text-on-primary rounded font-portal-button">1</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded text-on-surface hover:bg-surface-variant transition-colors font-portal-button">2</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded text-on-surface hover:bg-surface-variant transition-colors font-portal-button">3</button>
+            <button
+                class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded text-on-surface-variant hover:bg-surface-variant transition-colors">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container w-full mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-section-gap-sm max-w-container-max mx-auto px-gutter py-section-gap-lg">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-headline-sm font-headline-sm text-on-primary dark:text-on-primary-container mb-4">St.
+                    Jude Clinical</div>
+                <p class="font-body-md text-body-md text-on-primary dark:text-on-primary-container opacity-80 max-w-md">
+                    Providing clinical precision and healing calm. Dedicated to advancing medical care and ensuring
+                    patient well-being through innovative practices and compassionate professionals.
+                </p>
+                <div class="mt-6 text-body-md font-body-md">
+                    © 2024 St. Jude Clinical Care. All rights reserved. HIPAA Compliant.
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <span class="font-label-caps text-label-caps uppercase tracking-widest opacity-60 mb-2">Legal</span>
+                <a class="text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md"
+                    href="#">Terms of Service</a>
+            </div>
+            <div class="flex flex-col gap-3">
+                <span class="font-label-caps text-label-caps uppercase tracking-widest opacity-60 mb-2">Patient
+                    Resources</span>
+                <a class="text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md"
+                    href="#">Insurance Partners</a>
+                <a class="text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity font-body-md text-body-md"
+                    href="#">Clinic Locations</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

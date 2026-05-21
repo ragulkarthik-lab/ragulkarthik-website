@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>St. Jude Clinical - Contact &amp; Book</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Public+Sans:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS v3 -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#86a0cd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#cae6ff",
+                        "inverse-primary": "#adc7f7",
+                        "on-tertiary-fixed": "#00201c",
+                        "primary-container": "#1a365d",
+                        "background": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#004a6d",
+                        "outline-variant": "#c4c6cf",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "on-tertiary-container": "#43af9f",
+                        "primary": "#002045",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#002521",
+                        "surface-dim": "#d8dadc",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#adc7f7",
+                        "surface-container-low": "#f2f4f6",
+                        "tertiary-container": "#003d36",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-background": "#191c1e",
+                        "outline": "#74777f",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface-variant": "#43474e",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "tertiary-fixed-dim": "#70d8c8",
+                        "secondary-container": "#58bcfd",
+                        "inverse-surface": "#2d3133",
+                        "on-secondary-fixed-variant": "#004b6f",
+                        "secondary": "#006492",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "tertiary-fixed": "#8df5e4",
+                        "surface-tint": "#455f88",
+                        "on-tertiary-fixed-variant": "#005048",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed-dim": "#8ccdff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "baseline": "8px",
+                        "container-max": "1200px",
+                        "section-gap-sm": "40px",
+                        "margin-mobile": "16px",
+                        "section-gap-lg": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Public Sans"],
+                        "headline-sm": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "display-lg-mobile": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "portal-button": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.25", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "portal-button": ["14px", { "lineHeight": "1", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 32, 69, 0.05);
+            /* Soft Diffusion of Primary Color */
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+    <!-- Shared Component: EmergencyBanner -->
+    <div
+        class="bg-error dark:bg-error-container text-on-error dark:text-on-error-container font-label-caps text-label-caps uppercase tracking-widest w-full min-h-[40px] flex items-center justify-center text-center px-gutter py-2 cursor-default z-50 relative">
+        EMERGENCY: If you are experiencing a medical emergency, please call 108 immediately.
+    </div>
+    <!-- Shared Component: TopNavBar -->
+    <header class="w-full bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline">
+        <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+            <div class="flex items-center gap-4">
+                <span
+                    class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed uppercase tracking-tight">St.
+                    Jude Clinical</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="service.html">Services</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="meet.html">Doctors</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="patient.html">Patient Info</a>
+                <a class="text-on-surface-variant dark:text-on-surface-variant font-portal-button hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 active:scale-90 text-portal-button"
+                    href="contact.html">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:flex items-center gap-2 border border-outline-variant px-4 py-2 rounded-full text-primary hover:bg-surface-container-high transition-colors">
+                    <span class="material-symbols-outlined" data-icon="lock">lock</span>
+                    <span class="font-portal-button text-portal-button">Patient Portal</span>
+                </button>
+                <button
+                    class="bg-primary text-on-primary px-6 py-3 rounded-full font-portal-button text-portal-button hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_20px_rgba(0,32,69,0.15)]">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Main Canvas -->
+    <main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-section-gap-lg">
+        <!-- Page Header -->
+        <div class="mb-section-gap-sm max-w-2xl">
+            <h1
+                class="font-display-lg text-display-lg text-primary mb-4 md:font-display-lg md:text-display-lg font-display-lg-mobile text-display-lg-mobile">
+                Contact &amp; Appointments</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+                We are here to help. Reach out to schedule a consultation, ask a question, or find the care you need.
+            </p>
+        </div>
+        <!-- Two Column Layout: Form & Info -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-section-gap-sm items-start">
+            <!-- Left Column: Booking Form (spans 7 cols on large screens) -->
+            <div
+                class="lg:col-span-7 bg-surface-container-lowest rounded-xl ambient-shadow p-8 border-t border-tertiary/10">
+                <h2 class="font-headline-md text-headline-md text-primary mb-6">Request an Appointment</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- First Name -->
+                        <div class="flex flex-col">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant mb-2"
+                                for="firstName">First Name</label>
+                            <input
+                                class="h-12 px-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface"
+                                id="firstName" placeholder="Jane" type="text" />
+                        </div>
+                        <!-- Last Name -->
+                        <div class="flex flex-col">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant mb-2"
+                                for="lastName">Last Name</label>
+                            <input
+                                class="h-12 px-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface"
+                                id="lastName" placeholder="Doe" type="text" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Email -->
+                        <div class="flex flex-col">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant mb-2"
+                                for="email">Email Address</label>
+                            <input
+                                class="h-12 px-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface"
+                                id="email" placeholder="jane@example.com" type="email" />
+                        </div>
+                        <!-- Phone -->
+                        <div class="flex flex-col">
+                            <label class="font-label-caps text-label-caps text-on-surface-variant mb-2"
+                                for="phone">Phone Number</label>
+                            <input
+                                class="h-12 px-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface"
+                                id="phone" placeholder="(555) 000-0000" type="tel" />
+                        </div>
+                    </div>
+                    <!-- Reason for Visit -->
+                    <div class="flex flex-col">
+                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="reason">Reason
+                            for Visit</label>
+                        <select
+                            class="h-12 px-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface appearance-none"
+                            id="reason">
+                            <option disabled="" selected="" value="">Select a reason...</option>
+                            <option value="routine">Routine Checkup</option>
+                            <option value="specialist">Specialist Consultation</option>
+                            <option value="followup">Follow-up Visit</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <!-- Message -->
+                    <div class="flex flex-col">
+                        <label class="font-label-caps text-label-caps text-on-surface-variant mb-2"
+                            for="message">Additional Details (Optional)</label>
+                        <textarea
+                            class="p-4 rounded border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-shadow text-on-surface resize-none"
+                            id="message" placeholder="Please provide any relevant details..." rows="4"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <button
+                            class="w-full md:w-auto px-8 py-3 bg-primary text-on-primary rounded font-portal-button text-portal-button hover:bg-primary-container transition-colors shadow-sm"
+                            type="submit">
+                            Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Right Column: Info Panel & Map (spans 5 cols on large screens) -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <!-- Immediate Needs CTA -->
+                <div class="bg-secondary-container text-on-secondary-container rounded-xl p-6 ambient-shadow">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">error</span>
+                        <h3 class="font-headline-sm text-headline-sm">Need Immediate Care?</h3>
+                    </div>
+                    <p class="font-body-md text-body-md mb-4 opacity-90">For non-life-threatening urgent matters, our
+                        Urgent Care center is open 24/7.</p>
+                    <a class="inline-block px-4 py-2 bg-on-secondary-container text-secondary-container font-portal-button text-portal-button rounded hover:brightness-110 transition-all"
+                        href="#">
+                        View Urgent Care Info
+                    </a>
+                </div>
+                <!-- Contact Details -->
+                <div class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow border border-surface-container">
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Clinic Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-outline mt-1">location_on</span>
+                            <div>
+                                <p class="font-portal-button text-portal-button text-on-surface">Main Campus</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant">123 Healing
+                                    Way<br />Medical District, City, ST 12345</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-outline">call</span>
+                            <div>
+                                <p class="font-body-md text-body-md text-on-surface-variant">(800) 555-0199</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-outline">mail</span>
+                            <div>
+                                <p class="font-body-md text-body-md text-on-surface-variant">contact@stjudeclinical.org
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Office Hours -->
+                <div class="bg-surface-container-lowest rounded-xl p-6 ambient-shadow border border-surface-container">
+                    <h3 class="font-headline-sm text-headline-sm text-primary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-outline">schedule</span>
+                        Office Hours
+                    </h3>
+                    <table class="w-full text-left font-body-md text-body-md text-on-surface-variant">
+                        <tbody>
+                            <tr class="border-b border-surface-container last:border-0">
+                                <td class="py-2">Mon - Fri</td>
+                                <td class="py-2 text-right">8:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr class="border-b border-surface-container last:border-0">
+                                <td class="py-2">Saturday</td>
+                                <td class="py-2 text-right">9:00 AM - 2:00 PM</td>
+                            </tr>
+                            <tr class="border-b border-surface-container last:border-0">
+                                <td class="py-2">Sunday</td>
+                                <td class="py-2 text-right">Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Interactive Map Placeholder -->
+                <div class="rounded-xl overflow-hidden ambient-shadow h-64 bg-surface-container relative">
+                    <!-- Placeholder image acting as map -->
+                    <img alt="Map Location" class="w-full h-full object-cover"
+                        data-alt="A clean, minimalist digital map interface showing a pinpoint in a well-organized medical district. The map uses a light, modern color palette with soft greys, subtle blues representing water or parks, and white roads, fitting a clinical and trustworthy aesthetic. The lighting is flat and bright, mimicking a high-end web application interface."
+                        data-location="Medical District"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz8LlK1wuzodTA3mY0pFm7gKz6Y26JMQpt2UnSDZ547LSY7kr3QIB_z9drAx2fVOU_GEXzgXO_pnaYG5V-8kUshYkj01inpYqCc2syo7G1-UAvgUNeLMlt4PnhbrnXpaB5sjZ1cISRajx7koV_sHkEtYtu5IhjUzK1Jfl-I1a_MhLqQJOTre-_qicWqRI82_5RlsZIizXt6wT1zqVh4HeHjZxYKMRNr6EDbZF-XLZS36S2Wm6G_o2aY_S7uvrGevL0cbOnfPV9rKM" />
+                    <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+                    <!-- Subtle tint to integrate with brand -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Shared Component: Footer -->
+    <footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container w-full mt-auto">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-section-gap-sm max-w-container-max mx-auto px-gutter py-section-gap-lg">
+            <!-- Brand / Copyright -->
+            <div class="md:col-span-1 flex flex-col gap-4">
+                <span
+                    class="text-headline-sm font-headline-sm text-on-primary dark:text-on-primary-container flex items-center gap-2">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">medical_services</span>
+                    St. Jude
+                </span>
+                <p class="font-body-md text-body-md opacity-80 text-sm">
+                    © 2024 St. Jude Clinical Care. All rights reserved. HIPAA Compliant.
+                </p>
+            </div>
+            <!-- Links -->
+            <div class="md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+                <a class="font-label-caps text-label-caps text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-caps text-label-caps text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                    href="#">Terms of Service</a>
+                <a class="font-label-caps text-label-caps text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                    href="#">Insurance Partners</a>
+                <a class="font-label-caps text-label-caps text-on-primary dark:text-on-primary-container opacity-80 hover:opacity-100 transition-opacity"
+                    href="#">Clinic Locations</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
