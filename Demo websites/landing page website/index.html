@@ -125,7 +125,7 @@
 </head>
 <body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
 <!-- TopNavBar Component -->
-<header class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-on-primary-container border-b border-outline-variant dark:border-outline sticky top-0 z-50 bg-opacity-95 backdrop-blur-sm transition-all duration-300">
+<header id="site-header" class="bg-surface-container-lowest dark:bg-primary-container text-primary dark:text-on-primary-container border-b border-outline-variant dark:border-outline sticky top-0 z-50 bg-opacity-95 backdrop-blur-sm transition-all duration-300">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-stack-md max-w-container-max mx-auto">
 <!-- Brand -->
 <a class="font-display-lg text-headline-md font-extrabold tracking-tighter text-primary dark:text-on-primary-container scale-95 active:scale-90 transition-transform" href="#">
@@ -137,14 +137,34 @@
 <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#how-it-works">How it Works</a>
 <a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#pricing">Pricing</a>
 </nav>
-<!-- CTA -->
-<div class="flex items-center">
+<!-- Right Actions: CTA & Hamburger Toggle -->
+<div class="flex items-center gap-4">
+<!-- CTA (Desktop & Tablet) -->
+<div class="hidden sm:flex items-center">
 <a class="bg-primary text-on-primary font-label-sm text-label-sm px-[32px] py-[16px] hover:bg-secondary transition-colors duration-300 flex items-center justify-center scale-95 active:scale-90 uppercase tracking-widest" href="#pricing">
                     Get Started
                 </a>
 </div>
+<!-- Mobile Hamburger Toggle -->
+<button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center p-2 text-primary dark:text-on-primary-container focus:outline-none transition-transform active:scale-90" aria-label="Toggle menu">
+<span id="menu-icon" class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
 </div>
 </header>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 top-[73px] z-40 bg-surface-container-lowest dark:bg-primary-container border-t border-outline-variant dark:border-outline md:hidden transition-all duration-300 ease-in-out opacity-0 pointer-events-none flex flex-col justify-between p-margin-mobile overflow-y-auto">
+<nav class="flex flex-col gap-stack-lg pt-stack-lg">
+<a class="text-headline-md font-bold text-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#features">Features</a>
+<a class="text-headline-md font-bold text-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#how-it-works">How it Works</a>
+<a class="text-headline-md font-bold text-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#pricing">Pricing</a>
+</nav>
+<div class="pt-stack-lg border-t border-outline-variant dark:border-outline">
+<a class="w-full bg-primary text-on-primary font-label-sm text-label-sm py-[20px] hover:bg-secondary transition-colors duration-300 flex items-center justify-center uppercase tracking-widest text-center" href="#pricing">
+            Get Started
+        </a>
+</div>
+</div>
 <main>
 <!-- 1. Hero Section -->
 <section class="px-margin-mobile md:px-margin-desktop pt-[160px] pb-section-gap max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-gutter min-h-[870px]">
@@ -172,7 +192,7 @@
 </div>
 </section>
 <!-- 2. Problem/Agitation -->
-<section class="bg-primary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop">
+<section class="bg-primary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop" id="how-it-works">
 <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <div class="md:col-span-5 flex flex-col justify-center gap-stack-lg">
 <div class="font-label-sm text-label-sm uppercase tracking-widest text-surface-tint mb-stack-sm bg-inverse-surface self-start px-2 py-1">The Friction</div>
@@ -332,4 +352,50 @@
 </nav>
 </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const body = document.body;
+
+        const header = document.getElementById('site-header');
+
+        function toggleMenu() {
+            const isOpen = !mobileMenu.classList.contains('opacity-0');
+            if (isOpen) {
+                // Close menu
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                menuIcon.textContent = 'menu';
+                body.classList.remove('overflow-hidden');
+                header.style.removeProperty('background-color');
+            } else {
+                // Open menu
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                menuIcon.textContent = 'close';
+                body.classList.add('overflow-hidden');
+                // Ensure header is fully opaque when menu is open
+                header.style.backgroundColor = '#ffffff';
+            }
+        }
+
+        if (menuToggle && mobileMenu && menuIcon) {
+            menuToggle.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('nav a, div a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                    menuIcon.textContent = 'menu';
+                    header.style.removeProperty('background-color');
+                    body.classList.remove('overflow-hidden');
+                });
+            });
+        }
+    });
+</script>
 </body></html>

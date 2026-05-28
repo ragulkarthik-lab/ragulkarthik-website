@@ -138,8 +138,31 @@
                                         Request Technical Specs
                                 </button>
                         </div>
-                        <div class="md:hidden flex items-center">
-                                <span class="material-symbols-outlined text-primary text-[24px]">menu</span>
+                        <button id="mobile-menu-btn" class="md:hidden flex items-center focus:outline-none text-primary" aria-label="Toggle mobile menu">
+                                <span id="mobile-menu-icon" class="material-symbols-outlined text-[24px]">menu</span>
+                        </button>
+                </div>
+                <!-- Mobile Navigation Menu -->
+                <div id="mobile-menu" class="hidden border-t-2 border-outline-variant bg-background px-margin-desktop py-6 md:hidden">
+                        <div class="flex flex-col space-y-4">
+                                <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="index.html">Home</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="services.html">Services</a>
+                                <a class="font-label-caps text-label-caps text-primary border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="industries.html">Industries</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="projects.html">Projects</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="about.html">About</a>
+                                <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-outline-variant pb-2 hover:text-primary transition-colors duration-200"
+                                        href="contact.html">Contact</a>
+                                <div class="pt-2">
+                                        <button
+                                                class="w-full bg-primary-container text-background font-label-caps text-label-caps px-4 py-3 border-2 border-primary-container hover:bg-transparent hover:text-primary-container transition-colors duration-200 text-center">
+                                                Request Technical Specs
+                                        </button>
+                                </div>
                         </div>
                 </div>
         </nav>
@@ -348,6 +371,26 @@
                         </div>
                 </div>
         </footer>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                        const menuBtn = document.getElementById('mobile-menu-btn');
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        const menuIcon = document.getElementById('mobile-menu-icon');
+
+                        if (menuBtn && mobileMenu && menuIcon) {
+                                menuBtn.addEventListener('click', () => {
+                                        const isHidden = mobileMenu.classList.contains('hidden');
+                                        if (isHidden) {
+                                                mobileMenu.classList.remove('hidden');
+                                                menuIcon.textContent = 'close';
+                                        } else {
+                                                mobileMenu.classList.add('hidden');
+                                                menuIcon.textContent = 'menu';
+                                        }
+                                });
+                        }
+                });
+        </script>
 </body>
 
 </html>

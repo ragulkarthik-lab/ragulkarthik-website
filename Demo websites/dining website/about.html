@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Lumina Bistro</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#261900",
+                        "secondary": "#5f5e5e",
+                        "on-background": "#1a1c1a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e3e2e0",
+                        "surface-tint": "#775a19",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-container": "#c09d97",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary-container": "#c5a059",
+                        "surface": "#faf9f6",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4e4639",
+                        "secondary-container": "#e2dfde",
+                        "primary-fixed": "#ffdea5",
+                        "surface-container-low": "#f4f3f1",
+                        "on-secondary-container": "#636262",
+                        "outline": "#7f7667",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#4d3530",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-tertiary-fixed-variant": "#5b403c",
+                        "surface-container-high": "#e9e8e5",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "background": "#faf9f6",
+                        "on-error": "#ffffff",
+                        "primary": "#775a19",
+                        "surface-bright": "#faf9f6",
+                        "inverse-primary": "#e9c176",
+                        "tertiary": "#745853",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#4e3700",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e3beb8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f2f1ee",
+                        "on-surface": "#1a1c1a",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#d1c5b4",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#2b1613",
+                        "surface-container": "#efeeeb",
+                        "inverse-surface": "#2f312f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "stack-md": "48px",
+                        "margin-mobile": "24px",
+                        "stack-lg": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen pt-24 md:pt-32">
+    <!-- TopNavBar -->
+    <nav id="main-nav"
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden text-on-surface hover:text-primary transition-colors">
+                <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+            </button>
+            <!-- Brand Logo -->
+            <a class="font-display-lg-mobile md:font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter"
+                href="#">
+                LUMINA BISTRO
+            </a>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 font-label-md text-label-md uppercase tracking-widest">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="menu.html">Menu</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="reservation.html">Reservations</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 active:scale-90 transition-transform"
+                    href="about.html">About Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Trailing Action -->
+            <div class="hidden md:block">
+                <a class="btn-primary" href="reservation.html">Book a Table</a>
+            </div>
+            <!-- Mobile Book Icon (Visible only on mobile) -->
+            <a aria-label="Book a Table" class="md:hidden text-primary" href="reservation.html">
+                <span class="material-symbols-outlined" style="font-size: 28px;">calendar_month</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#faf9f6] dark:bg-[#1a1c1a] md:hidden flex flex-col transition-all duration-300 transform translate-x-full">
+        <div class="flex justify-between items-center px-margin-mobile py-6 border-b border-outline-variant/30">
+            <!-- Brand Logo -->
+            <span class="font-display-lg-mobile text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">
+                LUMINA BISTRO
+            </span>
+            <!-- Close Button -->
+            <button id="close-menu-btn" aria-label="Close Menu" class="text-on-surface hover:text-primary transition-colors">
+                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+            </button>
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex flex-col items-center justify-center flex-grow space-y-8 font-label-md text-xl uppercase tracking-widest px-margin-mobile">
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="menu.html">Menu</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="reservation.html">Reservations</a>
+            <a class="mobile-nav-link text-primary font-bold" href="about.html">About Us</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="contact.html">Contact</a>
+            <a class="btn-primary w-full text-center mt-4" href="reservation.html">Book a Table</a>
+        </div>
+    </div>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[614px] md:h-[819px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <img alt="Lumina Bistro Interior" class="w-full h-full object-cover parallax-bg"
+                    data-alt="A warm, inviting, high-end restaurant interior viewed from a low angle. The lighting is soft and golden, highlighting elegant wood finishes and pristine table settings with crystal glasses. The scene evokes a sense of hushed exclusivity and refined dining. Minimalist cream-toned walls provide a sophisticated backdrop."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7UiuanrU2dmzZxKbTWlDF1HW8TpZZMaI5Bd_OHHFFCSv-qwlBCaQRtLpWfbiy9m0Dvl-DLrJbbchAgUXmjOjC1ZRg2gI68-LyUdEHOtbD-GOOBNx-jJBnS71dj-eKiClLZAoSNTKqjEYUfq6vNY20n38Uf4B18TdQv1XdCb9XOYqgnP9zGEYNAYlB84kY6RwK6by3CaMcsCBw-aB1jxfjh_ImpYxN3KfWzjlOiIWbnQJ5br-k6PaDPjXdUz8W56DxBno7A7oWdpY" />
+                <div class="absolute inset-0 bg-surface/40 backdrop-blur-sm"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-3xl">
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                    Our Story</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">A dedication to craft, flavor, and the art
+                    of gathering.</p>
+            </div>
+        </section>
+        <!-- Our Heritage (Asymmetric Layout) -->
+        <section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 order-2 md:order-1">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-primary-fixed/30 text-on-primary-container font-label-md text-label-md uppercase mb-6">The
+                        Beginning</span>
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">
+                        A Heritage of Taste</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Born from a passion for honest ingredients and timeless culinary techniques, Lumina Bistro began
+                        as a quiet corner for epicureans. We believe that true luxury lies in simplicity and impeccable
+                        execution.
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Every dish is a narrative, woven from local harvests and global inspirations. Our space is
+                        designed to be a canvas, where the texture of the food and the warmth of the ambiance take
+                        center stage.
+                    </p>
+                </div>
+                <div class="md:col-span-7 order-1 md:order-2 mb-8 md:mb-0 relative">
+                    <div class="aspect-w-4 aspect-h-3 border border-outline-variant/50 p-2">
+                        <img alt="Chef plating food" class="w-full h-full object-cover"
+                            data-alt="A close-up, high-fidelity photograph of a chef's hands delicately plating a refined culinary dish on a textured ceramic plate. The lighting is dramatic yet warm, emphasizing the fresh, vibrant ingredients against a muted, dark wood background. The image exudes craftsmanship and culinary luxury."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5yBPcLAr0xfSvpbQVqdgWkZq1ihpFhWA2ovEAd7bUm7nmGbLeQC4MN9KRlO1QLA3lTNtcrQDL-_YT2e8yJrCVx4F12p7-F9u-THs9UtBQ6yjJ0NT93Cd0J0rSVFbZDzx3gu_bUm-40Gjgz1ZqgvjLMwENQFGGBypPNx_sNj-UgRXMUmQEv498W2b1Cytrcmh2ezCk1PpUCpicFhgMMZngJ67cTeZ90feHc-uYD3DDXJ5Je9Yfj3N4xJEtd_mxubqIWPTOryyATc" />
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-surface-tint opacity-10 hidden md:block"></div>
+                </div>
+            </div>
+        </section>
+        <!-- The Gallery Reveal (Parallax) -->
+        <section class="relative h-[716px] w-full overflow-hidden my-stack-lg">
+            <div class="absolute inset-0 w-full h-full"
+                data-alt="A wide, sweeping view of a bustling, high-end restaurant kitchen. The stainless steel surfaces gleam under focused, warm lighting. Chefs in pristine white uniforms move with precision. The atmosphere is energetic yet highly disciplined, capturing the professional essence of a premium culinary environment."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsn2W2au0IZzI25L5-NCGROVrLF7ZCHY-qyjuWJUNeZADLu9J_xW_ejoOgm77FR1tfdOvHr5zpf91er0Wh-xl4vJqEdlZk_CdZmDUFjxgSGI91WwSw1hSg8R2yzNUqjlQjk6A3ZcCfrpLPZoA1dzyO0rXq7ObyIgoMaqJ25N159gzqdAaNpl4Ut_ZzcdcYRhKlkOqzxasNZTy5tH05ynFrRGd5Ym0qwNvcVgfY1ksZ9C0EP1S9o8bnq-HcgLnWfoDFbK2AdOV92SQ'); background-attachment: fixed; background-position: center; background-size: cover;">
+                <div class="absolute inset-0 bg-on-background/30"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                    class="bg-surface/80 backdrop-blur-xl p-8 md:p-12 border border-outline-variant/30 text-center max-w-2xl mx-margin-mobile">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">The Heart of Lumina</h3>
+                    <p class="font-body-md text-body-md text-on-surface">Where precision meets passion in every plate.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Meet the Team (Bento Grid Style) -->
+        <section
+            class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface-container-low">
+            <div class="text-center mb-stack-md">
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">
+                    The Artisans</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Meet the visionaries
+                    behind the Lumina experience.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Team Member 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-w-3 aspect-h-4 mb-4 overflow-hidden border border-outline-variant/30">
+                        <img alt="Executive Chef"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A portrait of a confident executive chef standing in a softly lit, modern kitchen. He wears a clean, tailored chef's coat. The background features blurred warm tones of polished wood and muted cream walls. The portrait conveys professionalism, warmth, and culinary expertise in a high-end setting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK6s10muB31zptiYfDKQrCRIjDj48VW8oaZc5hDf5Mk0pssETZ_mNcWrKI7NC4pqZ-FLSEbq8J9REOasowMdoTCdWDgqzWHZj-ULIUhLODqHJjqBzffsHRu4dyvgaWx6WJrZN7IyZa1MW5yHHAK-6J1iuUyBTXwomTQ8UBbADc3zIYV8vFI5Hq47SF7fCgxFwA6AZq3-VsAuf5E-jBXP3aayEfV62ZcEjctK_znO3QiTl9D57bh74h2iUvZpLiCU-WgH40npYA81k" />
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-headline-md text-headline-md text-on-background text-xl mb-1">Elias Thorne</h4>
+                        <p class="font-label-md text-label-md text-primary uppercase tracking-widest">Executive Chef</p>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="group cursor-pointer md:mt-12">
+                    <div class="aspect-w-3 aspect-h-4 mb-4 overflow-hidden border border-outline-variant/30">
+                        <img alt="Sommelier"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A portrait of a sophisticated sommelier holding a glass of red wine, standing near a beautifully lit, dark wood wine cellar. The lighting highlights the rich ruby color of the wine and the elegant attire of the subject. The atmosphere is hushed, luxurious, and refined."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS6dXEQcPbuPLPWh4LNGSlMXF_QBrXlHBoCFdSAJT3qNFVohoTV0NvmqDmijOlkaasC4GYfTiXO5WbhMBAH7AU-yFw-kqk-yNql32G7pFpIafLfgtFGGdrYBXQdxp0jytAZ24bDdsRIoiG0knt3B_zs3oXKymkz5TL6dSIk1lHcsiv_emmTCR3Yt_2RrYrKtlOWktPQ-VeA65xtU2AKrF04jUxy_PFDMo3VpBwot3iSdgbz5Wr2bmdCivcUfAbirAbf04JwGlgdvY" />
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-headline-md text-headline-md text-on-background text-xl mb-1">Clara Vance</h4>
+                        <p class="font-label-md text-label-md text-primary uppercase tracking-widest">Head Sommelier</p>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-w-3 aspect-h-4 mb-4 overflow-hidden border border-outline-variant/30">
+                        <img alt="Maitre D'"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A portrait of a welcoming Maitre D' standing in the elegant entryway of a high-end restaurant. Soft, diffused daylight filters in, highlighting the subtle cream and charcoal tones of the interior. The subject's expression is warm and inviting, embodying luxury hospitality."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsOmI8Hpb5HU5y-vZ88pGVsNs5RrG1B_fbM105CSqw0wc_ntptdQUWQpKeSDcDOyghn6QiD1h8ejoyiVaNUBEYv31ZfrqUkgjIRohv8i1OoEPsv_Be09JHk_4buHNV9x8v8s__Hdx0DOZEiEPtYUHUW9Vvl8Ij4vY7YD0Tw-S6_PWvqWoMw2MCaZSDFwLABaGoS3K1FWRCvia71LerA1tbv_eKs9JGM5iusGYn2pzTVFHSLBdRsclVqMjQJwVVw0d2Qg5ra4M3v90" />
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-headline-md text-headline-md text-on-background text-xl mb-1">Julian Mercer</h4>
+                        <p class="font-label-md text-label-md text-primary uppercase tracking-widest">Maitre D'</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Lumina Experience -->
+        <section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div
+                        class="aspect-w-1 aspect-h-1 p-4 bg-surface-container-highest border border-outline-variant/40">
+                        <img alt="Dining Experience" class="w-full h-full object-cover"
+                            data-alt="A detailed shot of an impeccably set dining table in a luxury restaurant. A pristine white plate sits on a minimalist cream tablecloth, accompanied by gleaming silver cutlery and a delicate crystal wine glass. The lighting is soft and directional, creating a serene and inviting atmosphere."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_5meNAiU99Zr30QWPsrSJYNUY_uHYtPGzWfbcKCs85ekKx8NYxn5btYQUYK2uV5Jqy4huKcurSw2Wa7_KXx2gpYXU1YmBHbYc3diJg9bp0qDuD3wdlJsMTlGQwfqIJkkqpCk6UR2ChQCgtxpNbdEXzgM7fpQfTIhU5kuWmwSv9fqXVboj0c825CH1pkgZEhCM1qK--am2dV4E6br3hYsjI38JcLhzsVW3PIC8QTeGZjOZSyd1YTX3CTsVZmWKWQs2nv6NClP-W18" />
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 md:pl-12">
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">
+                        The Lumina Experience</h2>
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-outline-variant/50">
+                            <h3 class="font-headline-md text-headline-md text-primary text-2xl mb-2">Ambiance</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Designed to be a quiet retreat
+                                from the bustling city, our dining room features muted tones, tactile materials, and
+                                lighting that flatters both the food and the guests.</p>
+                        </div>
+                        <div class="pb-6 border-b border-outline-variant/50">
+                            <h3 class="font-headline-md text-headline-md text-primary text-2xl mb-2">Service</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Intuitive, unobtrusive, and
+                                deeply knowledgeable. We anticipate your needs to ensure your evening flows seamlessly.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary text-2xl mb-2">Sourcing</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">We maintain close relationships
+                                with local purveyors, ensuring that only the finest, most ethical ingredients enter our
+                                kitchen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full rounded-none"
+        id="footer">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+            <!-- Brand Column -->
+            <div class="col-span-1 md:col-span-2">
+                <a class="font-display-lg text-headline-lg text-on-surface dark:text-inverse-on-surface block mb-4"
+                    href="#">
+                    LUMINA BISTRO
+                </a>
+                <p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-sm mb-6">
+                    A destination for those who appreciate the quiet luxury of an exceptional meal.
+                </p>
+                <div class="flex gap-4">
+                    <a aria-label="Instagram" class="text-on-surface hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a aria-label="Facebook" class="text-on-surface hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </a>
+                    <a aria-label="Email" class="text-on-surface hover:text-primary transition-colors" href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Links Column -->
+            <div class="col-span-1">
+                <h4 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                    Explore</h4>
+                <ul class="space-y-3 font-body-md text-body-md">
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Menu</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Reservations</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Private Dining</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Gift Cards</a></li>
+                </ul>
+            </div>
+            <!-- Legal Column -->
+            <div class="col-span-1">
+                <h4 class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                    Legal</h4>
+                <ul class="space-y-3 font-body-md text-body-md">
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Terms of Service</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Careers</a></li>
+                    <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                            href="#">Press Kit</a></li>
+                </ul>
+            </div>
+            <!-- Copyright -->
+            <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 text-center">
+                <p class="font-body-md text-sm text-on-surface-variant dark:text-inverse-on-surface/70">
+                    © 2024 Lumina Bistro. Crafted for the epicurean.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple nav background transition on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (nav) {
+                if (window.scrollY > 50) {
+                    nav.classList.add('shadow-sm');
+                } else {
+                    nav.classList.remove('shadow-sm');
+                }
+            }
+        });
+
+        // Mobile Navigation Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            });
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = ''; // Restore scrolling
+            };
+
+            closeMenuBtn.addEventListener('click', closeMenu);
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+    </script>
+</body>
+
+</html>

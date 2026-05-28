@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Contact Us - Lumina Bistro</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "secondary-fixed": "#e5e2e1",
+                                                "on-primary-fixed": "#261900",
+                                                "secondary": "#5f5e5e",
+                                                "on-background": "#1a1c1a",
+                                                "error": "#ba1a1a",
+                                                "surface-variant": "#e3e2e0",
+                                                "surface-tint": "#775a19",
+                                                "tertiary-fixed": "#ffdad4",
+                                                "tertiary-container": "#c09d97",
+                                                "surface-dim": "#dbdad7",
+                                                "surface-container-highest": "#e3e2e0",
+                                                "primary-container": "#c5a059",
+                                                "surface": "#faf9f6",
+                                                "on-tertiary": "#ffffff",
+                                                "on-surface-variant": "#4e4639",
+                                                "secondary-container": "#e2dfde",
+                                                "primary-fixed": "#ffdea5",
+                                                "surface-container-low": "#f4f3f1",
+                                                "on-secondary-container": "#636262",
+                                                "outline": "#7f7667",
+                                                "secondary-fixed-dim": "#c8c6c5",
+                                                "on-tertiary-container": "#4d3530",
+                                                "primary-fixed-dim": "#e9c176",
+                                                "on-tertiary-fixed-variant": "#5b403c",
+                                                "surface-container-high": "#e9e8e5",
+                                                "on-primary-fixed-variant": "#5d4201",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed": "#1c1b1b",
+                                                "background": "#faf9f6",
+                                                "on-error": "#ffffff",
+                                                "primary": "#775a19",
+                                                "surface-bright": "#faf9f6",
+                                                "inverse-primary": "#e9c176",
+                                                "tertiary": "#745853",
+                                                "error-container": "#ffdad6",
+                                                "on-primary-container": "#4e3700",
+                                                "on-primary": "#ffffff",
+                                                "tertiary-fixed-dim": "#e3beb8",
+                                                "surface-container-lowest": "#ffffff",
+                                                "inverse-on-surface": "#f2f1ee",
+                                                "on-surface": "#1a1c1a",
+                                                "on-secondary": "#ffffff",
+                                                "outline-variant": "#d1c5b4",
+                                                "on-secondary-fixed-variant": "#474746",
+                                                "on-tertiary-fixed": "#2b1613",
+                                                "surface-container": "#efeeeb",
+                                                "inverse-surface": "#2f312f"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "gutter": "32px",
+                                                "container-max": "1280px",
+                                                "unit": "8px",
+                                                "margin-desktop": "64px",
+                                                "stack-md": "48px",
+                                                "margin-mobile": "24px",
+                                                "stack-lg": "80px"
+                                        },
+                                        "fontFamily": {
+                                                "display-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "label-md": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "headline-md": [
+                                                        "Playfair Display"
+                                                ],
+                                                "display-lg": [
+                                                        "Playfair Display"
+                                                ],
+                                                "body-lg": [
+                                                        "Montserrat"
+                                                ],
+                                                "body-md": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-lg": [
+                                                        "Playfair Display"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "display-lg-mobile": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-md": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "1.4",
+                                                                "letterSpacing": "0.1em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.3",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "1.1",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                body {
+                        background-color: theme('colors.surface');
+                        color: theme('colors.on-surface');
+                }
+
+                .form-input {
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid theme('colors.outline');
+                        border-radius: 0;
+                        padding: theme('spacing.unit') 0;
+                        font-family: theme('fontFamily.body-md');
+                        font-size: 16px;
+                        color: theme('colors.on-surface');
+                }
+
+                .form-input:focus {
+                        outline: none;
+                        box-shadow: none;
+                        border-color: theme('colors.primary');
+                }
+
+                .btn-primary {
+                        background-color: theme('colors.on-surface');
+                        color: theme('colors.primary-fixed');
+                        font-family: theme('fontFamily.label-md');
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        text-transform: uppercase;
+                        padding: 16px 32px;
+                        transition: all 0.3s ease;
+                        border-radius: theme('borderRadius.DEFAULT');
+                }
+
+                .btn-primary:hover {
+                        background-color: theme('colors.on-surface-variant');
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                }
+        </style>
+</head>
+
+<body class="antialiased font-body-md text-body-md flex flex-col min-h-screen">
+        <!-- TopNavBar -->
+        <nav id="main-nav"
+                class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows">
+                <div
+                        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+                        <!-- Mobile Menu Button (Hidden on Desktop) -->
+                        <button id="mobile-menu-btn" aria-label="Open Menu"
+                                class="md:hidden text-on-surface hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+                        </button>
+                        <!-- Brand Logo -->
+                        <a class="font-display-lg-mobile md:font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter"
+                                href="#">
+                                LUMINA BISTRO
+                        </a>
+                        <!-- Desktop Navigation Links -->
+                        <div
+                                class="hidden md:flex items-center space-x-8 font-label-md text-label-md uppercase tracking-widest">
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="index.html">Home</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="menu.html">Menu</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="reservation.html">Reservations</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="about.html">About Us</a>
+                                <a class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 active:scale-90 transition-transform"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <!-- Trailing Action -->
+                        <div class="hidden md:block">
+                                <a class="btn-primary" href="reservation.html">Book a Table</a>
+                        </div>
+                        <!-- Mobile Book Icon (Visible only on mobile) -->
+                        <a aria-label="Book a Table" class="md:hidden text-primary" href="reservation.html">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">calendar_month</span>
+                        </a>
+                </div>
+        </nav>
+        <!-- Mobile Menu Drawer (Hidden by default) -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#faf9f6] dark:bg-[#1a1c1a] md:hidden flex flex-col transition-all duration-300 transform translate-x-full">
+                <div class="flex justify-between items-center px-margin-mobile py-6 border-b border-outline-variant/30">
+                        <!-- Brand Logo -->
+                        <span class="font-display-lg-mobile text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">
+                                LUMINA BISTRO
+                        </span>
+                        <!-- Close Button -->
+                        <button id="close-menu-btn" aria-label="Close Menu" class="text-on-surface hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+                        </button>
+                </div>
+                <!-- Navigation Links -->
+                <div class="flex flex-col items-center justify-center flex-grow space-y-8 font-label-md text-xl uppercase tracking-widest px-margin-mobile">
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="menu.html">Menu</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="reservation.html">Reservations</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="about.html">About Us</a>
+                        <a class="mobile-nav-link text-primary font-bold" href="contact.html">Contact</a>
+                        <a class="btn-primary w-full text-center mt-4" href="reservation.html">Book a Table</a>
+                </div>
+        </div>
+        <!-- Main Content -->
+        <main class="flex-grow pt-[120px] pb-stack-lg">
+                <!-- Hero Section -->
+                <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg">
+                        <div class="text-center max-w-3xl mx-auto mb-stack-md">
+                                <h1
+                                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                                        Get in Touch</h1>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant">We invite you to reach out
+                                        for reservations, private events, or any inquiries you may have. Our team is
+                                        dedicated to providing an exceptional experience.</p>
+                        </div>
+                </section>
+                <!-- Bento Grid Layout -->
+                <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                                <!-- Contact Details Card -->
+                                <div
+                                        class="md:col-span-5 bg-surface-container-low p-8 border border-outline-variant rounded-DEFAULT flex flex-col justify-center">
+                                        <h2
+                                                class="font-headline-md text-headline-md text-on-surface mb-8 border-b border-outline-variant pb-4">
+                                                Contact Details</h2>
+                                        <div class="space-y-6">
+                                                <div class="flex items-start">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mr-4 mt-1">location_on</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-md text-label-md uppercase text-on-surface-variant mb-1">
+                                                                        Address</h3>
+                                                                <p class="font-body-md text-body-md text-on-surface">123
+                                                                        Culinary Avenue<br />Gastronomy District, NY
+                                                                        10001</p>
+                                                        </div>
+                                                </div>
+                                                <div class="flex items-start">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mr-4 mt-1">call</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-md text-label-md uppercase text-on-surface-variant mb-1">
+                                                                        Phone</h3>
+                                                                <p class="font-body-md text-body-md text-on-surface">+1
+                                                                        (555) 123-4567</p>
+                                                        </div>
+                                                </div>
+                                                <div class="flex items-start">
+                                                        <span
+                                                                class="material-symbols-outlined text-primary mr-4 mt-1">mail</span>
+                                                        <div>
+                                                                <h3
+                                                                        class="font-label-md text-label-md uppercase text-on-surface-variant mb-1">
+                                                                        Email</h3>
+                                                                <p class="font-body-md text-body-md text-on-surface">
+                                                                        hello@luminabistro.com</p>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <h2
+                                                class="font-headline-md text-headline-md text-on-surface mt-10 mb-6 border-b border-outline-variant pb-4">
+                                                Opening Hours</h2>
+                                        <ul class="space-y-3 font-body-md text-body-md text-on-surface">
+                                                <li
+                                                        class="flex justify-between border-b border-outline-variant/50 pb-2">
+                                                        <span>Mon - Thu</span> <span>5:00 PM - 10:00 PM</span></li>
+                                                <li
+                                                        class="flex justify-between border-b border-outline-variant/50 pb-2">
+                                                        <span>Fri - Sat</span> <span>5:00 PM - 11:30 PM</span></li>
+                                                <li class="flex justify-between pb-2"><span>Sunday</span> <span>4:00 PM
+                                                                - 9:00 PM</span></li>
+                                        </ul>
+                                </div>
+                                <!-- Inquiry Form -->
+                                <div class="md:col-span-7 bg-surface p-8 border border-outline-variant rounded-DEFAULT">
+                                        <h2 class="font-headline-md text-headline-md text-on-surface mb-8">Send an
+                                                Inquiry</h2>
+                                        <form class="space-y-8">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div class="flex flex-col">
+                                                                <label class="font-label-md text-label-md text-on-surface-variant uppercase mb-2"
+                                                                        for="firstName">First Name</label>
+                                                                <input class="form-input" id="firstName"
+                                                                        placeholder="Enter your first name"
+                                                                        type="text" />
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                                <label class="font-label-md text-label-md text-on-surface-variant uppercase mb-2"
+                                                                        for="lastName">Last Name</label>
+                                                                <input class="form-input" id="lastName"
+                                                                        placeholder="Enter your last name"
+                                                                        type="text" />
+                                                        </div>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <label class="font-label-md text-label-md text-on-surface-variant uppercase mb-2"
+                                                                for="email">Email Address</label>
+                                                        <input class="form-input" id="email"
+                                                                placeholder="Enter your email address" type="email" />
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <label class="font-label-md text-label-md text-on-surface-variant uppercase mb-2"
+                                                                for="subject">Subject</label>
+                                                        <select class="form-input text-on-surface-variant" id="subject">
+                                                                <option>General Inquiry</option>
+                                                                <option>Private Event</option>
+                                                                <option>Press &amp; Media</option>
+                                                                <option>Careers</option>
+                                                        </select>
+                                                </div>
+                                                <div class="flex flex-col">
+                                                        <label class="font-label-md text-label-md text-on-surface-variant uppercase mb-2"
+                                                                for="message">Message</label>
+                                                        <textarea class="form-input resize-none" id="message"
+                                                                placeholder="How can we assist you?"
+                                                                rows="4"></textarea>
+                                                </div>
+                                                <button class="btn-primary w-full md:w-auto" type="submit">Submit
+                                                        Inquiry</button>
+                                        </form>
+                                </div>
+                        </div>
+                </section>
+                <!-- Image & Map Section -->
+                <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-stack-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter h-[500px]">
+                                <!-- Entrance Image -->
+                                <div class="h-full rounded-DEFAULT overflow-hidden border border-outline-variant">
+                                        <img alt="Restaurant Entrance" class="w-full h-full object-cover"
+                                                data-alt="A warm, inviting shot of a high-end restaurant exterior at dusk. The entrance features elegant, minimalist signage reading 'Lumina Bistro' above a matte charcoal door. Soft, golden ambient light spills onto the textured cream stone pavement. The architectural style is modern luxury, emphasizing high-quality materials and a sophisticated, hused atmosphere."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzQYblmpJHz7gU3nmq6yTKp2les9lPo2UY7-BrkghktDkqu7s5zZAKiaL344lPkXSXL7VK_71GvUBmUJyWvi_heeFkyT2mqqmcpGyO3uBLBuD3jClFwuOnrvsNqnEWtZZV4Oocd6riFnHd1zZc4cGU1Ev_olZJsMlEG9KyiqdlyUXjUFpBK1-e-ranuX8Ui-4yxEOg7LE-24UmhqCIIQoUshgNa5ndyh2DsXnzVx6NnQ_cij0-I8kcC5sXhP7cACLcPkt96iO1Lc8" />
+                                </div>
+                                <!-- Google Map Placeholder -->
+                                <div
+                                        class="h-full rounded-DEFAULT overflow-hidden border border-outline-variant bg-surface-container-high flex items-center justify-center relative">
+                                        <img alt="Map Location" class="w-full h-full object-cover opacity-80"
+                                                data-alt="A stylized, minimalist street map of an upscale urban neighborhood, rendered in tones of cream, muted gold, and charcoal grey. The map emphasizes clean lines and a premium, editorial aesthetic, avoiding harsh, bright colors. A subtle, sophisticated pin marker indicates a central location."
+                                                data-location="New York"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLA-3y1529Oj-zKiOQSgQSe9hk3zR1M2BM2EtY3N-ycC0G8LkhlEMepXsZjSVyOBBB8z0klt1i1_yUUvZW3djrj5B_WyDHBw-Q7W4xBDaIPoJt0IbI1tftasnbchwyvyCmy92a7s0-XO1CRHFBMnhMRFCDkiyPljp513XXXVgy2Q3_tykmfKj6C-GqbKH5NpO9KXkd_pyicVh2Oy8JNVLqDjz2NH-kfmGzhvhFzeIDdK397bneuUrK7r6Z6fGEjj_tnjVR7d0Iwpo" />
+                                        <!-- Glassmorphism overlay for map details if needed -->
+                                        <div
+                                                class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-md p-4 rounded-DEFAULT border border-outline-variant shadow-sm max-w-xs">
+                                                <p class="font-label-md text-label-md uppercase text-on-surface mb-1">
+                                                        Find Us</p>
+                                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                                        Nestled in the heart of the Gastronomy District.</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </main>
+        <!-- Footer -->
+         <footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full rounded-none"
+                id="footer">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+                        <!-- Brand Column -->
+                        <div class="col-span-1 md:col-span-2">
+                                <a class="font-display-lg text-headline-lg text-on-surface dark:text-inverse-on-surface block mb-4"
+                                        href="#">
+                                        LUMINA BISTRO
+                                </a>
+                                <p
+                                        class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-sm mb-6">
+                                        A destination for those who appreciate the quiet luxury of an exceptional meal.
+                                </p>
+                                <div class="flex gap-4">
+                                        <a aria-label="Instagram"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">photo_camera</span>
+                                        </a>
+                                        <a aria-label="Facebook"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">thumb_up</span>
+                                        </a>
+                                        <a aria-label="Email"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">mail</span>
+                                        </a>
+                                </div>
+                        </div>
+                        <!-- Links Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Explore</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Menu</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Reservations</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Private Dining</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Gift Cards</a></li>
+                                </ul>
+                        </div>
+                        <!-- Legal Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Legal</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Privacy Policy</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Terms of Service</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Careers</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Press Kit</a></li>
+                                </ul>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 text-center">
+                                <p class="font-body-md text-sm text-on-surface-variant dark:text-inverse-on-surface/70">
+                                        © 2024 Lumina Bistro. Crafted for the epicurean.
+                                </p>
+                        </div>
+                </div>
+        </footer>
+        <script>
+                // Simple nav background transition on scroll
+                window.addEventListener('scroll', () => {
+                        const nav = document.getElementById('main-nav');
+                        if (nav) {
+                                if (window.scrollY > 50) {
+                                        nav.classList.add('shadow-sm');
+                                } else {
+                                        nav.classList.remove('shadow-sm');
+                                }
+                        }
+                });
+
+                // Mobile Navigation Menu Toggle Logic
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const closeMenuBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
+
+                if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
+                        mobileMenuBtn.addEventListener('click', () => {
+                                mobileMenu.classList.remove('translate-x-full');
+                                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                        });
+
+                        const closeMenu = () => {
+                                mobileMenu.classList.add('translate-x-full');
+                                document.body.style.overflow = ''; // Restore scrolling
+                        };
+
+                        closeMenuBtn.addEventListener('click', closeMenu);
+
+                        mobileMenuLinks.forEach(link => {
+                                link.addEventListener('click', closeMenu);
+                        });
+                }
+        </script>
+</body>
+
+</html>

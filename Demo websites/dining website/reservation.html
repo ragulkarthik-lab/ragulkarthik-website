@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reservations | Lumina Bistro</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e5e2e1",
+                        "on-primary-fixed": "#261900",
+                        "secondary": "#5f5e5e",
+                        "on-background": "#1a1c1a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e3e2e0",
+                        "surface-tint": "#775a19",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-container": "#c09d97",
+                        "surface-dim": "#dbdad7",
+                        "surface-container-highest": "#e3e2e0",
+                        "primary-container": "#c5a059",
+                        "surface": "#faf9f6",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#4e4639",
+                        "secondary-container": "#e2dfde",
+                        "primary-fixed": "#ffdea5",
+                        "surface-container-low": "#f4f3f1",
+                        "on-secondary-container": "#636262",
+                        "outline": "#7f7667",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#4d3530",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-tertiary-fixed-variant": "#5b403c",
+                        "surface-container-high": "#e9e8e5",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "background": "#faf9f6",
+                        "on-error": "#ffffff",
+                        "primary": "#775a19",
+                        "surface-bright": "#faf9f6",
+                        "inverse-primary": "#e9c176",
+                        "tertiary": "#745853",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#4e3700",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#e3beb8",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f2f1ee",
+                        "on-surface": "#1a1c1a",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#d1c5b4",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-fixed": "#2b1613",
+                        "surface-container": "#efeeeb",
+                        "inverse-surface": "#2f312f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "stack-md": "48px",
+                        "margin-mobile": "24px",
+                        "stack-lg": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 300,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md antialiased pt-[100px] flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <nav id="main-nav"
+        class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <!-- Mobile Menu Button (Hidden on Desktop) -->
+            <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden text-on-surface hover:text-primary transition-colors">
+                <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+            </button>
+            <!-- Brand Logo -->
+            <a class="font-display-lg-mobile md:font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter"
+                href="#">
+                LUMINA BISTRO
+            </a>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 font-label-md text-label-md uppercase tracking-widest">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="index.html">Home</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="menu.html">Menu</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 active:scale-90 transition-transform"
+                    href="reservation.html">Reservations</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="about.html">About Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                    href="contact.html">Contact</a>
+            </div>
+            <!-- Trailing Action -->
+            <div class="hidden md:block">
+                <a class="btn-primary" href="reservation.html">Book a Table</a>
+            </div>
+            <!-- Mobile Book Icon (Visible only on mobile) -->
+            <a aria-label="Book a Table" class="md:hidden text-primary" href="reservation.html">
+                <span class="material-symbols-outlined" style="font-size: 28px;">calendar_month</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Mobile Menu Drawer (Hidden by default) -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#faf9f6] dark:bg-[#1a1c1a] md:hidden flex flex-col transition-all duration-300 transform translate-x-full">
+        <div class="flex justify-between items-center px-margin-mobile py-6 border-b border-outline-variant/30">
+            <!-- Brand Logo -->
+            <span class="font-display-lg-mobile text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">
+                LUMINA BISTRO
+            </span>
+            <!-- Close Button -->
+            <button id="close-menu-btn" aria-label="Close Menu" class="text-on-surface hover:text-primary transition-colors">
+                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+            </button>
+        </div>
+        <!-- Navigation Links -->
+        <div class="flex flex-col items-center justify-center flex-grow space-y-8 font-label-md text-xl uppercase tracking-widest px-margin-mobile">
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="index.html">Home</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="menu.html">Menu</a>
+            <a class="mobile-nav-link text-primary font-bold" href="reservation.html">Reservations</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="about.html">About Us</a>
+            <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="contact.html">Contact</a>
+            <a class="btn-primary w-full text-center mt-4" href="reservation.html">Book a Table</a>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- Hero Section / Title -->
+        <section
+            class="py-stack-md md:py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+            <h1
+                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">
+                Secure Your Table</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Experience the art of modern
+                dining. Reserve your table below to ensure a seamless and unforgettable evening at Lumina Bistro.</p>
+        </section>
+        <!-- Reservation Layout -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+                <!-- Form Side (7 columns) -->
+                <div
+                    class="lg:col-span-7 bg-surface-container-low p-margin-mobile md:p-stack-md rounded-lg border border-outline-variant/50">
+                    <form action="#" class="space-y-stack-md" method="POST">
+                        <!-- Step 1: Details -->
+                        <div>
+                            <h2
+                                class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md text-on-background mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">person</span>
+                                Guest Details
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest"
+                                        for="name">Full Name</label>
+                                    <input
+                                        class="bg-transparent border-0 border-b border-outline text-on-background focus:ring-0 focus:border-primary py-2 px-0 font-body-md"
+                                        id="name" name="name" required="" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest"
+                                        for="email">Email Address</label>
+                                    <input
+                                        class="bg-transparent border-0 border-b border-outline text-on-background focus:ring-0 focus:border-primary py-2 px-0 font-body-md"
+                                        id="email" name="email" required="" type="email" />
+                                </div>
+                                <div class="flex flex-col gap-2 md:col-span-2">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest"
+                                        for="phone">Phone Number</label>
+                                    <input
+                                        class="bg-transparent border-0 border-b border-outline text-on-background focus:ring-0 focus:border-primary py-2 px-0 font-body-md"
+                                        id="phone" name="phone" required="" type="tel" />
+                                </div>
+                                <div class="flex flex-col gap-2 md:col-span-2">
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest"
+                                        for="party">Party Size</label>
+                                    <select
+                                        class="bg-transparent border-0 border-b border-outline text-on-background focus:ring-0 focus:border-primary py-2 px-0 font-body-md"
+                                        id="party" name="party">
+                                        <option value="1">1 Guest</option>
+                                        <option selected="" value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5 Guests</option>
+                                        <option value="6">6 Guests</option>
+                                        <option value="7+">7+ Guests (Call to reserve)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border-outline-variant/30" />
+                        <!-- Step 2: Date & Time -->
+                        <div>
+                            <h2
+                                class="font-headline-lg-mobile md:font-headline-md text-headline-lg-mobile md:text-headline-md text-on-background mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                                Date &amp; Time
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <!-- Fake Calendar Widget -->
+                                <div class="bg-surface p-4 rounded border border-outline-variant">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <button class="text-on-surface-variant hover:text-primary" type="button"><span
+                                                class="material-symbols-outlined">chevron_left</span></button>
+                                        <span class="font-label-md text-label-md uppercase tracking-widest">October
+                                            2024</span>
+                                        <button class="text-on-surface-variant hover:text-primary" type="button"><span
+                                                class="material-symbols-outlined">chevron_right</span></button>
+                                    </div>
+                                    <div
+                                        class="grid grid-cols-7 gap-1 text-center font-label-md text-[12px] text-on-surface-variant mb-2">
+                                        <div>S</div>
+                                        <div>M</div>
+                                        <div>T</div>
+                                        <div>W</div>
+                                        <div>T</div>
+                                        <div>F</div>
+                                        <div>S</div>
+                                    </div>
+                                    <div class="grid grid-cols-7 gap-1 text-center font-body-md">
+                                        <div class="p-2 text-outline/30">29</div>
+                                        <div class="p-2 text-outline/30">30</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">1</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">2</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">3</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">4</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">5</div>
+                                        <!-- Active Day -->
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">6</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">7</div>
+                                        <div class="p-2 cursor-pointer bg-primary text-on-primary rounded font-bold">8
+                                        </div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">9</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">10</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">11</div>
+                                        <div class="p-2 cursor-pointer hover:bg-surface-container rounded">12</div>
+                                        <div class="col-span-7 text-left text-sm mt-2 text-on-surface-variant italic">
+                                            Select a date...</div>
+                                    </div>
+                                </div>
+                                <!-- Time Slots -->
+                                <div>
+                                    <label
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block mb-4">Available
+                                        Times</label>
+                                    <div class="grid grid-cols-2 gap-3">
+                                        <button
+                                            class="py-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-colors font-label-md text-label-md"
+                                            type="button">6:00 PM</button>
+                                        <button
+                                            class="py-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-colors font-label-md text-label-md"
+                                            type="button">6:30 PM</button>
+                                        <button
+                                            class="py-2 bg-on-background text-primary-fixed border border-on-background font-label-md text-label-md shadow-sm"
+                                            type="button">7:00 PM</button>
+                                        <button
+                                            class="py-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-colors font-label-md text-label-md"
+                                            type="button">7:30 PM</button>
+                                        <button
+                                            class="py-2 border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-colors font-label-md text-label-md"
+                                            type="button">8:00 PM</button>
+                                        <button
+                                            class="py-2 border border-outline-variant/30 text-outline/30 cursor-not-allowed font-label-md text-label-md"
+                                            type="button">8:30 PM</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Submit -->
+                        <div class="pt-6">
+                            <button
+                                class="w-full bg-on-background text-primary-fixed font-label-md text-label-md uppercase px-8 py-4 tracking-widest hover:bg-outline transition-all duration-300 shadow-sm hover:-translate-y-0.5"
+                                type="submit">
+                                Confirm Reservation
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Image Side (5 columns) -->
+                <div class="hidden lg:block lg:col-span-5 relative h-full min-h-[600px] rounded-lg overflow-hidden">
+                    <img alt="Lumina Bistro dining room" class="absolute inset-0 w-full h-full object-cover"
+                        data-alt="A high-quality, professional photograph of a sophisticated restaurant dining room interior. The scene is bathed in warm, inviting, low-key lighting that highlights the textured wood tables and creamy beige upholstery. Subtle gold accents glimmer on modern light fixtures suspended from the ceiling. The aesthetic is tactile luxury and modern minimalism, perfectly matching a premium culinary experience."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcvvUINcKNO2mKvnTb1P_ww4ttkAvqlWvBt1t3zmnV4O2UPTOimfMgoE_8DBbTbfgJKMjItwmpCsPEfjLIcPaDaRVjCxBUhYV8bhVaV6skFNouMwlngEiMHHKnP0-EFAmOiBOQbHk4chLUSVD5ueH0g2fAb40Mq-5kwRr6h_QZI9cgjiuaCjqcVnWz-eNYh_jBetksHWenxZxkBjHDmOytrGun908AXEEV9fSoXPKtBSkpEki546_Z2uV-ctFfGg8PlReLTvH28_A" />
+                    <!-- Glassmorphism overlay card -->
+                    <div
+                        class="absolute bottom-8 left-8 right-8 bg-surface/80 backdrop-blur-xl p-6 border border-outline-variant/30">
+                        <h3 class="font-headline-md text-headline-md text-on-background mb-2">The Dining Experience</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Our seasonal menu is designed to be
+                            shared, celebrating local purveyors and tactile culinary craftsmanship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+        <footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full rounded-none"
+                id="footer">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+                        <!-- Brand Column -->
+                        <div class="col-span-1 md:col-span-2">
+                                <a class="font-display-lg text-headline-lg text-on-surface dark:text-inverse-on-surface block mb-4"
+                                        href="#">
+                                        LUMINA BISTRO
+                                </a>
+                                <p
+                                        class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-sm mb-6">
+                                        A destination for those who appreciate the quiet luxury of an exceptional meal.
+                                </p>
+                                <div class="flex gap-4">
+                                        <a aria-label="Instagram"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">photo_camera</span>
+                                        </a>
+                                        <a aria-label="Facebook"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">thumb_up</span>
+                                        </a>
+                                        <a aria-label="Email"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">mail</span>
+                                        </a>
+                                </div>
+                        </div>
+                        <!-- Links Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Explore</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Menu</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Reservations</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Private Dining</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Gift Cards</a></li>
+                                </ul>
+                        </div>
+                        <!-- Legal Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Legal</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Privacy Policy</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Terms of Service</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Careers</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Press Kit</a></li>
+                                </ul>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 text-center">
+                                <p class="font-body-md text-sm text-on-surface-variant dark:text-inverse-on-surface/70">
+                                        © 2024 Lumina Bistro. Crafted for the epicurean.
+                                </p>
+                        </div>
+                </div>
+        </footer>
+        <script>
+            // Simple nav background transition on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('main-nav');
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('shadow-sm');
+                    } else {
+                        nav.classList.remove('shadow-sm');
+                    }
+                }
+            });
+
+            // Mobile Navigation Menu Toggle Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('translate-x-full');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                });
+
+                const closeMenu = () => {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.style.overflow = ''; // Restore scrolling
+                };
+
+                closeMenuBtn.addEventListener('click', closeMenu);
+
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+            }
+        </script>
+</body>
+
+</html>

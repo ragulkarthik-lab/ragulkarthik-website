@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Lumina Bistro | Exquisite Flavors, Timeless Ambiance</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "secondary-fixed": "#e5e2e1",
+                                                "on-primary-fixed": "#261900",
+                                                "secondary": "#5f5e5e",
+                                                "on-background": "#1a1c1a",
+                                                "error": "#ba1a1a",
+                                                "surface-variant": "#e3e2e0",
+                                                "surface-tint": "#775a19",
+                                                "tertiary-fixed": "#ffdad4",
+                                                "tertiary-container": "#c09d97",
+                                                "surface-dim": "#dbdad7",
+                                                "surface-container-highest": "#e3e2e0",
+                                                "primary-container": "#c5a059",
+                                                "surface": "#faf9f6",
+                                                "on-tertiary": "#ffffff",
+                                                "on-surface-variant": "#4e4639",
+                                                "secondary-container": "#e2dfde",
+                                                "primary-fixed": "#ffdea5",
+                                                "surface-container-low": "#f4f3f1",
+                                                "on-secondary-container": "#636262",
+                                                "outline": "#7f7667",
+                                                "secondary-fixed-dim": "#c8c6c5",
+                                                "on-tertiary-container": "#4d3530",
+                                                "primary-fixed-dim": "#e9c176",
+                                                "on-tertiary-fixed-variant": "#5b403c",
+                                                "surface-container-high": "#e9e8e5",
+                                                "on-primary-fixed-variant": "#5d4201",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed": "#1c1b1b",
+                                                "background": "#faf9f6",
+                                                "on-error": "#ffffff",
+                                                "primary": "#775a19",
+                                                "surface-bright": "#faf9f6",
+                                                "inverse-primary": "#e9c176",
+                                                "tertiary": "#745853",
+                                                "error-container": "#ffdad6",
+                                                "on-primary-container": "#4e3700",
+                                                "on-primary": "#ffffff",
+                                                "tertiary-fixed-dim": "#e3beb8",
+                                                "surface-container-lowest": "#ffffff",
+                                                "inverse-on-surface": "#f2f1ee",
+                                                "on-surface": "#1a1c1a",
+                                                "on-secondary": "#ffffff",
+                                                "outline-variant": "#d1c5b4",
+                                                "on-secondary-fixed-variant": "#474746",
+                                                "on-tertiary-fixed": "#2b1613",
+                                                "surface-container": "#efeeeb",
+                                                "inverse-surface": "#2f312f"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "gutter": "32px",
+                                                "container-max": "1280px",
+                                                "unit": "8px",
+                                                "margin-desktop": "64px",
+                                                "stack-md": "48px",
+                                                "margin-mobile": "24px",
+                                                "stack-lg": "80px"
+                                        },
+                                        "fontFamily": {
+                                                "display-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "label-md": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "headline-md": [
+                                                        "Playfair Display"
+                                                ],
+                                                "display-lg": [
+                                                        "Playfair Display"
+                                                ],
+                                                "body-lg": [
+                                                        "Montserrat"
+                                                ],
+                                                "body-md": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-lg": [
+                                                        "Playfair Display"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "display-lg-mobile": [
+                                                        "40px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.01em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-md": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "1.4",
+                                                                "letterSpacing": "0.1em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-lg-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.3",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "display-lg": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "1.1",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                /* Custom styles to supplement Tailwind */
+                body {
+                        background-color: theme('colors.background');
+                        color: theme('colors.on-background');
+                        overflow-x: hidden;
+                }
+
+                .btn-primary {
+                        background-color: theme('colors.inverse-surface');
+                        color: theme('colors.primary-fixed');
+                        text-transform: uppercase;
+                        font-family: theme('fontFamily.label-md');
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        padding: 16px 32px;
+                        border-radius: theme('borderRadius.DEFAULT');
+                        transition: all 0.3s ease;
+                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                .btn-primary:hover {
+                        background-color: theme('colors.primary-container');
+                        color: theme('colors.on-primary-container');
+                        transform: translateY(-2px);
+                        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                }
+
+                .btn-secondary {
+                        border: 1px solid theme('colors.primary');
+                        color: theme('colors.primary');
+                        text-transform: uppercase;
+                        font-family: theme('fontFamily.label-md');
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 0.1em;
+                        padding: 16px 32px;
+                        border-radius: theme('borderRadius.DEFAULT');
+                        transition: all 0.3s ease;
+                        background-color: transparent;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                }
+
+                .btn-secondary:hover {
+                        background-color: theme('colors.primary');
+                        color: theme('colors.on-primary');
+                }
+
+                .glass-panel {
+                        background-color: rgba(250, 249, 246, 0.85);
+                        /* Cream tint */
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        border: 1px solid rgba(209, 205, 199, 0.4);
+                }
+
+                .card-border {
+                        border: 1px solid theme('colors.outline-variant');
+                }
+
+                .form-input-minimal {
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid theme('colors.outline');
+                        border-radius: 0;
+                        padding: 12px 0;
+                        color: theme('colors.on-surface');
+                        font-family: theme('fontFamily.body-md');
+                        font-size: 16px;
+                        width: 100%;
+                        transition: border-color 0.3s ease;
+                }
+
+                .form-input-minimal:focus {
+                        outline: none;
+                        border-bottom-color: theme('colors.primary');
+                        box-shadow: none;
+                }
+
+                .form-label {
+                        font-family: theme('fontFamily.label-md');
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1em;
+                        color: theme('colors.on-surface-variant');
+                        display: block;
+                        margin-bottom: 4px;
+                }
+
+                /* Parallax effect base */
+                .parallax-bg {
+                        background-attachment: fixed;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                }
+
+                .menu-divider {
+                        height: 1px;
+                        background-color: theme('colors.outline-variant');
+                        width: 100%;
+                        margin: 24px 0;
+                }
+
+                .chip {
+                        background-color: theme('colors.surface-container');
+                        color: theme('colors.on-surface');
+                        padding: 4px 12px;
+                        border-radius: 9999px;
+                        font-family: theme('fontFamily.label-md');
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        display: inline-block;
+                }
+        </style>
+</head>
+
+<body class="antialiased">
+        <!-- Top Navigation Bar -->
+        <nav id="main-nav"
+                class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/30 flat no shadows">
+                <div
+                        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+                        <!-- Mobile Menu Button (Hidden on Desktop) -->
+                        <button id="mobile-menu-btn" aria-label="Open Menu"
+                                class="md:hidden text-on-surface hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+                        </button>
+                        <!-- Brand Logo -->
+                        <a class="font-display-lg-mobile md:font-display-lg text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter"
+                                href="#">
+                                LUMINA BISTRO
+                        </a>
+                        <!-- Desktop Navigation Links -->
+                        <div
+                                class="hidden md:flex items-center space-x-8 font-label-md text-label-md uppercase tracking-widest">
+                                <a class="text-primary font-bold border-b-2 border-primary pb-1 scale-95 active:scale-90 transition-transform"
+                                        href="#">Home</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="menu.html">Menu</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="reservation.html">Reservations</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="about.html">About Us</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-primary-fixed-dim transition-all duration-200"
+                                        href="contact.html">Contact</a>
+                        </div>
+                        <!-- Trailing Action -->
+                        <div class="hidden md:block">
+                                <a class="btn-primary" href="#reservations">Book a Table</a>
+                        </div>
+                        <!-- Mobile Book Icon (Visible only on mobile) -->
+                        <a aria-label="Book a Table" class="md:hidden text-primary" href="#reservations">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">calendar_month</span>
+                        </a>
+                </div>
+        </nav>
+        <!-- Mobile Menu Drawer (Hidden by default) -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-[#faf9f6] dark:bg-[#1a1c1a] md:hidden flex flex-col transition-all duration-300 transform translate-x-full">
+                <div class="flex justify-between items-center px-margin-mobile py-6 border-b border-outline-variant/30">
+                        <!-- Brand Logo -->
+                        <span class="font-display-lg-mobile text-headline-md text-primary dark:text-primary-fixed-dim tracking-tighter">
+                                LUMINA BISTRO
+                        </span>
+                        <!-- Close Button -->
+                        <button id="close-menu-btn" aria-label="Close Menu" class="text-on-surface hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined" style="font-size: 28px;">close</span>
+                        </button>
+                </div>
+                <!-- Navigation Links -->
+                <div class="flex flex-col items-center justify-center flex-grow space-y-8 font-label-md text-xl uppercase tracking-widest px-margin-mobile">
+                        <a class="mobile-nav-link text-primary font-bold" href="#">Home</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="menu.html">Menu</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="reservation.html">Reservations</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="about.html">About Us</a>
+                        <a class="mobile-nav-link text-on-surface hover:text-primary transition-colors" href="contact.html">Contact</a>
+                        <a class="btn-primary w-full text-center mt-4" href="#reservations">Book a Table</a>
+                </div>
+        </div>
+        <!-- Hero Section -->
+        <header class="relative w-full h-[921px] min-h-[600px] flex items-center justify-center mt-[88px] md:mt-[96px]">
+                <!-- Background Image -->
+                <div class="absolute inset-0 w-full h-full">
+                        <img alt="Exquisite Plated Dish" class="w-full h-full object-cover"
+                                data-alt="A top-down view of an exquisitely plated fine-dining dish on a dark ceramic plate, resting on a textured wooden table. The lighting is moody and dramatic, highlighting the vibrant colors of the fresh ingredients and the intricate garnishes. The scene exudes tactile luxury and culinary craftsmanship, fitting perfectly with a modern, high-end bistro aesthetic featuring cream and charcoal tones."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdKKbXTBekjaSLjf9nvQNnorp3H1g2kiw_XOLoKvcWoSTO7ouGV5w0UCrrCwQnXroWROoiwAWc6FcULK5H5WgL-xniP2Xctwu5hAtOTxLIYkzBiAMmP284VRa2pcE0YQtKuv4id6xqPKpFddb3WRfbj7nT81YgWJ7_nG0Xll8qEkysotx1Q6CcyuLatf4TzrnOykxNEw8yDi_Mq-DyijVC-qkDDfn-YWonymZ6NOGUfvYE6Uz05QgeQP4ejoUCXyAdOYTgZQGU3yI" />
+                        <!-- Subtle Overlay for text readability -->
+                        <div class="absolute inset-0 bg-inverse-surface/30 mix-blend-multiply"></div>
+                </div>
+                <!-- Hero Content (Glassmorphism Panel) -->
+                <div
+                        class="relative z-10 glass-panel px-margin-mobile py-stack-md md:px-margin-desktop md:py-stack-lg max-w-3xl mx-auto text-center mx-margin-mobile md:mx-0">
+                        <h1
+                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                                Exquisite Flavors,<br />
+                                <span class="italic text-primary">Timeless Ambiance</span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
+                                A culinary journey where modern technique meets classic heritage, served in a space
+                                designed for the senses.
+                        </p>
+                        <a class="btn-primary" href="#reservations">Book a Table</a>
+                </div>
+        </header>
+        <!-- Trust Badges Section -->
+        <section class="py-stack-md bg-surface-container-low border-b border-outline-variant/30">
+                <div
+                        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                        <div
+                                class="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                                <span class="material-symbols-outlined text-4xl" data-weight="fill">star</span>
+                                <div>
+                                        <p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">
+                                                TripAdvisor</p>
+                                        <p class="font-body-md text-sm text-on-surface-variant">Travelers' Choice 2024
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="hidden md:block w-px h-12 bg-outline-variant"></div>
+                        <div
+                                class="flex items-center gap-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                                <span class="material-symbols-outlined text-4xl" data-weight="fill">verified</span>
+                                <div>
+                                        <p class="font-label-md text-label-md uppercase tracking-wider text-on-surface">
+                                                Google Reviews</p>
+                                        <p class="font-body-md text-sm text-on-surface-variant">4.9 / 5 from 500+ guests
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Featured Dishes (Bento Grid) -->
+        <section class="py-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" id="menu">
+                <div class="mb-stack-md md:mb-stack-lg text-center md:text-left">
+                        <h2
+                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">
+                                Culinary Signatures</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                                A curated selection of our most beloved creations, showcasing local ingredients and
+                                refined technique.
+                        </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                        <!-- Large Feature (Spans 8 columns) -->
+                        <div class="md:col-span-8 group">
+                                <div
+                                        class="relative h-[400px] md:h-[500px] overflow-hidden card-border bg-surface-container-lowest">
+                                        <img alt="Seared Scallops"
+                                                class="w-full h-[70%] object-cover transition-transform duration-700 group-hover:scale-105"
+                                                data-alt="A close-up shot of perfectly seared sea scallops resting on a bed of vibrant green pea purée, garnished with delicate microgreens and edible flowers. The image is bright and airy, utilizing natural light to highlight the golden crust of the scallops against the clean, white ceramic plate. The aesthetic is modern and sophisticated, aligning with a premium culinary experience."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdozws3A6Y4J4tX29zwmYQYuaE5wAP1F47lFEadqUE1gQFoPOZuC5KlnT_s7BWoEj4YsL6ZAuBVojFde8aPDiRbocXagLSf3EM8KthdYkAOV3_a1tIa5fC3rZOMpgADREgLAJfn4yxuSEKdwTdK8oz88Bh1FX4AZBSl8EFaRLhe7tKPLAOSRJsI_IdeClni7mKyucbUL6SmkuTqms2ku84X41uIwZZJGl1WYv1xc9nja2lCSykhKrLqQu_Z9rbxSqORMoWG1i-Ei4" />
+                                        <div
+                                                class="absolute bottom-0 w-full h-[30%] bg-surface-container-lowest p-6 flex flex-col justify-center">
+                                                <div class="flex justify-between items-start mb-2">
+                                                        <h3 class="font-headline-md text-headline-md text-on-surface">
+                                                                Pan-Seared Diver Scallops</h3>
+                                                        <span
+                                                                class="font-label-md text-label-md text-primary">$38</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-surface-variant">Sweet corn
+                                                        velouté, crispy pancetta, micro-cilantro, and a hint of white
+                                                        truffle oil.</p>
+                                                <div class="mt-3">
+                                                        <span class="chip">Signature</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- Smaller Feature Top (Spans 4 columns) -->
+                        <div class="md:col-span-4 group">
+                                <div
+                                        class="relative h-[400px] md:h-[500px] overflow-hidden card-border bg-surface-container-lowest flex flex-col">
+                                        <img alt="Truffle Risotto"
+                                                class="w-full h-[55%] object-cover transition-transform duration-700 group-hover:scale-105"
+                                                data-alt="A warm, inviting shot of a creamy wild mushroom and truffle risotto served in a shallow, rustic bowl. Steam gently rises from the dish, catching the soft, ambient lighting of the restaurant. The color palette features earthy browns, warm creams, and subtle gold tones, reflecting a tactile luxury and cozy elegance."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhpNtRLf6C5MrMqvjza5g48Dodpxko2pkzTCnyJSCkziYkxnyB5wsltHc6d1nr7x0uMEWiQ9HpNY4xtZcVk0RwjKca6qRx94kiLX9TGGQAab2KF94IEsBnY0W8HdQBBQfth-clS9IbRtZ-wOk6EW1H05-NENUujK2aWJFdyXNJKRY0Nd4kUndA-_caobrZFxS6tGXncmbn3N_rP_mzE3du19YMWKnzABhmqTnbzZjxau2JXhbE6id-UDYLReCPddyNuKiIjgOtGeQ" />
+                                        <div
+                                                class="flex-grow bg-surface-container-lowest p-6 flex flex-col justify-center">
+                                                <div class="flex justify-between items-start mb-2">
+                                                        <h3
+                                                                class="font-headline-md text-xl font-medium text-on-surface">
+                                                                Wild Mushroom Risotto</h3>
+                                                        <span
+                                                                class="font-label-md text-label-md text-primary">$29</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                                                        Arborio rice, porcini dust, aged Parmigiano-Reggiano, finished
+                                                        with black truffle shavings.</p>
+                                                <div class="mt-auto pt-3">
+                                                        <span class="chip">Vegetarian</span>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- Bottom Left (Spans 6 columns) -->
+                        <div class="md:col-span-6 group">
+                                <div
+                                        class="relative h-[350px] overflow-hidden card-border bg-surface-container-lowest flex flex-col md:flex-row">
+                                        <img alt="Wagyu Tartare"
+                                                class="w-full md:w-[50%] h-[200px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                data-alt="An overhead view of a precisely molded Wagyu beef tartare, topped with a bright orange cured egg yolk and accompanied by delicate, toasted brioche points. The presentation is geometric and clean, set against a dark, textured slate serving board. The lighting is focused, creating subtle shadows that enhance the rich, dark reds of the meat and the upscale, modern bistro vibe."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF2uK_TIEljD2DT8s1LU780icsP_imW7bQ2f2xoeFZ1Gd57rYGCCglCHxxWUdro3TpjcxGaKAS2exj8hrL4ODcFITHOTLYJPkN6If37w7OCjJhX8nlMO0JEalvSYUvIG1Q-i-qf2EDHHgbS5feZ77IPTMeBjIx9e_BrS4JTv7XonO1bVXbz-CxcKfkVe4E8yLUf1b8fR9a2MB3UW7pPMgQRLE3spK2eaMepzfz-olri_EZp9ERFsUlYrzmZoNX9fGr2IgUfodx2lI" />
+                                        <div
+                                                class="w-full md:w-[50%] bg-surface-container-lowest p-6 flex flex-col justify-center">
+                                                <div class="flex justify-between items-start mb-2">
+                                                        <h3
+                                                                class="font-headline-md text-xl font-medium text-on-surface">
+                                                                Wagyu Beef Tartare</h3>
+                                                        <span
+                                                                class="font-label-md text-label-md text-primary">$26</span>
+                                                </div>
+                                                <p
+                                                        class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">
+                                                        Hand-cut Wagyu, quail egg yolk, caperberries, and toasted
+                                                        brioche points.</p>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- Bottom Right (Spans 6 columns) -->
+                        <div class="md:col-span-6 group">
+                                <div
+                                        class="relative h-[350px] overflow-hidden card-border bg-surface-container-lowest flex flex-col md:flex-row-reverse">
+                                        <img alt="Artisan Dessert"
+                                                class="w-full md:w-[50%] h-[200px] md:h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                data-alt="A striking dessert composition featuring a dark chocolate dome accented with edible gold leaf, sitting beside a vivid streak of raspberry coulis. The plating is artistic and minimalist, utilizing negative space on a large white plate. The soft, diffused lighting emphasizes the glossy texture of the chocolate and the vibrant red of the sauce, conveying a sense of refined indulgence."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfcWtcYPq9vEUQqI1vzR5ScWCe380_4mnIeVfjWXa5NmKbsV8a6c_PxJwakOirnKRhv-vMVU4dciR3Y5F3ZOBgutxfthEs9i8L2mNIIb-MyZO1I7A3AnfuUDlk9rrcVx4H6Gpsdi7Gk9tLRn_kokmvkMTxhsX9PLE6hDHzDHPlvJh8zjIVnlPI_D3Pc9ncbC7sdMBr_ddYAowCNL4K_vuIRuK0Cj_w4exv6D822lhQoEl8q9Y6gckoZ5JBV115AaqR-ajAKdBpETQ" />
+                                        <div
+                                                class="w-full md:w-[50%] bg-surface-container-lowest p-6 flex flex-col justify-center">
+                                                <div class="flex justify-between items-start mb-2">
+                                                        <h3
+                                                                class="font-headline-md text-xl font-medium text-on-surface">
+                                                                Dark Chocolate Dome</h3>
+                                                        <span
+                                                                class="font-label-md text-label-md text-primary">$16</span>
+                                                </div>
+                                                <p
+                                                        class="font-body-md text-body-md text-on-surface-variant text-sm mb-4">
+                                                        Valrhona 70% dark chocolate mousse, passion fruit center, and
+                                                        edible gold.</p>
+                                                <div class="mt-auto">
+                                                        <a class="font-label-md text-xs uppercase text-primary border-b border-primary pb-1 hover:text-inverse-primary transition-colors"
+                                                                href="#">View Full Menu</a>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Our Story (Asymmetric Layout) -->
+        <section class="py-stack-lg bg-surface-container-low" id="story">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                                <!-- Text Content (5 columns) -->
+                                <div class="md:col-span-5 md:col-start-1 order-2 md:order-1 mt-8 md:mt-0 pr-0 md:pr-8">
+                                        <h2
+                                                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-6">
+                                                Heritage &amp;<br />Craftsmanship</h2>
+                                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                                                Founded by Chef Elena Rostova, Lumina Bistro was born from a desire to
+                                                strip away the pretense of fine dining while maintaining its rigorous
+                                                standards.
+                                        </p>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                                Our philosophy is simple: source the absolute best ingredients locally,
+                                                apply classical techniques with a modern sensibility, and serve it in a
+                                                space that feels like an extension of our home. We believe that true
+                                                luxury is found in authenticity and the quiet details.
+                                        </p>
+                                        <a class="btn-secondary" href="#">Read Our Story</a>
+                                </div>
+                                <!-- Image (7 columns, offset) -->
+                                <div class="md:col-span-7 md:col-start-6 order-1 md:order-2">
+                                        <div class="relative w-full aspect-[4/3] card-border bg-surface">
+                                                <img alt="Chef in the Kitchen" class="w-full h-full object-cover"
+                                                        data-alt="A candid, beautifully lit portrait of a female chef meticulously plating a dish in a modern, stainless steel professional kitchen. The background is slightly out of focus, emphasizing the concentration and artistry of the chef. Warm, golden lighting spills from hanging fixtures, contrasting with the cool steel tones, creating an atmosphere of passionate culinary dedication and premium quality."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDHP0YLLy1EgqkBG2OuI_jDPuLVPT399BdOUMOcCov74YomZXjWl4GuIqzwd0-ebpuk7wU_9unWnz43pUQEr-16QiZRCd2H44omK9J7Gt4HEvVozg-MvubOoYQnUZIDgM6xKXHggJvTv2zDB8_mtGepVFG8tFvhPn4u9kNhKE5AAXo0ZBC3d-GhrPLq7icBaHTVu5piTBW1dWfFdM4N3ZhMX6Na-Xq6d1ZSY1ttAdf8WtCMSfXcaj42oIY-kKcQJwf8xE53ZAQDH4" />
+                                                <!-- Decorative element -->
+                                                <div
+                                                        class="absolute -bottom-6 -left-6 w-24 h-24 bg-primary-container z-[-1] hidden md:block">
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Ambiance Gallery (The Gallery Reveal - Parallax & Masonry) -->
+        <section class="py-stack-lg relative">
+                <!-- Parallax Header Image -->
+                <div class="w-full h-[614px] parallax-bg relative mb-stack-md"
+                        data-alt="A wide, establishing shot of a sophisticated restaurant interior. The room features dark wood paneling, cream-colored leather banquettes, and striking contemporary chandeliers casting a warm, amber glow. Tables are meticulously set with crisp white linens and sparkling glassware. The mood is hushed exclusivity, perfectly capturing the high-end, modern minimalist aesthetic."
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCG_MiXAL1Iffj9uJp82qCs9zeoQ35p44dXjknOcMzqkU1nw0pWn9nHWR54RuUl8r1-wnyQB7TotUGC3QeCtjzVcG9KXxG2roQItqPrZ7uNxhs_qy-G2kDrmSY8LAXdcYnEqWsvI5N3E3UXWhVXV_3uXmXJwWv5LWG6N_r_PznSDylhGkcgExnKLSp5T-nZsWVKwg6XmuSJYufo7UkzHvIFGMg8Lkn6pw6UMLRWjaMOdl5MC9q5Hhgdfee694_do_8CsdCFI8y8UbU');">
+                        <div class="absolute inset-0 bg-inverse-surface/40"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                                <h2
+                                        class="font-display-lg-mobile md:font-display-lg text-on-tertiary text-center px-margin-mobile">
+                                        The Atmosphere
+                                </h2>
+                        </div>
+                </div>
+                <!-- Masonry Grid -->
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                        <div class="columns-1 md:columns-2 lg:columns-3 gap-gutter space-y-gutter">
+                                <div class="break-inside-avoid">
+                                        <img alt="Restaurant Seating" class="w-full h-auto card-border"
+                                                data-alt="A detail shot of an elegant dining table set for two. The focus is on a crystal wine glass and polished silverware resting on a textured cream linen tablecloth. In the soft-focus background, warm pendant lights hang over a dark wood table. The image communicates refined intimacy and tactile luxury."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIyJqgyBcMOq2mbi00xP6s0h8py5n-3wqlww3oCfwbRIsBi3c-UwYR-EU0a7rVXWw1VKUNv-bjYvwyOiQTzo-xwfRLz5s-1K8quD1eWjFZ8WYD4xCqIBeH2M3wI2hdQpyX4qPe8hZTJoiA8mme3BKmp8rekQYO74tsn3Pnt8YdkmIBIoqeX2rVQfmC95gWKwqkOH_yhIk0XYYQ-DFVDkou_5Q9CkGw9Qn_G9FFFlEhamiIA1B3TMohvdFIGrdxL5aCcVy1IhSp-Zg" />
+                                </div>
+                                <div class="break-inside-avoid">
+                                        <img alt="Wine Cellar" class="w-full h-auto card-border"
+                                                data-alt="A view down a stunning, glass-enclosed wine cellar within the restaurant. Racks of premium wine bottles stretch upwards, softly illuminated by integrated LED strip lighting. The framing is symmetrical, drawing the eye down the corridor of wine, showcasing the extensive collection and adding to the aura of established luxury."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3lZxWZFRB1SDpwbABjX8_wKpUaFpg5ieY6Y0VQmaTSxXDEGxTiSvAiyqEeHvJcljzQa9wc16h5bg3izpdc8lGWrODOL_FYF1vTYcxKgW7ZlHLG2Zd8YAmqVRAsj0QM6P5szENh71N1VyDdGIF61yPVQL7lzqSHTw7Pm9hL7_W6yXQjwc4iz8fot7QTVIU0wljvwr0vvK6DheFAQgQJf4VH9jM745JHEtnVm-JZr0skLPDH44MBYiOUkKtaNbVk7GWvMA0k-lDMFI" />
+                                </div>
+                                <div class="break-inside-avoid">
+                                        <img alt="Bar Area" class="w-full h-auto card-border"
+                                                data-alt="A sophisticated bar area featuring a sleek, charcoal-colored marble countertop. Neatly arranged highball glasses and premium spirits catch the light from dramatic, modern fixtures overhead. A bartender's hand, slightly blurred in motion, is visible pouring a cocktail, adding life and movement to the refined setting."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoN557FWo6JWQCsdQ6-Huy8Dn5ZUKx5qoZBawKLUUCowHc3JIj0mDy70mBktZ8uqmhVf_dM3zPrMQVokNBNGGhqONbseO4ALOsDsBy_Fvd5StWQz1ng9BWajoZDbFuElprUSYwoI8_DKnVZ91rFM3Hz3feqRALr5FdXWFBUMUAF9O0zS_5WD3LC0Exi6X7N7bIITaPutKw68x_1wnmGs8hCVcy93hzKLIpSlOIVWsmIAMExI_qfZ9NUSmuJKxVQb_9CudTTPuuLUk" />
+                                </div>
+                                <div class="break-inside-avoid">
+                                        <img alt="Exterior Night" class="w-full h-auto card-border"
+                                                data-alt="The exterior facade of the bistro at twilight. The building features dark, matte-finished walls contrasting with glowing, warm light spilling from large, floor-to-ceiling windows. A minimalist, illuminated sign reading 'Lumina' hangs above the entrance. The image sets a welcoming yet exclusive tone for arriving guests."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-86uJto6pZAsNczsBjus4spGhoQhhowIeaZwK0n63JdG9RDICahFJzT9MCnzg4siZfrKZlma6ygjI9GpglETMmLCzJo0i_muMy1OIl9pTpdw5KafB2t0fjKVZW0iAZnZEcN2TLI33Gd2kFbrP763fsgPjB6Hk85Tbs27n1RW_8R_0ARu481sYR3b6wHm3JP2Rr5FK9ltG6sKpDrbejslp_NhMmHkAblGxNgUSXuKf8ZlF9eCFhFobOMx5m6Nx3IEsjLG6Y9sEBAw" />
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Reservation Section (Minimal Form & Glassmorphism) -->
+        <section class="py-stack-lg bg-surface" id="reservations">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                                <!-- Form Column -->
+                                <div class="p-8 md:p-12 bg-surface-container-lowest card-border relative z-10">
+                                        <h2 class="font-headline-lg-mobile md:font-headline-lg text-on-surface mb-2">
+                                                Reserve a Table</h2>
+                                        <p class="font-body-md text-on-surface-variant mb-8">Join us for an
+                                                unforgettable culinary experience.</p>
+                                        <form class="space-y-6">
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div>
+                                                                <label class="form-label" for="date">Date</label>
+                                                                <input class="form-input-minimal" id="date" required=""
+                                                                        type="date" />
+                                                        </div>
+                                                        <div>
+                                                                <label class="form-label" for="time">Time</label>
+                                                                <select class="form-input-minimal" id="time"
+                                                                        required="">
+                                                                        <option disabled="" selected="" value="">Select
+                                                                                Time</option>
+                                                                        <option value="17:00">5:00 PM</option>
+                                                                        <option value="18:00">6:00 PM</option>
+                                                                        <option value="19:00">7:00 PM</option>
+                                                                        <option value="20:00">8:00 PM</option>
+                                                                        <option value="21:00">9:00 PM</option>
+                                                                </select>
+                                                        </div>
+                                                </div>
+                                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                        <div>
+                                                                <label class="form-label" for="guests">Party
+                                                                        Size</label>
+                                                                <select class="form-input-minimal" id="guests"
+                                                                        required="">
+                                                                        <option value="1">1 Guest</option>
+                                                                        <option selected="" value="2">2 Guests</option>
+                                                                        <option value="3">3 Guests</option>
+                                                                        <option value="4">4 Guests</option>
+                                                                        <option value="5">5+ Guests (Call Us)</option>
+                                                                </select>
+                                                        </div>
+                                                        <div>
+                                                                <label class="form-label" for="name">Full Name</label>
+                                                                <input class="form-input-minimal" id="name"
+                                                                        placeholder="Jane Doe" required=""
+                                                                        type="text" />
+                                                        </div>
+                                                </div>
+                                                <div>
+                                                        <label class="form-label" for="email">Email Address</label>
+                                                        <input class="form-input-minimal" id="email"
+                                                                placeholder="jane@example.com" required=""
+                                                                type="email" />
+                                                </div>
+                                                <div class="pt-4">
+                                                        <button class="btn-primary w-full md:w-auto"
+                                                                type="button">Confirm Reservation</button>
+                                                </div>
+                                        </form>
+                                </div>
+                                <!-- Info Column / Decorative Image -->
+                                <div class="relative hidden md:block">
+                                        <img alt="Dining Details" class="w-full h-full object-cover card-border"
+                                                data-alt="A close-up, high-fidelity shot of a beautifully textured menu resting on a dark wooden table top, beside a small, flickering votive candle. The focus is shallow, highlighting the quality of the paper and the elegant typography of the menu. The warm, ambient light conveys a sense of anticipation and premium hospitality."
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrTjnp2qHzwAEXhbtkzQ5XCbkXzsrVIWLmFJWkxussxu4QqIM2R3jHueQnUTwzC0DIo68ViAAV_K9EiGKpg1Hrn_OJvXlyYoQpc7gpjDQnBcD_eaABDFUrFXVcfR34n_-oQe4fM2IXwcd-_YI1NyLlHk6zhA_wVFOJpJiZUT0ckSTy3eDr-zLH5vsxmnz0HQoylVWKFzXZBcWlv2L9VmFDwSRj3bPxwg4q-DSI4rw-8am4fbyhH5JISrnYo_RAQ6pIjOgGZmr-rjA" />
+                                        <!-- Floating Info Card -->
+                                        <div class="absolute bottom-8 left-8 right-8 glass-panel p-6">
+                                                <h4 class="font-headline-md text-xl text-on-surface mb-4">Location &amp;
+                                                        Hours</h4>
+                                                <div class="space-y-2 font-body-md text-sm text-on-surface-variant">
+                                                        <p class="flex items-center gap-2">
+                                                                <span class="material-symbols-outlined text-primary"
+                                                                        style="font-size: 18px;">location_on</span>
+                                                                123 Culinary Ave, Gastronomy District
+                                                        </p>
+                                                        <p class="flex items-center gap-2">
+                                                                <span class="material-symbols-outlined text-primary"
+                                                                        style="font-size: 18px;">schedule</span>
+                                                                Tue - Sun: 5:00 PM - 11:00 PM
+                                                        </p>
+                                                        <p class="flex items-center gap-2">
+                                                                <span class="material-symbols-outlined text-primary"
+                                                                        style="font-size: 18px;">call</span>
+                                                                +1 (555) 123-4567
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant w-full rounded-none"
+                id="footer">
+                <div
+                        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto transition-all duration-300 ease-in-out">
+                        <!-- Brand Column -->
+                        <div class="col-span-1 md:col-span-2">
+                                <a class="font-display-lg text-headline-lg text-on-surface dark:text-inverse-on-surface block mb-4"
+                                        href="#">
+                                        LUMINA BISTRO
+                                </a>
+                                <p
+                                        class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-sm mb-6">
+                                        A destination for those who appreciate the quiet luxury of an exceptional meal.
+                                </p>
+                                <div class="flex gap-4">
+                                        <a aria-label="Instagram"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">photo_camera</span>
+                                        </a>
+                                        <a aria-label="Facebook"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">thumb_up</span>
+                                        </a>
+                                        <a aria-label="Email"
+                                                class="text-on-surface hover:text-primary transition-colors" href="#">
+                                                <span class="material-symbols-outlined">mail</span>
+                                        </a>
+                                </div>
+                        </div>
+                        <!-- Links Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Explore</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Menu</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Reservations</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Private Dining</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Gift Cards</a></li>
+                                </ul>
+                        </div>
+                        <!-- Legal Column -->
+                        <div class="col-span-1">
+                                <h4
+                                        class="font-headline-md text-headline-md text-on-surface dark:text-inverse-on-surface mb-4">
+                                        Legal</h4>
+                                <ul class="space-y-3 font-body-md text-body-md">
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Privacy Policy</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Terms of Service</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Careers</a></li>
+                                        <li><a class="text-on-secondary-fixed-variant hover:text-primary hover:opacity-80 transition-opacity"
+                                                        href="#">Press Kit</a></li>
+                                </ul>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 text-center">
+                                <p class="font-body-md text-sm text-on-surface-variant dark:text-inverse-on-surface/70">
+                                        © 2024 Lumina Bistro. Crafted for the epicurean.
+                                </p>
+                        </div>
+                </div>
+        </footer>
+        <script>
+                // Simple nav background transition on scroll
+                window.addEventListener('scroll', () => {
+                        const nav = document.getElementById('main-nav');
+                        if (nav) {
+                                if (window.scrollY > 50) {
+                                        nav.classList.add('shadow-sm');
+                                } else {
+                                        nav.classList.remove('shadow-sm');
+                                }
+                        }
+                });
+
+                // Mobile Navigation Menu Toggle Logic
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const closeMenuBtn = document.getElementById('close-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
+
+                if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
+                        mobileMenuBtn.addEventListener('click', () => {
+                                mobileMenu.classList.remove('translate-x-full');
+                                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                        });
+
+                        const closeMenu = () => {
+                                mobileMenu.classList.add('translate-x-full');
+                                document.body.style.overflow = ''; // Restore scrolling
+                        };
+
+                        closeMenuBtn.addEventListener('click', closeMenu);
+
+                        mobileMenuLinks.forEach(link => {
+                                link.addEventListener('click', closeMenu);
+                        });
+                }
+        </script>
+</body>
+
+</html>
